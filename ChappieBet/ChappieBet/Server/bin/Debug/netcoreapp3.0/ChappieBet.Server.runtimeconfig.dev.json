@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\lucca.boets.BAZANDPOORT\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\lucca.boets.BAZANDPOORT\\.nuget\\packages"
+      "C:\\Users\\dries.leyers.BAZANDPOORT\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\dries.leyers.BAZANDPOORT\\.nuget\\packages"
     ]
   }
 }

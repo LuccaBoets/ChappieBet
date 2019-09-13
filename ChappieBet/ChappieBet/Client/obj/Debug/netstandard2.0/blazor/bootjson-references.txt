@@ -1,4 +1,5 @@
 ChappieBet.Shared.dll
+MatBlazor.dll
 Microsoft.AspNetCore.Authorization.dll
 Microsoft.AspNetCore.Blazor.dll
 Microsoft.AspNetCore.Blazor.HttpClient.dll

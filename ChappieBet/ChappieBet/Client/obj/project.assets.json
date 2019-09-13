@@ -1488,19 +1488,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucca.boets.BAZANDPOORT\\.nuget\\packages\\": {}
+    "C:\\Users\\dries.leyers.BAZANDPOORT\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucca.boets.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Client\\ChappieBet.Client.csproj",
+      "projectUniqueName": "C:\\Users\\dries.leyers.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Client\\ChappieBet.Client.csproj",
       "projectName": "ChappieBet.Client",
-      "projectPath": "C:\\Users\\lucca.boets.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Client\\ChappieBet.Client.csproj",
-      "packagesPath": "C:\\Users\\lucca.boets.BAZANDPOORT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucca.boets.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Client\\obj\\",
+      "projectPath": "C:\\Users\\dries.leyers.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Client\\ChappieBet.Client.csproj",
+      "packagesPath": "C:\\Users\\dries.leyers.BAZANDPOORT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dries.leyers.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lucca.boets.BAZANDPOORT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dries.leyers.BAZANDPOORT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1513,8 +1513,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\lucca.boets.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Shared\\ChappieBet.Shared.csproj": {
-              "projectPath": "C:\\Users\\lucca.boets.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Shared\\ChappieBet.Shared.csproj"
+            "C:\\Users\\dries.leyers.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Shared\\ChappieBet.Shared.csproj": {
+              "projectPath": "C:\\Users\\dries.leyers.BAZANDPOORT\\Documents\\GitHub\\ChappieBet\\ChappieBet\\ChappieBet\\Shared\\ChappieBet.Shared.csproj"
             }
           }
         }

@@ -5,7 +5,7 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\lucca.boets.BAZANDPOORT\.nuget\packages\</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\dries.leyers.BAZANDPOORT\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.3.0</NuGetToolVersion>
   </PropertyGroup>
@@ -26,8 +26,8 @@
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.blazor.build\3.0.0-preview9.19424.4\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Build.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.blazor.build\3.0.0-preview9.19424.4\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Build.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_AspNetCore_Blazor_Mono Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_Mono)' == '' ">C:\Users\lucca.boets.BAZANDPOORT\.nuget\packages\microsoft.aspnetcore.blazor.mono\3.0.0-preview9.19421.1</PkgMicrosoft_AspNetCore_Blazor_Mono>
-    <PkgMicrosoft_AspNetCore_Blazor_DevServer Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_DevServer)' == '' ">C:\Users\lucca.boets.BAZANDPOORT\.nuget\packages\microsoft.aspnetcore.blazor.devserver\3.0.0-preview9.19424.4</PkgMicrosoft_AspNetCore_Blazor_DevServer>
-    <PkgMicrosoft_AspNetCore_Blazor_Build Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_Build)' == '' ">C:\Users\lucca.boets.BAZANDPOORT\.nuget\packages\microsoft.aspnetcore.blazor.build\3.0.0-preview9.19424.4</PkgMicrosoft_AspNetCore_Blazor_Build>
+    <PkgMicrosoft_AspNetCore_Blazor_Mono Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_Mono)' == '' ">C:\Users\dries.leyers.BAZANDPOORT\.nuget\packages\microsoft.aspnetcore.blazor.mono\3.0.0-preview9.19421.1</PkgMicrosoft_AspNetCore_Blazor_Mono>
+    <PkgMicrosoft_AspNetCore_Blazor_DevServer Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_DevServer)' == '' ">C:\Users\dries.leyers.BAZANDPOORT\.nuget\packages\microsoft.aspnetcore.blazor.devserver\3.0.0-preview9.19424.4</PkgMicrosoft_AspNetCore_Blazor_DevServer>
+    <PkgMicrosoft_AspNetCore_Blazor_Build Condition=" '$(PkgMicrosoft_AspNetCore_Blazor_Build)' == '' ">C:\Users\dries.leyers.BAZANDPOORT\.nuget\packages\microsoft.aspnetcore.blazor.build\3.0.0-preview9.19424.4</PkgMicrosoft_AspNetCore_Blazor_Build>
   </PropertyGroup>
 </Project>

@@ -1,0 +1,21 @@
+﻿@page "/login"
+
+<p>
+    <MatTextField @bind-Value="@UserFullName" Label="Full Name" FullWidth="true" Required="true"></MatTextField>
+</p>
+<p>
+    <MatTextField @bind-value="@UserEmail" Label="E-mail" FullWidth="true" Required="true" Type="email"></MatTextField>
+</p>
+<p>
+    <MatTextField @bind-value="@UserPassword" Label="Password" FullWidth="true" Required="true" Type="password"></MatTextField>
+</p>
+
+@code
+    {
+        private string UserPassword { get; set; }
+        private string UserEmail { get; set; }
+        private string UserFullName { get; set; }
+    }
+
+    
+
