@@ -2,6 +2,26 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "MatBlazor/1.7.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Blazor": "3.0.0-preview9.19424.4",
+          "Microsoft.AspNetCore.Blazor.HttpClient": "3.0.0-preview9.19424.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/MatBlazor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MatBlazor.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.0/Properties/launchSettings.json": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authorization/3.0.0-preview9.19424.4": {
         "type": "package",
         "dependencies": {
@@ -345,6 +365,21 @@
     }
   },
   "libraries": {
+    "MatBlazor/1.7.4": {
+      "sha512": "ZmRHlGBcfFgFyJzb11iMG7op77A4h2HUK6LjL0ZTTaRsyzYQQKxRSfpMRBar+aTaygrp1xwbi4O37YwODZ89Qw==",
+      "type": "package",
+      "path": "matblazor/1.7.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Properties/launchSettings.json",
+        "contentFiles/any/netstandard2.0/Properties/launchSettings.json",
+        "lib/netstandard2.0/MatBlazor.dll",
+        "lib/netstandard2.0/MatBlazor.xml",
+        "matblazor.1.7.4.nupkg.sha512",
+        "matblazor.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/3.0.0-preview9.19424.4": {
       "sha512": "GdKUkS36YPrJvmpQdpKCkoE4NtwCDHmPOAZy1ws/oyB+in7SrTD/b/K9TzV8QX3OUZWJzf5dJcuhyWp/jvPrwA==",
       "type": "package",
@@ -1444,6 +1479,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "ChappieBet.Shared >= 1.0.0",
+      "MatBlazor >= 1.7.4",
       "Microsoft.AspNetCore.Blazor >= 3.0.0-preview9.19424.4",
       "Microsoft.AspNetCore.Blazor.Build >= 3.0.0-preview9.19424.4",
       "Microsoft.AspNetCore.Blazor.DevServer >= 3.0.0-preview9.19424.4",
@@ -1492,6 +1528,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "MatBlazor": {
+            "target": "Package",
+            "version": "[1.7.4, )"
+          },
           "Microsoft.AspNetCore.Blazor": {
             "target": "Package",
             "version": "[3.0.0-preview9.19424.4, )"

@@ -12,6 +12,15 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)matblazor\1.7.4\contentFiles\any\netstandard2.0\Properties\launchSettings.json" Condition="Exists('$(NuGetPackageRoot)matblazor\1.7.4\contentFiles\any\netstandard2.0\Properties\launchSettings.json')">
+      <NuGetPackageId>MatBlazor</NuGetPackageId>
+      <NuGetPackageVersion>1.7.4</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>Properties\launchSettings.json</Link>
+    </Content>
+  </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.blazor.mono\3.0.0-preview9.19421.1\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Mono.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.blazor.mono\3.0.0-preview9.19421.1\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Mono.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.blazor.build\3.0.0-preview9.19424.4\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Build.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.blazor.build\3.0.0-preview9.19424.4\build\netstandard1.0\Microsoft.AspNetCore.Blazor.Build.props')" />

@@ -48,6 +48,11 @@ using ChappieBet.Client.Shared;
 
 #line default
 #line hidden
+#line 8 "C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Client\_Imports.razor"
+using MatBlazor;
+
+#line default
+#line hidden
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public class Index : Microsoft.AspNetCore.Components.ComponentBase
     {

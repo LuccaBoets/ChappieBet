@@ -1,0 +1,8 @@
+C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Shared\bin\Debug\netstandard2.0\ChappieBet.Shared.deps.json
+C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Shared\bin\Debug\netstandard2.0\ChappieBet.Shared.dll
+C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Shared\bin\Debug\netstandard2.0\ChappieBet.Shared.pdb
+C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Shared\obj\Debug\netstandard2.0\ChappieBet.Shared.csprojAssemblyReference.cache
+C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Shared\obj\Debug\netstandard2.0\ChappieBet.Shared.AssemblyInfoInputs.cache
+C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Shared\obj\Debug\netstandard2.0\ChappieBet.Shared.AssemblyInfo.cs
+C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Shared\obj\Debug\netstandard2.0\ChappieBet.Shared.dll
+C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Shared\obj\Debug\netstandard2.0\ChappieBet.Shared.pdb

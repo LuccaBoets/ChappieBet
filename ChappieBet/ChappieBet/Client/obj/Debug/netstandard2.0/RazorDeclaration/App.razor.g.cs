@@ -48,6 +48,11 @@ using ChappieBet.Client.Shared;
 
 #line default
 #line hidden
+#line 8 "C:\Users\lucca.boets.BAZANDPOORT\Documents\GitHub\ChappieBet\ChappieBet\ChappieBet\Client\_Imports.razor"
+using MatBlazor;
+
+#line default
+#line hidden
     public class App : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
