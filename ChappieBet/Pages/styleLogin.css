@@ -1,0 +1,31 @@
+body{
+
+	background-color: #C7483A;
+
+}
+
+.background {
+  	width: 99%;
+	background-image: url(../Afbeeldingen/backgroundImageLogin.png);
+	opacity: 0.6;
+  	top: 0;
+  	right: 0;
+  	left: 0;
+  	bottom: 0;
+  	position: absolute;
+}
+
+.inlogScherm{
+	border-radius: 10px;
+	width: 50%;
+	height: 50%;
+	margin: auto;
+	margin-top: 5%;
+	background-color: white;
+	opacity: 0.6;
+}
+.tekst{
+text-align: center;
+height: 50%;
+
+}
