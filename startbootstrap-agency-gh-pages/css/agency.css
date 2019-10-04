@@ -64,7 +64,7 @@ h6 {
 }
 
 ::-moz-selection {
-  background: #fed136;
+  background: #c7493A;
   text-shadow: none;
 }
 
@@ -251,7 +251,7 @@ header.masthead .intro-text .intro-heading {
   height: 100%;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(254, 209, 54, 0.9);
+  background: rgba(163, 51, 39, 0.9);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -283,11 +283,12 @@ header.masthead .intro-text .intro-heading {
   margin: 0 auto;
   padding: 25px;
   text-align: center;
-  background-color: #fff;
+  background-color:     #c7493a;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4 {
-  margin: 0;
+  color: #3c3c3c;
+    margin: 0;
   text-transform: none;
 }
 
@@ -447,7 +448,7 @@ header.masthead .intro-text .intro-heading {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #fed136;
+  background-color: #689775;
 }
 
 .timeline > li .timeline-image h4 {
