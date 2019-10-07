@@ -1,32 +1,59 @@
 function onBet() {
 
-    var dealersCard1 = geefKaart();
-    var dealersCard2 = geefKaart();
+    var dealerCard1 = geefKaart();
+    var dealerCard2 = geefKaart();
 
-    var youreCard1 = geefKaart();
-    var youreCard2 = geefKaart();
+    var yourCard1 = geefKaart();
+    var yourCard2 = geefKaart();
 
-
-    document.getElementById("dealersCard1").innerHTML = dealersCard1;
-    document.getElementById("dealersCard2").innerHTML = dealersCard2;
-    document.getElementById("youreCard1").innerHTML = youreCard1;
-    document.getElementById("youreCard2").innerHTML = youreCard2;
+    console.log(dealerCard1);
+    console.log( "imagesBlackjack/" + geefKaart() + ".png");
+    document.getElementById("dealerCard1").src =  "imagesBlackjack/" + geefKaart() + ".png";
+    document.getElementById("dealerCard2").src = dealerCard2;
+    document.getElementById("yourCard1").src = yourCard1;
+    document.getElementById("yourCard2").src = yourCard2;
 
 
 }
 
 function onHit() {
 
-    if (document.getElementById("youreCard3").innerHTML == 0){
+    if (document.getElementById("yourCard3").src == 0) {
 
-        document.getElementById("youreCard3").innerHTML = geefKaart();
-    }else
+        document.getElementById("yourCard3").src = "imagesBlackjack/" + geefKaart() + ".png";
 
-        }
+    }else if (document.getElementById("yourCard4").src == 0) {
+
+        document.getElementById("yourCard4").src = geefKaart();
+
+    }else if (document.getElementById("yourCard5").src == 0){
+
+        document.getElementById("yourCard5").src = geefKaart();
+
+    }else {
+
+        document.getElementById("testing").srcs = "Gewonnen";
+    }
+
+}
 
 function geefKaart() {
-    var random = Math.abs((Math.random() - 0.48) * 100);
-    random = Math.trunc(random);
+    var random1 = Math.abs(Math.random() * 13);
+    var random2 = Math.abs(Math.random() * 100);
+    random1 = Math.trunc(random1) + 1;
+    random2 = Math.trunc(random2);
 
-    return random;
+    console.log(random1);
+    console.log(random2);
+
+    if (random2 <= 25) {
+        var naamKaart = random1 + "S";
+    } else if (random2 <=  50) {
+        var naamKaart = random1 + "C";
+    }else if (random2 <= 75) {
+        var naamKaart = random1 + "D";
+    }else {
+        var naamKaart = random1 + "H";
+    }
+    return naamKaart;
 }
