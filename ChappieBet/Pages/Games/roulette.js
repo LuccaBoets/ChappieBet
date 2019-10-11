@@ -1,3 +1,6 @@
+var bedrag = document.getElementById("beschikbareBedrag");
+var
+
 function onStart()
 {
 	
@@ -23,16 +26,36 @@ function onStart()
 function onBetNumber()
 {
 	var numbersWhereBettedOn = []
-	var number = //hier komt hoe je de waarde uit de HTML haalt
+	var isGeselecteerd = false;
 
-	if (numbersWhereBettedOn.includes(number)) 
+	for (var i = 0; i < 37; i++)
 	{
-		numbersWhereBettedOn.pop(number);
-	}else
-	{
-		numbersWhereBettedOn.push(number);
+
+		if (document.getElementById(i).checked == true)
+		{
+            if (numbersWhereBettedOn.includes(number)) //als er nog niet is gegokt op deze nummer, voeg toe in array
+            {
+                numbersWhereBettedOn.pop(number);
+            }else
+            {
+                numbersWhereBettedOn.push(number);
+            }
+
+        }
 	}
 
 
+}
 
+function onBetEvenOrUneven(){
+
+	var even = document.getElementById("even").checked;
+	var uneven = document.getElementById("uneven").checked;
+
+}
+
+function onBet(){
+
+	startWinningWheel();
+	
 }
