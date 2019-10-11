@@ -57,5 +57,5 @@ function onBetEvenOrUneven(){
 function onBet(){
 
 	startWinningWheel();
-	
+
 }
