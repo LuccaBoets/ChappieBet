@@ -59,12 +59,20 @@
 </div>
 <div class="col-sm">
         
-	<button onclick = "randomGetal()">Generate</button>
-  <p style="color: white">Hoeveel zet je in?</p><input width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000"></input>
+	<button onclick = "randomGetal()" id="myBtn">Generate</button>
+
+  <p style="color: white">Hoeveel zet je in?</p>
+  <input id="geld" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000"></input>
+
   <button style="background-color: darkred">Bet!</button>
   <p></p>
-  <input width="10px" style="background-color: darkred" placeholder="auto cash-out"></input> 
-  <button style="background-color: darkred">Lock</button> <button style="background-color: darkred">Cash-out!</button>
+
+  <input width="10px" style="background-color: darkred" placeholder="auto cash-out" id="AutoCash" type="number" name="quantity" min="1" max="100000000000" ></input> 
+
+  <button style="background-color: darkred" onclick="Lock()">Lock</button>
+
+  <button style="background-color: darkred" onclick="CashOut()" id="CashOut1">Cash-out!</button>
+  <h1 id="resultaat"></h1>
 
 
 
