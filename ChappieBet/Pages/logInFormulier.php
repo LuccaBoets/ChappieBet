@@ -227,12 +227,15 @@
                 </div>
             </div>
 
+            
+                        <form  method='post'>
+
             <div class="row kpx_row-sm-offset-3">
                 <div class="col-xs-12 col-sm-6">
                     <form class="kpx_loginForm" action="" autocomplete="off" method="POST">
                         <div class="input-group">
                             <span class="input-group-addon"><span class="fa fa-user"></span></span>
-                            <input type="text" class="form-control" name="username" placeholder="Username">
+                            <input type="text" class="form-control" name="Naam" placeholder="Username">
                         </div>
                         <hr />
 
@@ -241,19 +244,15 @@
                             <input  type="password" class="form-control" name="password" placeholder="Password">
                         </div>
                         <hr />
-                        <button class="btn btn-lg btn-outline-primary btn-block" type="submit"><i class="fa fa-sign-in"></i> Login</button>
+                        <button class="btn btn-lg btn-outline-primary btn-block" type="submit" name="Login"><i class="fa fa-sign-in"></i> Login</button>
                     </form>
                 </div>
             </div>
+                                        </form>  
+
             <div class="row kpx_row-sm-offset-3">
                 <div class="col-xs-12 col-sm-3">
-                    <p></p>
-                    <label class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" value="remember-me">
-                        <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description">Remember me!</span>
-                    </label>
-                    </p>
+                    
 
                 </div>
                 <div class="col-xs-12 col-sm-3">
@@ -263,7 +262,7 @@
                 </div>
 
                 <div class="col-lg-12">
-                    <p class="text-lg-center text-md-center text-sm-center text-xs-center">Created by <a href="http://www.koalapix.com" target="_blank">koalapix. studio</a>, for crazy developers...</p>
+                    <p class="text-lg-center text-md-center text-sm-center text-xs-center">HI</p>
                 </div>
             </div>
         </div>
@@ -280,7 +279,18 @@
     </body>
     <?php
 
+       include "connect.php";
+        if (isset($_POST['Login'])) {
+        
+            $sql = "SELECT * FROM `tblgebruikers` WHERE `username` == "+  $_POST["Naam"] +" AND `password` == "+  $_POST["password"];
+            echo($sql);
+            echo("test");
 
+            $resultaat = $mysqli->query($sql);
+            $row = $resultaat->fetch_assoc();
+
+        
+        }
 
 
     ?>

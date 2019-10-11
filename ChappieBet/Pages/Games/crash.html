@@ -59,8 +59,23 @@
 </div>
 <div class="col-sm">
         
-	<button onclick = "randomGetal()">Generate</button>
-        
+	<button onclick = "randomGetal()" id="myBtn">Generate</button>
+
+  <p style="color: white">Hoeveel zet je in?</p>
+  <input id="geld" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000"></input>
+
+  <button style="background-color: darkred">Bet!</button>
+  <p></p>
+
+  <input width="10px" style="background-color: darkred" placeholder="auto cash-out" id="AutoCash" type="number" name="quantity" min="1" max="100000000000" ></input> 
+
+  <button style="background-color: darkred" onclick="Lock()">Lock</button>
+
+  <button style="background-color: darkred" onclick="CashOut()" id="CashOut1">Cash-out!</button>
+  <h1 id="resultaat"></h1>
+
+
+
 </div>
 </div>
 </div>
@@ -68,7 +83,7 @@
     
     <!-- Chart JavaScript -->
     <script src="../../Chart/Chart.min.js"></script>
-	<script type="text/javascript" src="crash.js"></script>
+	  <script type="text/javascript" src="crash.js"></script>
     
         
     <!-- Bootstrap core JavaScript -->
@@ -83,6 +98,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="../../js/agency.min.js"></script>
+
 
     
 </body>
