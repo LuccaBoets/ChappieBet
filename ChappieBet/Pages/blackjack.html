@@ -7,31 +7,44 @@
 
     <script type="text/javascript" src="Games/blackjack.js"></script>
 </head>
-<body>
+<bodys>
+
+<style>
+
+    td{
+
+        max-width: fit-content;
+    }
+    img{
+
+        width: 50%;
+    }
+
+</style>
 
 <table border="1">
     <tr>
-        <td><img src="imagesBlackjack/1S.png" id="dealerCard1.png"></td>
-        <td id="dealersCard2">0</td>
-        <td id="dealersCard3">0</td>
-        <td id="dealersCard4">0</td>
-        <td id="dealersCard5">0</td>
+        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard0"></td>
+        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard1"></td>
+        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard2"></td>
+        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard3"></td>
+        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard4"></td>
     </tr>
     <tr>
-        <td id="yourCard1">0</td>
-        <td id="yourCard2">0</td>
-        <td id="yourCard3">0</td>
-        <td id="yourCard4">0</td>
-        <td id="yourCard5">0</td>
+        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard0"></td>
+        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard1"></td>
+        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard2"></td>
+        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard3"></td>
+        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard4"></td>
     </tr>
 </table>
 
 
-<button onclick="onBet()">BET</button>
-<button onclick="onHit()">HIT</button>
-<button onclick="onStand()">Stand</button>
+<button id="button_bet" onclick="onBet()">BET</button><br>
+<button id="button_hit" onclick="onHit()">HIT</button><br>
+<button id="button_stand" onclick="onStand()">Stand</button>
 
 <h2 id="testing"></h2>
 
-</body>
+</bodys>
 </html>

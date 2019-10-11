@@ -1,50 +1,84 @@
+
+
+    var stand = false;
+    var dealerCards = [
+
+        geefKaart(),
+        geefKaart(),
+        "Games/imagesBlackjack/default.png",
+        "Games/imagesBlackjack/default.png",
+        "Games/imagesBlackjack/default.png"
+    ]
+
+    var playercards = [
+
+        geefKaart(),
+        geefKaart(),
+        "Games/imagesBlackjack/default.png",
+        "Games/imagesBlackjack/default.png",
+        "Games/imagesBlackjack/default.png"
+    ]
+
+
+
 function onBet() {
 
-    var dealerCard1 = geefKaart();
-    var dealerCard2 = geefKaart();
-
-    var yourCard1 = geefKaart();
-    var yourCard2 = geefKaart();
-
-    console.log(dealerCard1);
-    console.log( "imagesBlackjack/" + geefKaart() + ".png");
-    document.getElementById("dealerCard1").src =  "imagesBlackjack/" + geefKaart() + ".png";
-    document.getElementById("dealerCard2").src = dealerCard2;
-    document.getElementById("yourCard1").src = yourCard1;
-    document.getElementById("yourCard2").src = yourCard2;
+    document.getElementById("button_bet").style.visibility = hidden;
+    document.getElementById("dealerCard0").src = dealerCards[0];
+    document.getElementById("dealerCard1").src = dealerCards[1];
+    document.getElementById("playerCard0").src = playercards[0];
+    document.getElementById("playerCard1").src = playercards[1];
 
 
 }
 
 function onHit() {
 
-    if (document.getElementById("yourCard3").src == 0) {
+    document.getElementById("button_bet").style.visibility = hidden;
+    if (!stand) {
 
-        document.getElementById("yourCard3").src = "imagesBlackjack/" + geefKaart() + ".png";
+        var onHit = true;
 
-    }else if (document.getElementById("yourCard4").src == 0) {
+        for (var i = 2; i < playercards.length; i++) {
 
-        document.getElementById("yourCard4").src = geefKaart();
+            if (playercards[i] == "Games/imagesBlackjack/default.png" && onHit) {
 
-    }else if (document.getElementById("yourCard5").src == 0){
+                playercards[i] = geefKaart();
+                document.getElementById("playerCard" + i).src = playercards[i];
+                onHit = false;
+                console.log(i);
+                break;
 
-        document.getElementById("yourCard5").src = geefKaart();
+            } else if (i == 3) {
 
-    }else {
+                document.getElementById("playerCard4").src = playercards[4];
+                document.getElementById("testing").innerHTML = "gewonnen"
+                document.getElementById("button_bet").style.visibility = hidden;
 
-        document.getElementById("testing").srcs = "Gewonnen";
+            }
+
+        }
     }
 
 }
+
+function onStand() {
+    document.getElementById("button_bet").style.visibility = hidden;
+    document.getElementById("button_hit").style.visibility = hidden;
+    stand = true;
+
+
+
+}
+    
+
+
 
 function geefKaart() {
     var random1 = Math.abs(Math.random() * 13);
     var random2 = Math.abs(Math.random() * 100);
     random1 = Math.trunc(random1) + 1;
     random2 = Math.trunc(random2);
-
-    console.log(random1);
-    console.log(random2);
 
     if (random2 <= 25) {
         var naamKaart = random1 + "S";
@@ -55,5 +89,5 @@ function geefKaart() {
     }else {
         var naamKaart = random1 + "H";
     }
-    return naamKaart;
+    return "Games/imagesBlackjack/" + naamKaart + ".png";
 }
