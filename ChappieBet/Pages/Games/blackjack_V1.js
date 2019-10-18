@@ -55,6 +55,8 @@ function onBet() {
         document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
         console.log("21"+dealerTotalValue);
         document.getElementById("button_bet").style.visibility = "hidden";
+        document.getElementById("button_hit").style.visibility = "hidden";
+        document.getElementById("button_stand").style.visibility = "hidden";
 
         document.getElementById("dealerCard1").src = dealerCards[1];
 
@@ -72,27 +74,12 @@ function onBet() {
         console.log("21"+playerTotalValue);
 
         document.getElementById("button_bet").style.visibility = "hidden";
+        document.getElementById("button_hit").style.visibility = "hidden";
+        document.getElementById("button_stand").style.visibility = "hidden";
 
         document.getElementById("dealerCard1").src = dealerCards[1];
 
 
-
-        //Page Reloads
-        myVar = setInterval(function (temp) {
-
-            location.reload();
-
-        }, 7000);
-
-    }
-
-    if(playerTotalValue == dealerTotalValue){
-
-        document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
-        console.log("21"+dealerTotalValue);
-        document.getElementById("button_bet").style.visibility = "hidden";
-
-        document.getElementById("dealerCard1").src = dealerCards[1];
 
         //Page Reloads
         myVar = setInterval(function (temp) {
@@ -202,9 +189,9 @@ function onHit() {
 
             }
 
-        }
-
             break;
+
+        }
     }
 
         if (i == 4) {
@@ -225,9 +212,6 @@ function onHit() {
             }, 7000);
 
         }
-
-    }
-
 
 }
 
@@ -302,7 +286,7 @@ function onStand() {
 
         }else if (dealerTotalValue >= 17){
 
-            if(playerTotalValue == dealerTotalValue){
+            if(playerTotalValue === dealerTotalValue){
 
                 document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
                 console.log("21"+dealerTotalValue);
@@ -319,9 +303,8 @@ function onStand() {
 
             }
 
-        }
-
             break;
+
         }
         console.log("voor geefkeaart");
 
@@ -329,11 +312,7 @@ function onStand() {
         document.getElementById("dealerCard" + i).src = dealerCards[i];
         dealerTotalValue += calculateValueOfCard(dealerCards[i]);
         console.log(dealerTotalValue);
-
-
-
     }
-
 
 }
 
