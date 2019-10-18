@@ -178,6 +178,8 @@ function onHit() {
             document.getElementById("playerCard4").src = playercards[4];
             document.getElementById("uikomstSpel").innerHTML = "gewonnen";
             document.getElementById("button_bet").style.visibility = "hidden";
+            document.getElementById("button_hit").style.visibility = "hidden";
+            document.getElementById("button_stand").style.visibility = "hidden";
 
             document.getElementById("dealerCard1").src = dealerCards[1];
 
@@ -264,7 +266,7 @@ function onStand() {
                 }, 7000);
             }
 
-        }else if (dealerCards <= 17){
+        }else if (dealerTotalValue >= 17){
 
             break;
         }
