@@ -286,7 +286,7 @@ function onStand() {
 
         }else if (dealerTotalValue >= 17){
 
-            if(playerTotalValue === dealerTotalValue){
+            if(playerTotalValue <= dealerTotalValue){
 
                 document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
                 console.log("21"+dealerTotalValue);
