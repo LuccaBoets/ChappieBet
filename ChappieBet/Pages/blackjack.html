@@ -9,42 +9,50 @@
 </head>
 <bodys>
 
-<style>
+    <style>
 
-    td{
+        td{
 
-        max-width: fit-content;
-    }
-    img{
+            max-width: fit-content;
+        }
+        img{
 
-        width: 50%;
-    }
+            width: 50%;
+        }
 
-</style>
+        #button_hit{
+            visibility: hidden;
+        }
 
-<table border="1">
-    <tr>
-        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard0"></td>
-        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard1"></td>
-        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard2"></td>
-        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard3"></td>
-        <td><img src="Games/imagesBlackjack/default.png" id="dealerCard4"></td>
-    </tr>
-    <tr>
-        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard0"></td>
-        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard1"></td>
-        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard2"></td>
-        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard3"></td>
-        <td><img src="Games/imagesBlackjack/default.png"  id="playerCard4"></td>
-    </tr>
-</table>
+        #button_stand{
+            visibility: hidden;
+        }
 
-<p id="test"></p>
-<button id="button_bet" onclick="onBet()">BET</button><br>
-<button id="button_hit" onclick="onHit()">HIT</button><br>
-<button id="button_stand" onclick="onStand()">Stand</button>
+    </style>
 
-<h2 id="testing"></h2>
+    <table border="1">
+        <tr>
+            <td><img src="Games/imagesBlackjack/default.png" id="dealerCard0"></td>
+            <td><img src="Games/imagesBlackjack/default.png" id="dealerCard1"></td>
+            <td><img src="Games/imagesBlackjack/default.png" id="dealerCard2"></td>
+            <td><img src="Games/imagesBlackjack/default.png" id="dealerCard3"></td>
+            <td><img src="Games/imagesBlackjack/default.png" id="dealerCard4"></td>
+        </tr>
+        <tr>
+            <td><img src="Games/imagesBlackjack/default.png"  id="playerCard0"></td>
+            <td><img src="Games/imagesBlackjack/default.png"  id="playerCard1"></td>
+            <td><img src="Games/imagesBlackjack/default.png"  id="playerCard2"></td>
+            <td><img src="Games/imagesBlackjack/default.png"  id="playerCard3"></td>
+            <td><img src="Games/imagesBlackjack/default.png"  id="playerCard4"></td>
+        </tr>
+    </table>
+
+
+    <button id="button_bet" onclick="onBet()">BET</button><br>
+    <button id="button_hit" onclick="onHit()">HIT</button><br>
+    <button id="button_stand" onclick="onStand()">Stand</button>
+
+    <h2 id="uikomstSpel"></h2>
 
 </bodys>
 </html>
