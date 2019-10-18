@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Crash</title>
+    <alert>Bent u niet ouder dan 18, verlaat de website</alert>
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="../MainCss.css" rel="stylesheet" type="text/css">
@@ -46,7 +47,7 @@
 
     
 <div class="container">
-  <div class="row">
+  <div class="row" style="margin-top: 200px">
     <div class="col-sm">
 
 	<h1 id="getal" style="text-align: center;">0</h1>
@@ -64,14 +65,14 @@
   <p style="color: white">Hoeveel zet je in?</p>
   <input id="geld" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000"></input>
 
-  <button style="background-color: darkred">Bet!</button>
+  <button style="background-color: darkred" onclick="ingezetGeld()">Bet!</button>
   <p></p>
 
   <input width="10px" style="background-color: darkred" placeholder="auto cash-out" id="AutoCash" type="number" name="quantity" min="1" max="100000000000" ></input> 
 
-  <button style="background-color: darkred" onclick="Lock()">Lock</button>
+  <button style="background-color: darkred" onclick="Lock()" id="Lock" onclick="ingezetGeld()">Lock</button>
 
-  <button style="background-color: darkred" onclick="CashOut()" id="CashOut1">Cash-out!</button>
+  <button style="background-color: darkred" onclick="CashOut()" id="CashOut1" >Cash-out!</button>
   <h1 id="resultaat"></h1>
 
 
