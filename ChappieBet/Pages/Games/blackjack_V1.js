@@ -86,6 +86,23 @@ function onBet() {
 
     }
 
+    if(playerTotalValue == dealerTotalValue){
+
+        document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
+        console.log("21"+dealerTotalValue);
+        document.getElementById("button_bet").style.visibility = "hidden";
+
+        document.getElementById("dealerCard1").src = dealerCards[1];
+
+        //Page Reloads
+        myVar = setInterval(function (temp) {
+
+            location.reload();
+
+        }, 7000);
+
+    }
+
 }
 
 function onHit() {
@@ -168,10 +185,27 @@ function onHit() {
 
                 }
 
+            }else if(playerTotalValue == dealerTotalValue){
+
+                document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
+                console.log("21"+dealerTotalValue);
+                document.getElementById("button_bet").style.visibility = "hidden";
+
+                document.getElementById("dealerCard1").src = dealerCards[1];
+
+                //Page Reloads
+                myVar = setInterval(function (temp) {
+
+                    location.reload();
+
+                }, 7000);
+
             }
 
-            break;
         }
+
+            break;
+    }
 
         if (i == 4) {
 
@@ -267,6 +301,25 @@ function onStand() {
             }
 
         }else if (dealerTotalValue >= 17){
+
+            if(playerTotalValue == dealerTotalValue){
+
+                document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
+                console.log("21"+dealerTotalValue);
+                document.getElementById("button_bet").style.visibility = "hidden";
+
+                document.getElementById("dealerCard1").src = dealerCards[1];
+
+                //Page Reloads
+                myVar = setInterval(function (temp) {
+
+                    location.reload();
+
+                }, 7000);
+
+            }
+
+        }
 
             break;
         }
