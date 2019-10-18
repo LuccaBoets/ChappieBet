@@ -1,19 +1,4 @@
 var ctx = document.getElementById('myChart');
-var bet;
-var geld = 0;
-var totaa = 50;
-var totaal = parseFloat(totaa);
-function geldIngezet(){
-  
-    geld = document.getElementById("geld").value;
-    document.getElementById("bet").disabled = true;
-    document.getElementById("geld").disabled = true;
-    totaal = totaal - geld;
-     
-
-    console.log(geld);
-
-}
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -49,16 +34,20 @@ myChart.canvas.parentNode.style.width = '100%';
 var aftellen = 0.0;
 var gewonnen;
 var random;
+var geld;
 Boolean(gewonnen); 
  var cashoutStop;
- var aantalGeld;
+
 
 
 function randomGetal(){
-
     document.getElementById("myBtn").disabled = true;
-  
-    console.log(totaal);
+   
+     document.getElementById("Lock").disabled = false;
+    document.getElementById("CashOut1").disabled = false;
+        document.getElementById("AutoCash").disabled = false;
+   
+
 
 	
 	random = parseFloat( Math.random() * 50);
@@ -73,7 +62,7 @@ function randomGetal(){
 	}
 
 	console.log(random);
-    console.log(cashoutStop);
+
 
 	var x = setInterval(function() {
 		aftellen = Math.round((aftellen + 0.01) * 100) / 100;
@@ -81,6 +70,7 @@ function randomGetal(){
         
     document.getElementById('resultaat').innerHTML = ("");
 		if (aftellen.toString().length - (Math.round(aftellen)).toString().length == 3) {
+           
             
 			document.getElementById("getal").innerHTML = aftellen;
             
@@ -96,30 +86,13 @@ function randomGetal(){
 		if (aftellen == random) {  
 
 
-        if (cashoutStop <= aftellen && cashoutStop != 0) {
-            document.getElementById('resultaat').innerHTML = ("Gewonnen");
+        if (cashoutStop <= aftellen && cashoutStop != 0) { 
             geld = geld * cashoutStop;
-            totaal = totaal + geld;
+            document.getElementById('resultaat').innerHTML = ("Gewonnen") + geld;
             cashoutStop = 0;
-            geld = 0;
-            document.getElementById("lock").disabled = false;
-            document.getElementById("AutoCash").disabled = false;
-            document.getElementById("bet").disabled = false;
-            document.getElementById("geld").disabled = false;
-             document.getElementById("CashOut1").disabled = false;
-             console.log(totaal);
             
         }else{
-            geld = 0;
-            cashoutStop = 0;
             document.getElementById('resultaat').innerHTML = ("Verloren");
-            document.getElementById("lock").disabled = false;
-            document.getElementById("AutoCash").disabled = false;
-            document.getElementById("bet").disabled = false;
-            document.getElementById("geld").disabled = false;
-             document.getElementById("CashOut1").disabled = false;
-             console.log(totaal);
-
            
         }
             aftellen = 0.0;
@@ -137,19 +110,23 @@ function randomGetal(){
 }
 function CashOut(){
     var cashout2 = document.getElementById('CashOut1');
-         cashoutStop = aftellen;
+   
+        cashoutStop = aftellen;
         console.log(cashoutStop);
         document.getElementById("CashOut1").disabled = true;
+        geld = document.getElementById("geld").value;
     
    
 
 }
-function Lock(){
 
-    cashoutStop = document.getElementById("AutoCash").value;
-    document.getElementById("lock").disabled = true;
-    document.getElementById("AutoCash").disabled = true;  
+function Lock(){
+    document.getElementById("AutoCash").disabled = true;
     document.getElementById("CashOut1").disabled = true;
-    console.log(cashoutStop);
+    document.getElementById("CashOut1").disabled = true;
 }
 
+function ingezetGeld(){
+
+
+}

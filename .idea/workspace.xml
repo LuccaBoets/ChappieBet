@@ -8,64 +8,41 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/testing.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="544">
-                    <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1647398922">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="2" />
-          <entry key="jpg" value="2" />
-          <entry key="js" value="9" />
+          <entry key="js" value="5" />
           <entry key="php" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="Image" value="2" />
-          <entry key="JavaScript" value="9" />
+          <entry key="JavaScript" value="5" />
           <entry key="PHP" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="442" />
-          <entry key="js" value="5277" />
+          <entry key="html" value="393" />
+          <entry key="js" value="3640" />
           <entry key="php" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="442" />
-          <entry key="JavaScript" value="5277" />
+          <entry key="HTML" value="393" />
+          <entry key="JavaScript" value="3640" />
           <entry key="PHP" value="53" />
         </counts>
       </usages-collector>
@@ -76,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/blackjack.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+            <state relative-caret-position="119">
+              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -85,24 +62,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="198" column="64" selection-start-line="198" selection-start-column="64" selection-end-line="198" selection-end-column="64" />
+            <state relative-caret-position="579">
+              <caret line="94" column="64" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="64" />
               <folding>
-                <element signature="e#255#439#0" />
-                <element signature="n#!!block;n#onBet#0" />
-                <element signature="n#!!block;n#onHit#0" />
+                <element signature="e#47#231#0" />
+                <element signature="e#1776#1816#0" />
+                <element signature="e#1896#1994#0" />
+                <element signature="e#1756#2008#0" />
                 <element signature="n#!!block;n#geefKaart#0" />
-                <element signature="n#!!block;n#calculateValueOfCard#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/crash.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="87" column="12" lean-forward="true" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -132,22 +100,10 @@
       <find>hidden</find>
       <find>calculatevalueOfCards</find>
       <find>console</find>
-      <find>isthereanAces</find>
-      <find>isThereAnAce</find>
-      <find>testing</find>
-      <find>contains</find>
-      <find>3000</find>
-      <find>dealercard1</find>
-      <find>5000</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;hidden&quot;</replace>
       <replace>calculatevalueOfCard</replace>
-      <replace>ist</replace>
-      <replace>uitkomstSpel</replace>
-      <replace>includes</replace>
-      <replace>5000</replace>
-      <replace>7000</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -159,7 +115,6 @@
         <option value="$PROJECT_DIR$/ChappieBet/Pages/blackjack.php" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack.js" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V2.js" />
-        <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/testing.js" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/blackjack.html" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js" />
       </list>
@@ -246,19 +201,17 @@
       <workItem from="1570453945344" duration="4141000" />
       <workItem from="1570707909780" duration="6446000" />
       <workItem from="1570794192813" duration="7574000" />
-      <workItem from="1571057142397" duration="5074000" />
-      <workItem from="1571399128201" duration="4731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29489000" />
+    <option name="totallyTimeSpent" value="19684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25820568" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24726477" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -308,50 +261,39 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/blackjack.php" />
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V2.js" />
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/backgroundRouletteBlur.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/backgroundRoulette.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/connect.php">
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/crash.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/testing.js">
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/crash.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="87" column="12" lean-forward="true" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/connect.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/blackjack.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+        <state relative-caret-position="119">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="198" column="64" selection-start-line="198" selection-start-column="64" selection-end-line="198" selection-end-column="64" />
+        <state relative-caret-position="579">
+          <caret line="94" column="64" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="64" />
           <folding>
-            <element signature="e#255#439#0" />
-            <element signature="n#!!block;n#onBet#0" />
-            <element signature="n#!!block;n#onHit#0" />
+            <element signature="e#47#231#0" />
+            <element signature="e#1776#1816#0" />
+            <element signature="e#1896#1994#0" />
+            <element signature="e#1756#2008#0" />
             <element signature="n#!!block;n#geefKaart#0" />
-            <element signature="n#!!block;n#calculateValueOfCard#0" />
           </folding>
         </state>
       </provider>
