@@ -1,4 +1,10 @@
 
+    var aces1 = "Games/imagesBlackjack/1C.png";
+    var aces2 = "Games/imagesBlackjack/1D.png";
+    var aces3 = "Games/imagesBlackjack/1H.png";
+    var aces4 = "Games/imagesBlackjack/1S.png";
+
+    var gewachtWanneerSpelVoorbijIs = false;
 
     var stand = false;
     var dealerCards = [
@@ -8,7 +14,7 @@
         "Games/imagesBlackjack/default.png",
         "Games/imagesBlackjack/default.png",
         "Games/imagesBlackjack/default.png"
-    ]
+    ];
 
     var playercards = [
 
@@ -17,7 +23,7 @@
         "Games/imagesBlackjack/default.png",
         "Games/imagesBlackjack/default.png",
         "Games/imagesBlackjack/default.png"
-    ]
+    ];
 
     var playerTotalValue = 0;
     var dealerTotalValue = 0;
@@ -39,12 +45,21 @@ function onBet() {
     dealerTotalValue += calculateValueOfCard(dealerCards[0]);
     dealerTotalValue += calculateValueOfCard(dealerCards[1]);
 
-
     if (playerTotalValue == 21){
 
         document.getElementById("uikomstSpel").innerHTML = "gewonnen";
         console.log("21"+playerTotalValue);
         document.getElementById("button_bet").style.visibility = "hidden";
+
+
+        //Page Reloads
+        myVar = setInterval(function (temp) {
+
+            location.reload();
+
+        }, 5000);
+
+
 
     }
 
@@ -53,6 +68,15 @@ function onBet() {
         document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
         console.log("21"+dealerTotalValue);
         document.getElementById("button_bet").style.visibility = "hidden";
+
+
+        //Page Reloads
+        myVar = setInterval(function (temp) {
+
+            location.reload();
+
+        }, 5000);
+
     }
 
 }
@@ -77,11 +101,40 @@ function onHit() {
                 document.getElementById("uikomstSpel").innerHTML = "gewonnen";
                 console.log("21"+playerTotalValue);
                 document.getElementById("button_bet").style.visibility = "hidden";
+
+                onStand();
+
+
+                //Page Reloads
+                myVar = setInterval(function (temp) {
+
+                    location.reload();
+
+                }, 5000);
+
                 break;
 
             }else if(playerTotalValue > 21){
 
-                if( // Maak nog een variabele voor de asen voor aparte speler en dealer) {
+                if (playercards.includes(aces1)) {
+
+                    playerTotalValue = playerTotalValue - 10;
+                    console.log("isAce"+playerTotalValue);
+                    break;
+
+                }else if (playercards.includes(aces2)){
+
+                    playerTotalValue = playerTotalValue - 10;
+                    console.log("isAce"+playerTotalValue);
+                    break;
+
+                }else if (playercards.includes(aces3)) {
+
+                    playerTotalValue = playerTotalValue - 10;
+                    console.log("isAce"+playerTotalValue);
+                    break;
+
+                }else if (playercards.includes(aces4)) {
 
                     playerTotalValue = playerTotalValue - 10;
                     console.log("isAce"+playerTotalValue);
@@ -92,6 +145,15 @@ function onHit() {
                     document.getElementById("uikomstSpel").innerHTML = "That's a bust";
                     console.log("Bust"+playerTotalValue);
                     document.getElementById("button_bet").style.visibility = "hidden";
+
+
+                    //Page Reloads
+                    myVar = setInterval(function (temp) {
+
+                        location.reload();
+
+                    }, 5000);
+
                     break;
 
                 }
@@ -101,11 +163,18 @@ function onHit() {
             break;
         }
 
-        if (i == 3) {
+        if (i == 4) {
 
             document.getElementById("playerCard4").src = playercards[4];
             document.getElementById("uikomstSpel").innerHTML = "gewonnen";
             document.getElementById("button_bet").style.visibility = "hidden";
+
+            //Page Reloads
+            myVar = setInterval(function (temp) {
+
+                location.reload();
+
+            }, 5000);
 
         }
 
@@ -127,15 +196,58 @@ function onStand() {
         if (dealerTotalValue == 21){
 
             document.getElementById("uikomstSpel").innerHTML = "Dealer wint";
+
+            //Page Reloads
+            myVar = setInterval(function (temp) {
+
+                location.reload();
+
+            }, 5000);
             break;
 
         }else if (dealerTotalValue > 21){
 
-            document.getElementById("uikomstSpel").innerHTML = "Speler wint";
+
+
+            if (dealerCards.includes(aces1)) {
+
+                dealerTotalValue = dealerTotalValue - 10;
+                console.log("isAce"+dealerTotalValue);
+                break;
+
+            }else if (dealerCards.includes(aces2)){
+
+                dealerTotalValue = dealerTotalValue - 10;
+                console.log("isAce"+dealerTotalValue);
+                break;
+
+            }else if (dealerCards.includes(aces3)) {
+
+                dealerTotalValue = dealerTotalValue - 10;
+                console.log("isAce"+dealerTotalValue);
+                break;
+
+            }else if (dealerCards.includes(aces4)) {
+
+                dealerTotalValue = dealerTotalValue - 10;
+                console.log("isAce"+dealerTotalValue);
+                break;
+
+            }else {
+
+                document.getElementById("uikomstSpel").innerHTML = "Speler wint";
+
+                //Page Reloads
+                myVar = setInterval(function (temp) {
+
+                    location.reload();
+
+                }, 5000);
+            }
+
+
             break;
         }else if (dealerCards <= 17){
-
-
 
             break;
         }
