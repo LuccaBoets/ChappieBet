@@ -1,8 +1,7 @@
-<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registration system PHP and MySQL</title>
+  <title>Registration</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -11,14 +10,13 @@
   </div>
 
   <form method="post" action="register.php">
-  <?php include('errors.php'); ?>
   <div class="input-group">
     <label>Username</label>
-    <input type="text" name="username" value="<?php echo $username; ?>">
+    <input type="text" name="username" value="">
   </div>
   <div class="input-group">
     <label>Email</label>
-    <input type="email" name="email" value="<?php echo $email; ?>">
+    <input type="email" name="email" value="">
   </div>
   <div class="input-group">
     <label>Password</label>
@@ -29,11 +27,33 @@
     <input type="password" name="password_2">
   </div>
   <div class="input-group">
-    <button type="submit" class="btn" name="reg_user">Register</button>
+    <button type="submit" name="submit">Register</button>
   </div>
   <p>
-  Already a member? <a href="login.php">Sign in</a>
+  Already a member? <a href="logInFormulier.php">Sign in</a>
   </p>
   </form>
+    
+    <?php
+    
+           include "connect.php";
+        if (isset($_POST['submit'])) {
+        
+            $sql = "INSERT INTO `tblgebruikers`(`username`, `password`, `mail`, `totaalGeld`, `online`, `profImage`, `coins`, `winstreak`, `lastDate`, `daysOnline`) VALUES (".$_POST["Naam"].",".md5($_POST["Password"])."
+            ,".$_POST["Mail"].","..","[value-7]","[value-8]","[value-9]","[value-10]","[value-11])";
+            echo($sql);
+
+            $resultaat = $mysqli->query($sql);
+            
+            
+
+            //$row = $resultaat->fetch_assoc();
+
+        
+        }
+
+    
+    ?>
+    
 </body>
 </html>
