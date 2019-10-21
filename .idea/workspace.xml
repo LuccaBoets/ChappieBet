@@ -15,11 +15,7 @@
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/testingblyat.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="238">
-                    <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-                  </state>
-                </provider>
+                <provider selected="true" editor-type-id="text-editor" />
               </entry>
             </file>
           </leaf>
@@ -55,14 +51,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="393" />
-          <entry key="js" value="4012" />
+          <entry key="js" value="4040" />
           <entry key="php" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="393" />
-          <entry key="JavaScript" value="4012" />
+          <entry key="JavaScript" value="4040" />
           <entry key="PHP" value="53" />
         </counts>
       </usages-collector>
@@ -82,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="335" column="26" selection-start-line="335" selection-start-column="26" selection-end-line="335" selection-end-column="26" />
+            <state relative-caret-position="338">
+              <caret line="242" column="37" lean-forward="true" selection-start-line="242" selection-start-column="37" selection-end-line="242" selection-end-column="37" />
               <folding>
                 <element signature="n#!!block;n#onBet#0" />
                 <element signature="n#!!block;n#geefKaart#0" />
@@ -142,8 +138,8 @@
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack.js" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V2.js" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/blackjack.html" />
-        <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/testingblyat.js" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js" />
+        <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/testingblyat.js" />
       </list>
     </option>
   </component>
@@ -228,12 +224,12 @@
       <workItem from="1570453945344" duration="4141000" />
       <workItem from="1570707909780" duration="6446000" />
       <workItem from="1570794192813" duration="7574000" />
-      <workItem from="1571659218985" duration="1598000" />
+      <workItem from="1571659218985" duration="2564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23568000" />
+    <option name="totallyTimeSpent" value="24534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1206" height="1047" extended-state="0" />
@@ -311,16 +307,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/testingblyat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="335" column="26" selection-start-line="335" selection-start-column="26" selection-end-line="335" selection-end-column="26" />
+        <state relative-caret-position="338">
+          <caret line="242" column="37" lean-forward="true" selection-start-line="242" selection-start-column="37" selection-end-line="242" selection-end-column="37" />
           <folding>
             <element signature="n#!!block;n#onBet#0" />
             <element signature="n#!!block;n#geefKaart#0" />

@@ -353,30 +353,45 @@ function onStand() {
 
         }else if (dealerCards[4] != "Games/imagesBlackjack/default.png"){
 
+            if (dealerTotalValue <= 17){
 
-            document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
-            console.log("21" + dealerTotalValue);
-            document.getElementById("button_bet").style.visibility = "hidden";
-            document.getElementById("button_hit").style.visibility = "hidden";
-            document.getElementById("button_stand").style.visibility = "hidden";
+                console.log("voor geefkeaart");
 
-            document.getElementById("dealerCard1").src = dealerCards[1];
+                dealerCards[i] = geefKaart();
+                document.getElementById("dealerCard" + i).src = dealerCards[i];
+                dealerTotalValue += calculateValueOfCard(dealerCards[i]);
+                console.log(dealerTotalValue);
+            }else {
 
-            //Page Reloads
-            myVar = setInterval(function (temp) {
 
-                location.reload();
+                document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
+                console.log("21" + dealerTotalValue);
+                document.getElementById("button_bet").style.visibility = "hidden";
+                document.getElementById("button_hit").style.visibility = "hidden";
+                document.getElementById("button_stand").style.visibility = "hidden";
 
-            }, 7000);
+                document.getElementById("dealerCard1").src = dealerCards[1];
+
+                //Page Reloads
+                myVar = setInterval(function (temp) {
+
+                    location.reload();
+
+                }, 7000);
+
+            }
 
         }
 
-        console.log("voor geefkeaart");
+        if (dealerTotalValue <= 17){
 
-        dealerCards[i] = geefKaart();
-        document.getElementById("dealerCard" + i).src = dealerCards[i];
-        dealerTotalValue += calculateValueOfCard(dealerCards[i]);
-        console.log(dealerTotalValue);
+            console.log("voor geefkeaart");
+
+            dealerCards[i] = geefKaart();
+            document.getElementById("dealerCard" + i).src = dealerCards[i];
+            dealerTotalValue += calculateValueOfCard(dealerCards[i]);
+            console.log(dealerTotalValue);
+        }
 
     }
 
