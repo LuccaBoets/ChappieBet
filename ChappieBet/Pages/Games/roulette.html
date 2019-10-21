@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crash</title> 
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../MainCss.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="roulette.js"></script>
+</head>
+<body>
+    
+      <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">ChappieBet</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+
+<div class="col-sm">
+        
+	<button onclick = "Bet()" id="myBtn">Zet in</button>
+
+  <input id="inzet" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000"></input>
+  <p id="beschikbareBedrag">500</p>
+
+  <br>
+  <table  border="1">
+    <thead>Roulette</thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td onclick="onBetNumber(3)">3</td>
+        <td onclick="onBetNumber(6)">6</td>
+        <td onclick="onBetNumber(9)">9</td>
+        <td onclick="onBetNumber(12)">12</td>
+        <td onclick="onBetNumber(15)">15</td>
+        <td onclick="onBetNumber(18)">18</td>
+        <td onclick="onBetNumber(21)">21</td>
+        <td onclick="onBetNumber(24)">24</td>
+        <td onclick="onBetNumber(27)">27</td>
+        <td onclick="onBetNumber(30)">30</td>
+        <td onclick="onBetNumber(33)">33</td>
+        <td onclick="onBetNumber(36)">36</td>
+      </tr>
+      <tr>
+        <td onclick="onBetNumber(0)">0</td>
+        <td onclick="onBetNumber(2)">2</td>
+        <td onclick="onBetNumber(5)">5</td>
+        <td onclick="onBetNumber(8)">8</td>
+        <td onclick="onBetNumber(11)">11</td>
+        <td onclick="onBetNumber(14)">14</td>
+        <td onclick="onBetNumber(17)">17</td>
+        <td onclick="onBetNumber(20)">20</td>
+        <td onclick="onBetNumber(23)">23</td>
+        <td onclick="onBetNumber(26)">26</td>
+        <td onclick="onBetNumber(29)">29</td>
+        <td onclick="onBetNumber(32)">32</td>
+        <td onclick="onBetNumber(35)">35</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td onclick="onBetNumber(1)">1</td>
+        <td onclick="onBetNumber(4)">4</td>
+        <td onclick="onBetNumber(7)">7</td>
+        <td onclick="onBetNumber(10)">10</td>
+        <td onclick="onBetNumber(13)">13</td>
+        <td onclick="onBetNumber(16)">16</td>
+        <td onclick="onBetNumber(19)">19</td>
+        <td onclick="onBetNumber(22)">22</td>
+        <td onclick="onBetNumber(25)">25</td>
+        <td onclick="onBetNumber(28)">28</td>
+        <td onclick="onBetNumber(31)">31</td>
+        <td onclick="onBetNumber(34)">34</td>
+      </tr>
+    </tbody>
+    <br>
+  </table>
+  <table border="1">
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td onclick="onBetExtra(112)">1st 12</td>
+        <td onclick="onBetExtra(212)">2nd 12</td>
+        <td onclick="onBetExtra(312)">3rd 12</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td onclick="onBetExtra(118)">1 to 18</td>
+        <td onclick="onBetExtra(1936)">19 to 36</td>      
+      </tr>
+      <tr>
+        <td onclick="onBetExtra(88)">Even</td>
+        <td onclick="onBetExtra(1)">Red</td>
+        <td onclick="onBetExtra(2)">Black</td>
+        <td onclick="onBetExtra(89)">Odd</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+</div>
+
+  <br>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="36" value="0" class="slider" id="rouletteSlider">
+</div>
+  <p id="gewordenGetal"></p>
+  <button onclick="onBet()">Bet</button>
+    
+
+    
+</body>
+</html>
