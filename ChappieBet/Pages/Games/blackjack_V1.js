@@ -622,7 +622,7 @@ function checkPlayer() {
 function checkDealer() {
 
     console.log(dealerTotalValue  + " en " + playerTotalValue);
-    
+
     if (dealerTotalValue > 21){
         if (aceDealer){
             dealerTotalValue -= 10;
