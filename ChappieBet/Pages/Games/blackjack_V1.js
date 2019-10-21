@@ -6,6 +6,11 @@ var aces2 = "Games/imagesBlackjack/1D.png";
 var aces3 = "Games/imagesBlackjack/1H.png";
 var aces4 = "Games/imagesBlackjack/1S.png";
 
+var Daces1 = "Games/imagesBlackjack/1C.png";
+var Daces2 = "Games/imagesBlackjack/1D.png";
+var Daces3 = "Games/imagesBlackjack/1H.png";
+var Daces4 = "Games/imagesBlackjack/1S.png";
+
 var gewachtWanneerSpelVoorbijIs = false;
 
 var stand = false;
@@ -302,28 +307,33 @@ function onStand() {
 
 
 
-                if (dealerCards.includes(aces1)) {
+                if (dealerCards.includes(Daces1)) {
 
                     dealerTotalValue = dealerTotalValue - 10;
                     console.log("isAce"+dealerTotalValue);
+                    Daces1 = "";
+                    break;
 
 
-                }else if (dealerCards.includes(aces2)){
-
-                    dealerTotalValue = dealerTotalValue - 10;
-                    console.log("isAce"+dealerTotalValue);
-
-
-                }else if (dealerCards.includes(aces3)) {
+                }else if (dealerCards.includes(Daces2)){
 
                     dealerTotalValue = dealerTotalValue - 10;
                     console.log("isAce"+dealerTotalValue);
+                    Daces2="";
+                    break;
 
+                }else if (dealerCards.includes(Daces3)) {
 
-                }else if (dealerCards.includes(aces4)) {
+                    dealerTotalValue = dealerTotalValue - 10;
+                    console.log("isAce"+dealerTotalValue);
+                    Daces3 = "";
+
+                }else if (dealerCards.includes(Daces4)) {
 
                     dealerTotalValue = dealerTotalValue - 10;
                     console.log("isAce" + dealerTotalValue);
+                    Daces4 = "";
+                    break;
                 }
 
                 document.getElementById("uikomstSpel").innerHTML = "Speler wint";
