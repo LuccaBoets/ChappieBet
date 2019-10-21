@@ -115,8 +115,6 @@ function onHit() {
                 document.getElementById("button_hit").style.visibility = "hidden";
                 document.getElementById("button_stand").style.visibility = "hidden";
 
-                onStand();
-
                 document.getElementById("dealerCard1").src = dealerCards[1];
 
 
@@ -135,24 +133,28 @@ function onHit() {
 
                     playerTotalValue = playerTotalValue - 10;
                     console.log("isAce"+playerTotalValue);
+                    aces1 = "";
                     break;
 
                 }else if (playercards.includes(aces2)){
 
                     playerTotalValue = playerTotalValue - 10;
                     console.log("isAce"+playerTotalValue);
+                    aces2 = "";
                     break;
 
                 }else if (playercards.includes(aces3)) {
 
                     playerTotalValue = playerTotalValue - 10;
                     console.log("isAce"+playerTotalValue);
+                    aces3 = "";
                     break;
 
                 }else if (playercards.includes(aces4)) {
 
                     playerTotalValue = playerTotalValue - 10;
                     console.log("isAce"+playerTotalValue);
+                    aces4 = "";
                     break;
 
                 }else {
@@ -244,7 +246,22 @@ function onStand() {
                 location.reload();
 
             }, 7000);
-        } else if (dealerTotalValue >= 17) {
+
+        }else if (dealerTotalValue > 21){
+
+            document.getElementById("uikomstSpel").innerHTML = "Speler wint";
+
+            document.getElementById("dealerCard1").src = dealerCards[1];
+
+            //Page Reloads
+            myVar = setInterval(function (temp) {
+
+                location.reload();
+
+            }, 7000);
+
+
+        } else if (dealerTotalValue >= 17  && dealerCards[4] == "Games/imagesBlackjack/default.png") {
 
             if (playerTotalValue <= dealerTotalValue) {
 
@@ -270,8 +287,6 @@ function onStand() {
                 document.getElementById("button_bet").style.visibility = "hidden";
                 document.getElementById("button_hit").style.visibility = "hidden";
                 document.getElementById("button_stand").style.visibility = "hidden";
-
-                onStand();
 
                 document.getElementById("dealerCard1").src = dealerCards[1];
 
@@ -308,28 +323,43 @@ function onStand() {
                 }else if (dealerCards.includes(aces4)) {
 
                     dealerTotalValue = dealerTotalValue - 10;
-                    console.log("isAce"+dealerTotalValue);
-
-
-                }else {
-
-                    document.getElementById("uikomstSpel").innerHTML = "Speler wint";
-
-                    document.getElementById("dealerCard1").src = dealerCards[1];
-
-                    //Page Reloads
-                    myVar = setInterval(function (temp) {
-
-                        location.reload();
-
-                    }, 7000);
+                    console.log("isAce" + dealerTotalValue);
                 }
+
+                document.getElementById("uikomstSpel").innerHTML = "Speler wint";
+
+                document.getElementById("dealerCard1").src = dealerCards[1];
+
+                //Page Reloads
+                myVar = setInterval(function (temp) {
+
+                    location.reload();
+
+                }, 7000);
 
             }
 
             break;
 
-        }//forlus
+        }else if (dealerCards[4] != "Games/imagesBlackjack/default.png"){
+
+
+            document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
+            console.log("21" + dealerTotalValue);
+            document.getElementById("button_bet").style.visibility = "hidden";
+            document.getElementById("button_hit").style.visibility = "hidden";
+            document.getElementById("button_stand").style.visibility = "hidden";
+
+            document.getElementById("dealerCard1").src = dealerCards[1];
+
+            //Page Reloads
+            myVar = setInterval(function (temp) {
+
+                location.reload();
+
+            }, 7000);
+
+        }
 
         console.log("voor geefkeaart");
 
