@@ -621,29 +621,30 @@ function checkPlayer() {
 
 function checkDealer() {
 
-    console.log(dealerTotalValue  + " en " + playerTotalValue);
+    console.log(dealerTotalValue);
+
 
     if (dealerTotalValue > 21){
         if (aceDealer){
             dealerTotalValue -= 10;
             aceDealer = false;
-        } else {
-
-            document.getElementById("uikomstSpel").innerHTML = "gewonnen";
-            document.getElementById("button_bet").style.visibility = "hidden";
-            document.getElementById("button_hit").style.visibility = "hidden";
-            document.getElementById("button_stand").style.visibility = "hidden";
-
-            //document.getElementById("dealerCard1").src = dealerCards[1];
-
-            //Page Reloads
-            myVar = setInterval(function (temp) {
-
-                location.reload();
-
-            }, 7000);
-
         }
+
+    }else {
+
+        document.getElementById("uikomstSpel").innerHTML = "gewonnen";
+        document.getElementById("button_bet").style.visibility = "hidden";
+        document.getElementById("button_hit").style.visibility = "hidden";
+        document.getElementById("button_stand").style.visibility = "hidden";
+
+        //document.getElementById("dealerCard1").src = dealerCards[1];
+
+        //Page Reloads
+        myVar = setInterval(function (temp) {
+
+            location.reload();
+
+        }, 7000);
     }
 
 

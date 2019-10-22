@@ -8,25 +8,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/testingblyat.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="331">
-                    <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1647398922">
       <usages-collector id="statistics.lifecycle.project">
@@ -35,8 +16,9 @@
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -58,14 +40,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="393" />
-          <entry key="js" value="5156" />
+          <entry key="js" value="5183" />
           <entry key="php" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="393" />
-          <entry key="JavaScript" value="5156" />
+          <entry key="JavaScript" value="5183" />
           <entry key="PHP" value="53" />
         </counts>
       </usages-collector>
@@ -76,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/blackjack.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="629">
               <caret line="37" column="76" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="76" />
             </state>
           </provider>
@@ -85,19 +67,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="624" selection-start-line="624" selection-end-line="624" />
+            <state relative-caret-position="432">
+              <caret line="631" lean-forward="true" selection-start-line="631" selection-end-line="631" />
               <folding>
                 <element signature="e#1064#4674#0" />
-                <element signature="e#2195#3531#0" />
-                <element signature="e#1437#1983#0" />
-                <element signature="e#2200#3249#0" />
-                <element signature="e#5216#8757#0" />
-                <element signature="e#8428#12450#0" />
-                <element signature="e#7355#7627#0" />
-                <element signature="e#7718#8130#0" />
-                <element signature="e#8470#9519#0" />
+                <element signature="n#!!block;n#geefKaart#0" />
                 <element signature="n#!!block;n#calculateValueOfCard#0" />
+                <element signature="n#!!block;n#checkPlayer#0" />
               </folding>
             </state>
           </provider>
@@ -166,7 +142,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -242,16 +218,18 @@
       <workItem from="1570707909780" duration="6446000" />
       <workItem from="1570794192813" duration="7574000" />
       <workItem from="1571659218985" duration="8446000" />
+      <workItem from="1571727947831" duration="570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30416000" />
+    <option name="totallyTimeSpent" value="30986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14392324" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14552239" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -304,7 +282,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/ChappieBet/Pages/Games/testingblyat.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -313,6 +290,20 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/blackjack.php" />
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V2.js" />
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="4752" column="4" selection-start-line="4752" selection-start-column="4" selection-end-line="4752" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/blackjack.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="76" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/crash.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
@@ -326,42 +317,22 @@
     <entry file="file://$PROJECT_DIR$/ChappieBet/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="4752" column="4" selection-start-line="4752" selection-start-column="4" selection-end-line="4752" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/testingblyat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
-          <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/blackjack.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="37" column="76" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="76" />
+          <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="624" selection-start-line="624" selection-end-line="624" />
+        <state relative-caret-position="432">
+          <caret line="631" lean-forward="true" selection-start-line="631" selection-end-line="631" />
           <folding>
             <element signature="e#1064#4674#0" />
-            <element signature="e#2195#3531#0" />
-            <element signature="e#1437#1983#0" />
-            <element signature="e#2200#3249#0" />
-            <element signature="e#5216#8757#0" />
-            <element signature="e#8428#12450#0" />
-            <element signature="e#7355#7627#0" />
-            <element signature="e#7718#8130#0" />
-            <element signature="e#8470#9519#0" />
+            <element signature="n#!!block;n#geefKaart#0" />
             <element signature="n#!!block;n#calculateValueOfCard#0" />
+            <element signature="n#!!block;n#checkPlayer#0" />
           </folding>
         </state>
       </provider>
