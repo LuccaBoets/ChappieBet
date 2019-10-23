@@ -282,12 +282,14 @@
        include "connect.php";
         if (isset($_POST['Login'])) {
         
-            $sql = "SELECT * FROM `tblgebruikers` WHERE `username` == "+  $_POST["Naam"] +" AND `password` == "+  $_POST["password"];
+            $sql = "SELECT * FROM `tblgebruikers` WHERE `username` == ". $_POST["Naam"] . " AND `password` == " . md5($_POST["password"]);
             echo($sql);
-            echo("test");
 
             $resultaat = $mysqli->query($sql);
-            $row = $resultaat->fetch_assoc();
+            
+            
+
+            //$row = $resultaat->fetch_assoc();
 
         
         }
