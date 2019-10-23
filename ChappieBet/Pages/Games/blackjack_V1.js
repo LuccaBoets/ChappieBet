@@ -1,10 +1,11 @@
+console.log("js");
 
 var ingezeteMunten;
 
-var aces1 = "Games/imagesBlackjack/1C.png";
-var aces2 = "Games/imagesBlackjack/1D.png";
-var aces3 = "Games/imagesBlackjack/1H.png";
-var aces4 = "Games/imagesBlackjack/1S.png";
+var aces1 = "imagesBlackjack/1C.png";
+var aces2 = "imagesBlackjack/1D.png";
+var aces3 = "imagesBlackjack/1H.png";
+var aces4 = "imagesBlackjack/1S.png";
 
 var gewachtWanneerSpelVoorbijIs = false;
 
@@ -13,18 +14,18 @@ var dealerCards = [
 
     geefKaart(),
     geefKaart(),
-    "Games/imagesBlackjack/default.png",
-    "Games/imagesBlackjack/default.png",
-    "Games/imagesBlackjack/default.png"
+    "imagesBlackjack/default.png",
+    "imagesBlackjack/default.png",
+    "imagesBlackjack/default.png"
 ];
 
 var playercards = [
 
     geefKaart(),
     geefKaart(),
-    "Games/imagesBlackjack/default.png",
-    "Games/imagesBlackjack/default.png",
-    "Games/imagesBlackjack/default.png"
+    "imagesBlackjack/default.png",
+    "imagesBlackjack/default.png",
+    "imagesBlackjack/default.png"
 ];
 
 var playerTotalValue = 0;
@@ -99,7 +100,7 @@ function onHit() {
 
     for (var i = 2; i < playercards.length; i++) {
 
-        if (playercards[i] == "Games/imagesBlackjack/default.png" && onHit) {
+        if (playercards[i] == "imagesBlackjack/default.png" && onHit) {
 
             playercards[i] = geefKaart();
             document.getElementById("playerCard" + i).src = playercards[i];
@@ -358,7 +359,7 @@ function geefKaart() {
     }else {
         var naamKaart = random1 + "H";
     }
-    return "Games/imagesBlackjack/" + naamKaart + ".png";
+    return "imagesBlackjack/" + naamKaart + ".png";
 }
 
 function calculateValueOfCard(card) {

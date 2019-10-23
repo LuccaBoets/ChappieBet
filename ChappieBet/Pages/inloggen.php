@@ -14,14 +14,14 @@ if (isset($_POST["knop"])){//controleer of de knop is ingedrukt
     if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
 
         $_SESSION["gebruiker"] = $_POST['naam'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
-        header("Location:home.php");//ga direct naar home.php
+        header("Location:index.php");//ga direct naar home.php
 
 
     }
     else {
 
         session_destroy();//anders destroy eventuele lopende sessies
-        header("Location:index.php");//ga direcet terug naar index.php
+        header("Location:inloggen.php");//ga direcet terug naar index.php
 
     }
 
@@ -58,6 +58,6 @@ if (isset($_POST["knop"])){//controleer of de knop is ingedrukt
 
 		</div>
 
-	</form>";//inlogformulier
+	</form>";
 
 }

@@ -42,11 +42,23 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> 
+    
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <form method="get" name="form" action="crash.php"> 
+        <input type="hidden" id="hidden" name="money"> 
+        <input type="submit" value="Next" name="submit"> 
+    </form> 
+  </div>
+
+</div>
     
 <div class="container">
-  <div class="row" style = "margin-top: 200px">
+  <div class="row" style="margin-top: 200px">
     <div class="col-sm">
 
 	<h1 id="getal" style="text-align: center;">0</h1>
@@ -56,22 +68,19 @@
         <canvas id="myChart"></canvas>
         
     </div>
-</div>
+  </div>
+
 <div class="col-sm">
         
 	<button onclick = "randomGetal()" id="myBtn">Generate</button>
 
   <p style="color: white">Hoeveel zet je in?</p>
-  <input id="geld" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000"></input>
+  <input id="geld" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000">
 
-  <button style="background-color: darkred" onclick="geldIngezet()" id="bet">Bet!</button>
-  <p></p>
+    <input width="10px" style="background-color: darkred" placeholder="auto cash-out" id="AutoCash" type="number" name="quantity" min="1" max="100000000000" >
+  <button style="background-color: darkred" onclick="Lock()" id="Lock">Lock</button>
 
-  <input width="10px" style="background-color: darkred" placeholder="auto cash-out" id="AutoCash" type="number" name="quantity" min="1" max="100000000000" ></input> 
-
-  <button style="background-color: darkred" onclick="Lock()" id="lock">Lock</button>
-
-  <button style="background-color: darkred" onclick="CashOut()" id="CashOut1">Cash-out!</button>
+  <button style="background-color: darkred" onclick="CashOut()" id="CashOut1" >Cash-out!</button>
   <h1 id="resultaat"></h1>
 
 
@@ -80,6 +89,19 @@
 </div>
 </div>
     
+<?php
+    if(!empty($_GET['money'])){
+        $result = $_GET['money']; 
+        echo $result; 
+        $sql = "SELECT * FROM tbl_gebruikers WHERE `naam` = '".$_POST['naam']."' AND `wachtwoord` = '" . $_POST['wachtwoord'] . "'";
+        $resultaat = $mysqli ->query($sql);
+    }
+    
+    
+    
+
+
+?>
     
     <!-- Chart JavaScript -->
     <script src="../../Chart/Chart.min.js"></script>
