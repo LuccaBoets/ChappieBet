@@ -9,9 +9,9 @@
         <?php
     
     session_start();
-    if(empty($_SESSION["gebruiker"])){
-        echo $_SESSION["gebruiker"];
-        //header("Location:../index.html");
+    if(empty($_SESSION["id"])){
+        header("Location:../index.html");
+        echo $_SESSION["id"];
     }
     
     ?>

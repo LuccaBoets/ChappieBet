@@ -12,9 +12,11 @@ if (isset($_POST["knop"])){//controleer of de knop is ingedrukt
     echo $sql;
     $resultaat = $mysqli ->query($sql);//uitvoeren van de query
     if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
+        
+                    $row = $resultaat->fetch_assoc();
 
         
-        $_SESSION["id"] = $_POST['naam'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
+        $_SESSION["id"] = $row['gebruikerID'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
         echo $_SESSION["gebruiker"];
         header("Location:index.php");//ga direct naar home.php
 
