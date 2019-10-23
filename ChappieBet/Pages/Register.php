@@ -12,15 +12,15 @@
   <form method="post" action="register.php">
   <div class="input-group">
     <label>Username</label>
-    <input type="text" name="username" value="">
+    <input type="text" name="Naam" value="">
   </div>
   <div class="input-group">
     <label>Email</label>
-    <input type="email" name="email" value="">
+    <input type="email" name="Mail" value="">
   </div>
   <div class="input-group">
     <label>Password</label>
-    <input type="password" name="password_1">
+    <input type="password" name="Password">
   </div>
   <div class="input-group">
     <label>Confirm password</label>
@@ -39,8 +39,10 @@
            include "connect.php";
         if (isset($_POST['submit'])) {
         
-            $sql = "INSERT INTO `tblgebruikers`(`username`, `password`, `mail`, `totaalGeld`, `online`, `profImage`, `coins`, `winstreak`, `lastDate`, `daysOnline`) VALUES (".$_POST["Naam"].",".md5($_POST["Password"])."
-            ,".$_POST["Mail"].","..","[value-7]","[value-8]","[value-9]","[value-10]","[value-11])";
+            //Date date = new Date();
+            
+            $sql = "INSERT INTO `tblgebruikers`(`username`, `password`, `mail`, `totaalGeld`, `online`, `coins`, `winstreak`, `lastDate`, `daysOnline`) 
+            VALUES (".$_POST["Naam"].",".md5($_POST["Password"]).",".$_POST["Mail"].",0,0,0,0,".(date("H:i:s")).",0)";
             echo($sql);
 
             $resultaat = $mysqli->query($sql);
