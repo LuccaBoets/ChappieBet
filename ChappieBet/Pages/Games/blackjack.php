@@ -51,6 +51,8 @@
     <button id="button_hit" onclick="onHit()">HIT</button><br>
     <button id="button_stand" onclick="onStand()">Stand</button>
 
+    <h2 id="puntenPlayer">test</h2>
+    <h2 id="puntenDealer">test</h2>
     <h2 id="uikomstSpel"></h2>
 
 </bodys>
