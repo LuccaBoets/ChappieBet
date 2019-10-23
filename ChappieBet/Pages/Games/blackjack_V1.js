@@ -1,35 +1,30 @@
-console.log("js");
-
-var ingezeteMunten;
-
-var aces1 = "imagesBlackjack/1C.png";
-var aces2 = "imagesBlackjack/1D.png";
-var aces3 = "imagesBlackjack/1H.png";
-var aces4 = "imagesBlackjack/1S.png";
-
-var gewachtWanneerSpelVoorbijIs = false;
-
-var stand = false;
-var dealerCards = [
-
-    geefKaart(),
-    geefKaart(),
-    "imagesBlackjack/default.png",
-    "imagesBlackjack/default.png",
-    "imagesBlackjack/default.png"
-];
-
-var playercards = [
-
-    geefKaart(),
-    geefKaart(),
-    "imagesBlackjack/default.png",
-    "imagesBlackjack/default.png",
-    "imagesBlackjack/default.png"
-];
+var dealerTotalValue = 0;
 
 var playerTotalValue = 0;
-var dealerTotalValue = 0;
+
+var ingezeteMunten;
+var gewachtWanneerSpelVoorbijIs = false;
+var stand = false;
+var acePlayer = false;
+
+var aceDealer = false;
+
+var dealerCards = [
+
+    geefKaart(false),
+    "imagesBlackjack/default.png",
+    "imagesBlackjack/default.png",
+    "imagesBlackjack/default.png",
+    "imagesBlackjack/default.png"
+];
+var playercards = [
+
+    geefKaart(true),
+    geefKaart(true),
+    "imagesBlackjack/default.png",
+    "imagesBlackjack/default.png",
+    "imagesBlackjack/default.png"
+];
 var cardsOnPlayer = 0;
 
 
@@ -46,10 +41,84 @@ function onBet() {
     document.getElementById("playerCard1").src = playercards[1];
 
     cardsOnPlayer += 2;
-    playerTotalValue += calculateValueOfCard(playercards[0]);
-    playerTotalValue += calculateValueOfCard(playercards[1]);
-    dealerTotalValue += calculateValueOfCard(dealerCards[0]);
-    dealerTotalValue += calculateValueOfCard(dealerCards[1]);
+
+
+/*
+    if (playerTotalValue == 21){
+
+
+
+        document.getElementById("uikomstSpel").innerHTML = "gewonnen";
+        console.log("21"+playerTotalValue);
+        document.getElementById("button_bet").style.visibility = "hidden";
+
+        document.getElementById("button_hit").style.visibility = "hidden";
+        document.getElementById("button_stand").style.visibility = "hidden";
+        document.getElementById("dealerCard1").src = dealerCards[1];
+
+        //Page Reloads
+        myVar = setInterval(function (temp) {
+
+            location.reload();
+
+        }, 7000);
+
+
+
+    }
+
+    if(playerTotalValue > 21){
+
+        if (playercards.includes(aces1)) {
+
+            playerTotalValue = playerTotalValue - 10;
+
+            console.log("isAce"+playerTotalValue);
+            aces1 = "";
+        }else if (playercards.includes(aces2)){
+
+            playerTotalValue = playerTotalValue - 10;
+            console.log("isAce"+playerTotalValue);
+            aces2 = "";
+
+
+        }else if (playercards.includes(aces3)) {
+
+            playerTotalValue = playerTotalValue - 10;
+            console.log("isAce"+playerTotalValue);
+            aces3 = "";
+
+
+        }else if (playercards.includes(aces4)) {
+
+            playerTotalValue = playerTotalValue - 10;
+            console.log("isAce"+playerTotalValue);
+            aces4 = "";
+
+
+        }else {
+
+            document.getElementById("uikomstSpel").innerHTML = "That's a bust";
+            console.log("Bust"+playerTotalValue);
+            document.getElementById("button_bet").style.visibility = "hidden";
+            document.getElementById("button_hit").style.visibility = "hidden";
+            document.getElementById("button_stand").style.visibility = "hidden";
+
+            document.getElementById("dealerCard1").src = dealerCards[1];
+
+            //Page Reloads
+            myVar = setInterval(function (temp) {
+
+                location.reload();
+
+            }, 7000);
+
+
+
+        }
+
+
+    }
 
     if (dealerTotalValue == 21){
 
@@ -70,18 +139,99 @@ function onBet() {
 
     }
 
-    if (playerTotalValue == 21){
-        document.getElementById("uikomstSpel").innerHTML = "gewonnen";
-        console.log("21"+playerTotalValue);
+    if (dealerTotalValue > 21){
 
+        if (dealerCards.includes(Daces1)) {
+
+            dealerTotalValue = dealerTotalValue - 10;
+            console.log("isAce"+dealerTotalValue);
+            Daces1 = "";
+
+        }else if (dealerCards.includes(Daces2)){
+
+            dealerTotalValue = dealerTotalValue - 10;
+            console.log("isAce"+dealerTotalValue);
+            Daces2="";
+
+        }else if (dealerCards.includes(Daces3)) {
+
+            dealerTotalValue = dealerTotalValue - 10;
+            console.log("isAce"+dealerTotalValue);
+            Daces3 = "";
+
+        }else if (dealerCards.includes(Daces4)) {
+
+            dealerTotalValue = dealerTotalValue - 10;
+            console.log("isAce" + dealerTotalValue);
+            Daces4 = "";
+
+        }else {
+
+            document.getElementById("uikomstSpel").innerHTML = "Speler wint";
+
+            document.getElementById("dealerCard1").src = dealerCards[1];
+
+            //Page Reloads
+            myVar = setInterval(function (temp) {
+
+                location.reload();
+
+            }, 7000);
+
+        }
+
+
+
+    }
+*/
+
+}
+
+function onHit() {
+
+    document.getElementById("playerCard"+(cardsOnPlayer)).src = geefKaart(true);
+    cardsOnPlayer++;
+
+    checkPlayer();
+    console.log(playerTotalValue);
+
+}
+
+function onStand() {
+
+    var dealerOnCards = 1;
+
+    do {
+
+        document.getElementById("dealerCard"+(dealerOnCards)).src = geefKaart(false);
+        dealerOnCards++;
+
+        checkDealer();
+
+        console.log(dealerTotalValue);
+    } while(dealerTotalValue <= 17);
+
+
+    if (dealerTotalValue >= playerTotalValue){
+        document.getElementById("uikomstSpel").innerHTML = "Dealer wint";
+        document.getElementById("dealerCard1").src = dealerCards[1];
         document.getElementById("button_bet").style.visibility = "hidden";
         document.getElementById("button_hit").style.visibility = "hidden";
         document.getElementById("button_stand").style.visibility = "hidden";
 
+        //document.getElementById("dealerCard1").src = dealerCards[1];
+
+
+        //Page Reloads
+        myVar = setInterval(function (temp) {
+
+            location.reload();
+
+        }, 7000);
+    } else {
+
+        document.getElementById("uikomstSpel").innerHTML = "Speler wint";
         document.getElementById("dealerCard1").src = dealerCards[1];
-
-
-
         //Page Reloads
         myVar = setInterval(function (temp) {
 
@@ -93,257 +243,7 @@ function onBet() {
 
 }
 
-function onHit() {
-
-    document.getElementById("button_bet").style.visibility = "hidden";
-    var onHit = true;
-
-    for (var i = 2; i < playercards.length; i++) {
-
-        if (playercards[i] == "imagesBlackjack/default.png" && onHit) {
-
-            playercards[i] = geefKaart();
-            document.getElementById("playerCard" + i).src = playercards[i];
-            onHit = false;
-            playerTotalValue += calculateValueOfCard(playercards[i]);
-
-            if (playerTotalValue == 21) {
-
-
-                document.getElementById("uikomstSpel").innerHTML = "gewonnen";
-                console.log("21"+playerTotalValue);
-                document.getElementById("button_bet").style.visibility = "hidden";
-                document.getElementById("button_hit").style.visibility = "hidden";
-                document.getElementById("button_stand").style.visibility = "hidden";
-
-                onStand();
-
-                document.getElementById("dealerCard1").src = dealerCards[1];
-
-
-                //Page Reloads
-                myVar = setInterval(function (temp) {
-
-                    location.reload();
-
-                }, 7000);
-
-                break;
-
-            }else if(playerTotalValue > 21){
-
-                if (playercards.includes(aces1)) {
-
-                    playerTotalValue = playerTotalValue - 10;
-                    console.log("isAce"+playerTotalValue);
-                    break;
-
-                }else if (playercards.includes(aces2)){
-
-                    playerTotalValue = playerTotalValue - 10;
-                    console.log("isAce"+playerTotalValue);
-                    break;
-
-                }else if (playercards.includes(aces3)) {
-
-                    playerTotalValue = playerTotalValue - 10;
-                    console.log("isAce"+playerTotalValue);
-                    break;
-
-                }else if (playercards.includes(aces4)) {
-
-                    playerTotalValue = playerTotalValue - 10;
-                    console.log("isAce"+playerTotalValue);
-                    break;
-
-                }else {
-
-                    document.getElementById("uikomstSpel").innerHTML = "That's a bust";
-                    console.log("Bust"+playerTotalValue);
-                    document.getElementById("button_bet").style.visibility = "hidden";
-                    document.getElementById("button_hit").style.visibility = "hidden";
-                    document.getElementById("button_stand").style.visibility = "hidden";
-
-                    document.getElementById("dealerCard1").src = dealerCards[1];
-
-                    //Page Reloads
-                    myVar = setInterval(function (temp) {
-
-                        location.reload();
-
-                    }, 7000);
-
-                    break;
-
-                }
-
-            }else if(playerTotalValue == dealerTotalValue){
-
-                document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
-                console.log("21"+dealerTotalValue);
-                document.getElementById("button_bet").style.visibility = "hidden";
-                document.getElementById("button_hit").style.visibility = "hidden";
-                document.getElementById("button_stand").style.visibility = "hidden";
-
-                document.getElementById("dealerCard1").src = dealerCards[1];
-
-                //Page Reloads
-                myVar = setInterval(function (temp) {
-
-                    location.reload();
-
-                }, 7000);
-
-            }
-
-            break;
-
-        }
-    }
-
-        if (i == 4) {
-
-            document.getElementById("playerCard4").src = playercards[4];
-            document.getElementById("uikomstSpel").innerHTML = "gewonnen";
-            document.getElementById("button_bet").style.visibility = "hidden";
-            document.getElementById("button_hit").style.visibility = "hidden";
-            document.getElementById("button_stand").style.visibility = "hidden";
-
-            document.getElementById("dealerCard1").src = dealerCards[1];
-
-            //Page Reloads
-            myVar = setInterval(function (temp) {
-
-                location.reload();
-
-            }, 7000);
-
-        }
-
-}
-
-function onStand() {
-    document.getElementById("button_bet").style.visibility = "hidden";
-    document.getElementById("button_hit").style.visibility = "hidden";
-    document.getElementById("button_stand").style.visibility = "hidden";
-    stand = true;
-
-    document.getElementById("dealerCard1").src = dealerCards[1];
-
-    console.log("voor dowhile");
-
-    for (var i = 2; i < dealerCards.length; i++) {
-
-        if (dealerTotalValue == 21) {
-            document.getElementById("uikomstSpel").innerHTML = "Dealer wint";
-
-            document.getElementById("dealerCard1").src = dealerCards[1];
-
-            //Page Reloads
-            myVar = setInterval(function (temp) {
-
-                location.reload();
-
-            }, 7000);
-        } else if (dealerTotalValue >= 17) {
-
-            if (playerTotalValue <= dealerTotalValue) {
-
-                document.getElementById("uikomstSpel").innerHTML = "Dealer wints";
-                console.log("21" + dealerTotalValue);
-                document.getElementById("button_bet").style.visibility = "hidden";
-                document.getElementById("button_hit").style.visibility = "hidden";
-                document.getElementById("button_stand").style.visibility = "hidden";
-
-                document.getElementById("dealerCard1").src = dealerCards[1];
-
-                //Page Reloads
-                myVar = setInterval(function (temp) {
-
-                    location.reload();
-
-                }, 7000);
-
-            } else if (playerTotalValue >= dealerTotalValue) {
-
-                document.getElementById("uikomstSpel").innerHTML = "gewonnen";
-                console.log("21" + playerTotalValue);
-                document.getElementById("button_bet").style.visibility = "hidden";
-                document.getElementById("button_hit").style.visibility = "hidden";
-                document.getElementById("button_stand").style.visibility = "hidden";
-
-                onStand();
-
-                document.getElementById("dealerCard1").src = dealerCards[1];
-
-
-                //Page Reloads
-                myVar = setInterval(function (temp) {
-
-                    location.reload();
-
-                }, 7000);
-
-            }else if (dealerTotalValue > 21){
-
-
-
-                if (dealerCards.includes(aces1)) {
-
-                    dealerTotalValue = dealerTotalValue - 10;
-                    console.log("isAce"+dealerTotalValue);
-
-
-                }else if (dealerCards.includes(aces2)){
-
-                    dealerTotalValue = dealerTotalValue - 10;
-                    console.log("isAce"+dealerTotalValue);
-
-
-                }else if (dealerCards.includes(aces3)) {
-
-                    dealerTotalValue = dealerTotalValue - 10;
-                    console.log("isAce"+dealerTotalValue);
-
-
-                }else if (dealerCards.includes(aces4)) {
-
-                    dealerTotalValue = dealerTotalValue - 10;
-                    console.log("isAce"+dealerTotalValue);
-
-
-                }else {
-
-                    document.getElementById("uikomstSpel").innerHTML = "Speler wint";
-
-                    document.getElementById("dealerCard1").src = dealerCards[1];
-
-                    //Page Reloads
-                    myVar = setInterval(function (temp) {
-
-                        location.reload();
-
-                    }, 7000);
-                }
-
-            }
-
-            break;
-
-        }//forlus
-
-        console.log("voor geefkeaart");
-
-        dealerCards[i] = geefKaart();
-        document.getElementById("dealerCard" + i).src = dealerCards[i];
-        dealerTotalValue += calculateValueOfCard(dealerCards[i]);
-        console.log(dealerTotalValue);
-
-    }
-
-}
-
-function geefKaart() {
+function geefKaart(isPlayer) {
 
     var random1 = Math.abs(Math.random() * 13);
     var random2 = Math.abs(Math.random() * 100);
@@ -359,10 +259,13 @@ function geefKaart() {
     }else {
         var naamKaart = random1 + "H";
     }
+
+    calculateValueOfCard("imagesBlackjack/" + naamKaart + ".png",isPlayer);
+
     return "imagesBlackjack/" + naamKaart + ".png";
 }
 
-function calculateValueOfCard(card) {
+function calculateValueOfCard(card,isPlayer) {
 
     var valueOfCard = 0;
     var cardFirstDigit = parseInt(card.charAt(22));
@@ -386,7 +289,11 @@ function calculateValueOfCard(card) {
 
             default:
 
-
+                if (isPlayer){
+                    acePlayer = true;
+                } else {
+                    aceDealer = true;
+                }
                 valueOfCard = 11;
                 break;
 
@@ -397,5 +304,87 @@ function calculateValueOfCard(card) {
         valueOfCard = cardFirstDigit;
     }
 
-    return valueOfCard;
+    if (isPlayer){
+        playerTotalValue += valueOfCard;
+    } else {
+        dealerTotalValue += valueOfCard
+    }
+
+}
+
+function checkPlayer() {
+
+    if (playerTotalValue > 21){
+
+        if (acePlayer){
+            playerTotalValue -= 10;
+            acePlayer = false;
+        } else {
+
+            document.getElementById("uikomstSpel").innerHTML = "That's a bust";
+            console.log("Bust"+playerTotalValue);
+            document.getElementById("button_bet").style.visibility = "hidden";
+            document.getElementById("button_hit").style.visibility = "hidden";
+            document.getElementById("button_stand").style.visibility = "hidden";
+            document.getElementById("dealerCard1").src = dealerCards[1];
+
+            //Page Reloads
+            myVar = setInterval(function (temp) {
+
+                location.reload();
+
+            }, 7000);
+        }
+
+    }
+    if (playercards == 5){
+        document.getElementById("playerCard4").src = playercards[4];
+        document.getElementById("uikomstSpel").innerHTML = "gewonnen";
+        document.getElementById("button_bet").style.visibility = "hidden";
+        document.getElementById("button_hit").style.visibility = "hidden";
+        document.getElementById("button_stand").style.visibility = "hidden";
+        document.getElementById("dealerCard1").src = dealerCards[1];
+
+        //document.getElementById("dealerCard1").src = dealerCards[1];
+
+        //Page Reloads
+        myVar = setInterval(function (temp) {
+
+            location.reload();
+
+        }, 7000);
+    }
+
+}
+
+function checkDealer() {
+
+    console.log(dealerTotalValue);
+
+
+    if (dealerTotalValue > 21){
+        if (aceDealer){
+            console.log("ass");
+            dealerTotalValue -= 10;
+            aceDealer = false;
+        }else {
+            console.log("dab");
+            document.getElementById("uikomstSpel").innerHTML = "gewonnen";
+            document.getElementById("button_bet").style.visibility = "hidden";
+            document.getElementById("button_hit").style.visibility = "hidden";
+            document.getElementById("button_stand").style.visibility = "hidden";
+
+            //document.getElementById("dealerCard1").src = dealerCards[1];
+
+            //Page Reloads
+            myVar = setInterval(function (temp) {
+
+                location.reload();
+
+            }, 7000);
+        }
+
+    }
+
+
 }
