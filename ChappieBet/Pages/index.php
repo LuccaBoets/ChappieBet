@@ -6,7 +6,15 @@
     <title>Front page</title>
 </head>
 <body>
-        
+        <?php
+    
+    session_start();
+    if(empty($_SESSION["gebruiker"])){
+        echo $_SESSION["gebruiker"];
+        //header("Location:../index.html");
+    }
+    
+    ?>
 <ul class="nav flex-column verticalNav">
     <div>
         <li class="nav-item">

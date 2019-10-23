@@ -12,15 +12,15 @@
   <form method="post" action="register.php">
   <div class="input-group">
     <label>Username</label>
-    <input type="text" name="Naam" value="">
+    <input type="text" name="Naam" value="" required>
   </div>
   <div class="input-group">
     <label>Email</label>
-    <input type="email" name="Mail" value="">
+    <input type="email" name="Mail" value="" required>
   </div>
   <div class="input-group">
     <label>Password</label>
-    <input type="password" name="Password">
+    <input type="password" name="Password" required>
   </div>
   <div class="input-group">
     <label>Confirm password</label>
@@ -42,15 +42,12 @@
             //Date date = new Date();
             
             $sql = "INSERT INTO `tblgebruikers`(`username`, `password`, `mail`, `totaalGeld`, `online`, `coins`, `winstreak`, `lastDate`, `daysOnline`) 
-            VALUES (".$_POST["Naam"].",".md5($_POST["Password"]).",".$_POST["Mail"].",0,0,0,0,".(date("H:i:s")).",0)";
+            VALUES ('".$_POST["Naam"]."','".md5($_POST["Password"])."','".$_POST["Mail"]."',0,0,0,0,'".(date("H:i:s"))."',0)";
             echo($sql);
 
             $resultaat = $mysqli->query($sql);
             
             
-
-            //$row = $resultaat->fetch_assoc();
-
         
         }
 

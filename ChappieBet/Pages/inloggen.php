@@ -8,30 +8,24 @@ session_start();
 
 if (isset($_POST["knop"])){//controleer of de knop is ingedrukt
 
-    $sql = "SELECT * FROM tbl_gebruikers WHERE `naam` = '".$_POST['naam']."' AND `wachtwoord` = '" . $_POST['wachtwoord'] . "'";//controleer of er iemand bestaat met deze gebruikersnaam en wachtwoord
+    $sql = "SELECT * FROM tblgebruikers WHERE `mail` = '".$_POST['naam']."' AND `password` = '" . md5($_POST['wachtwoord']) . "'";//controleer of er iemand bestaat met deze gebruikersnaam en wachtwoord
+    echo $sql;
     $resultaat = $mysqli ->query($sql);//uitvoeren van de query
-
     if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
 
-        $_SESSION["gebruiker"] = $_POST['naam'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
+        
+        $_SESSION["id"] = $_POST['naam'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
+        echo $_SESSION["gebruiker"];
         header("Location:index.php");//ga direct naar home.php
 
 
     }
-    else {
-
-        session_destroy();//anders destroy eventuele lopende sessies
-        header("Location:inloggen.php");//ga direcet terug naar index.php
-
-    }
-
-
 
 }else {
 
     print"
     
-	<form method='post' action='index.php' >
+	<form method='post' action='inloggen.php' >
 		<div style='padding-top: 250px; '>
 		    <table style='margin: auto '>
 		        <tr>
