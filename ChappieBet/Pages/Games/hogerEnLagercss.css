@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>hoger en lager</title>
-	<script type="text/javascript" src="hogerEnLager.js"></script>
-	
 	<title>Crash</title>
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -15,11 +12,12 @@
     
     <script src="../../Chart/Chart.css"></script>
 </head>
-<body onLoad="EersteGetal()">
-	 <!-- Navigation -->
+<body>
+    
+      <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">ChappieBet</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -46,39 +44,6 @@
     </div>
   </nav>
     
-<style type="text/css">
-	img{
-		width: 25%;
-
-	}
-	h3{
-		color: darkred;
-	}
-
-	button {
-    	position: center;
-    
-	}
-
-</style>
-
-    <h1>Hoger en lager</h1>
-    <input type="number" name="ingezetGeld" placeholder="Money">
-    <button>Bet!</button>
-	<table style="width:120%">
-		<tr>
-    		<th><h3 id="Getal1"></h3></th> 	
-    		<th><h3 id="Getal2"></h3></th>
-    	</tr>	
-    	<tr>
-    		<th><img id="imgGetal1" src="" style="width:25%"></th>
-    		<th><img id="imgGetal2" src="" style="width:25%"></th>
-    	</tr>
-    </table>s
-   	<button onclick="Hoger()">Hoger</button>
-   	<button onclick="Lager()">Lager</button>
-   	<h3 id="Resultaat"></h3>
-
     <!-- Chart JavaScript -->
     <script src="../../Chart/Chart.min.js"></script>
 	  <script type="text/javascript" src="crash.js"></script>
@@ -98,5 +63,6 @@
     <script src="../../js/agency.min.js"></script>
 
 
+    
 </body>
 </html>

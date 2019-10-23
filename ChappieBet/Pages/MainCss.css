@@ -2,7 +2,7 @@ body {
     margin: 0px;
     background-image: url("../img/pw_maze_black.png");
     background-repeat: repeat;
-    
+    color: white;
 }
 
 h1 {
