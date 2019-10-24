@@ -1,6 +1,44 @@
-#nummers td{
+#nummers td {
 
     width: 1%;
     height: 1%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.even{
+
+    background-color: #3b3033;
+}
+
+.oneven{
+
+    background-color: red;
+}
+
+#null{
+
+    background-color: #22ba9e;
+}
+
+#nummers{
+
+    background-color: #0e4f09;
+}
+
+.button{
+
+    background-color: green;
+    border-radius: 4px;
+    border-color: #3b3033;
+    outline-: 0 !important;
+
+
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
 
 }
