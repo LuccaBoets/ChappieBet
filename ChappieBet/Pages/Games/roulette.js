@@ -32,6 +32,7 @@ function onBetNumber(numberWhereBetOn)
     }else
     {
         numbersWhereBettedOn.push(numberWhereBetOn);
+        alert("je hebt chips gezet op " + numberWhereBetOn);
     }
 
     console.log(numbersWhereBettedOn);
