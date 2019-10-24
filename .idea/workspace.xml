@@ -19,14 +19,15 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="3" />
+          <entry key="css" value="3" />
+          <entry key="html" value="4" />
           <entry key="js" value="8" />
           <entry key="php" value="9" />
           <entry key="ts" value="1" />
@@ -34,7 +35,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="3" />
+          <entry key="CSS" value="3" />
+          <entry key="HTML" value="4" />
           <entry key="JavaScript" value="8" />
           <entry key="PHP" value="9" />
           <entry key="TypeScript" value="1" />
@@ -42,14 +44,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="393" />
+          <entry key="css" value="289" />
+          <entry key="html" value="469" />
           <entry key="js" value="5217" />
           <entry key="php" value="769" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="393" />
+          <entry key="CSS" value="289" />
+          <entry key="HTML" value="469" />
           <entry key="JavaScript" value="5217" />
           <entry key="PHP" value="769" />
         </counts>
@@ -59,63 +63,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js">
+        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="203" column="26" selection-start-line="203" selection-start-column="26" selection-end-line="203" selection-end-column="26" />
-              <folding>
-                <element signature="n#!!block;n#onStand#0" />
-                <element signature="n#!!block;n#geefKaart#0" />
-                <element signature="n#!!block;n#calculateValueOfCard#0" />
-                <element signature="n#!!block;n#checkDealer#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/hogerEnLager.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Register.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/index.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/inloggen.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="59" column="22" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/logInFormulier.php">
+        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="214" column="20" selection-start-line="214" selection-start-column="20" selection-end-line="214" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/hogerEnLager.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -144,6 +104,7 @@
       <find>naam</find>
       <find>wachtwoord</find>
       <find>SESSION</find>
+      <find>bg</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;hidden&quot;</replace>
@@ -164,6 +125,8 @@
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack.php" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/logInFormulier.php" />
+        <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html" />
+        <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css" />
       </list>
     </option>
   </component>
@@ -174,7 +137,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -254,16 +217,18 @@
       <workItem from="1571825565316" duration="180000" />
       <workItem from="1571902652202" duration="6565000" />
       <workItem from="1571917373755" duration="34000" />
+      <workItem from="1571917705780" duration="1704000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39170000" />
+    <option name="totallyTimeSpent" value="40874000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2713348" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27680525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -285,7 +250,7 @@
       <window_info anchor="right" x="0" y="0" width="193" height="847" id="Documentation" order="4" side_tool="true" weight="0.32932165" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26586434" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27680525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -300,11 +265,11 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" x="0" y="0" width="193" height="847" id="Documentation" order="0" side_tool="true" weight="0.32932165" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" x="0" y="0" width="193" height="847" id="Documentation" order="4" side_tool="true" weight="0.32932165" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,9 +335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/hogerEnLager.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
@@ -384,20 +346,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="214" column="20" selection-start-line="214" selection-start-column="20" selection-end-line="214" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="e#508#581#0#HTML" />
-            <element signature="e#595#641#0#HTML" />
-            <element signature="e#662#776#0#HTML" />
-            <element signature="e#815#901#0#HTML" />
-            <element signature="e#947#1040#0#HTML" />
-            <element signature="e#1091#1163#0#HTML" />
-            <element signature="e#1225#1447#0#HTML" />
-            <element signature="e#1720#1942#0#HTML" />
-            <element signature="e#2217#2439#0#HTML" />
-            <element signature="e#2721#2943#0#HTML" />
-            <element signature="e#3218#3440#0#HTML" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/hogerEnLager.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/MainCss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
