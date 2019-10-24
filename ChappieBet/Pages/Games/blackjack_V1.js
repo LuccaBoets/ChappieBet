@@ -216,9 +216,6 @@ function checkPlayer() {
         document.getElementById("button_bet").style.visibility = "hidden";
         document.getElementById("button_hit").style.visibility = "hidden";
         document.getElementById("button_stand").style.visibility = "hidden";
-        //document.getElementById("dealerCard1").src = dealerCards[1];
-
-        //document.getElementById("dealerCard1").src = dealerCards[1];
 
         //Page Reloads
         myVar = setInterval(function (temp) {

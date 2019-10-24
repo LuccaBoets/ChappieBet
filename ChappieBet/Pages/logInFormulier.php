@@ -1,3 +1,8 @@
+<?php
+include 'connect.php';
+session_start();
+?>
+
 <html>
     <head>
         <style>
@@ -13,6 +18,9 @@
                     margin-left: 25%;
                 }
             }
+
+
+
             body {
                 font-family: 'Titillium Web', sans-serif;
             }
@@ -194,62 +202,106 @@
     <!------ Include the above in your HEAD tag ---------->
 
     <div class="container">
+    <?php
+
+    $sqlGebruikerIDNaarWWenUsername = "SELECT * FROM tblgebruikers WHERE gebruikerID = ".$_SESSION["id"];
+    echo $sqlGebruikerIDNaarWWenUsername;
+    $usernameEnWw = $mysqli->query($sqlGebruikerIDNaarWWenUsername);
+
+    if ($usernameEnWw->num_rows > 0){
+
+        $row = $usernameEnWw ->fetch_assoc();
+        echo $row;
+        echo" test";
+
+    }
 
 
-        <div class="kpx_login">
-            <br>
-            <div class="row kpx_row-sm-offset-3 kpx_socialButtons">
-                <div class="col-xs-2 col-sm-2">
-                    <a href="#" class="btn btn-lg btn-block kpx_btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
-                        <i class="fa fa-facebook fa-2x"></i>
-                        <span class="hidden-xs"></span>
-                    </a>
-                </div>
-                <div class="col-xs-2 col-sm-2">
-                    <a href="#" class="btn btn-lg btn-block kpx_btn-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
-                        <i class="fa fa-twitter fa-2x"></i>
-                        <span class="hidden-xs"></span>
-                    </a>
-                </div>
-                <div class="col-xs-2 col-sm-2">
-                    <a href="#" class="btn btn-lg btn-block kpx_btn-google-plus" data-toggle="tooltip" data-placement="top" title="Google Plus">
-                        <i class="fa fa-google-plus fa-2x"></i>
-                        <span class="hidden-xs"></span>
-                    </a>
-                </div>
-            </div><br>
+
+            if(isset($_POST["knop"])){
+
+                $sql = "SELECT * FROM tblgebruikers WHERE `username` = '".$_POST['naam']."' AND `password` = '" . md5($_POST['wachtwoord']) . "'";//controleer of er iemand bestaat met deze gebruikersnaam en wachtwoord
+                $resultaat = $mysqli ->query($sql);//uitvoeren van de query
 
 
-            <div class="row kpx_row-sm-offset-3 kpx_loginOr">
-                <div class="col-xs-12 col-sm-6">
-                    <hr class="kpx_hrOr">
-                    <span class="kpx_spanOr">or</span>
-                </div>
-            </div>
 
+
+
+                $sqlSessionLogin = "SELECT * FROM tblgebruikers WHERE `".$_SESSION["id"]."` =  + + +";
+
+                if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
+
+                    $row = $resultaat->fetch_assoc();
+
+
+                    $_SESSION["id"] = $row['gebruikerID'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
+                    header("Location: index.php");//ga direct naar home.php
+
+                }
+
+
+
+            }else{
+
+            print '
             
-                        <form  method='post'>
+            <div class="kpx_login">
+                <br>
+                <div class="row kpx_row-sm-offset-3 kpx_socialButtons">
+                    <div class="col-xs-2 col-sm-2">
+                        <a href="#" class="btn btn-lg btn-block kpx_btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+                            <i class="fa fa-facebook fa-2x"></i>
+                            <span class="hidden-xs"></span>
+                        </a>
+                    </div>
+                    <div class="col-xs-2 col-sm-2">
+                        <a href="#" class="btn btn-lg btn-block kpx_btn-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                            <i class="fa fa-twitter fa-2x"></i>
+                            <span class="hidden-xs"></span>
+                        </a>
+                    </div>
+                    <div class="col-xs-2 col-sm-2">
+                        <a href="#" class="btn btn-lg btn-block kpx_btn-google-plus" data-toggle="tooltip" data-placement="top" title="Google Plus">
+                            <i class="fa fa-google-plus fa-2x"></i>
+                            <span class="hidden-xs"></span>
+                        </a>
+                    </div>
+                </div><br>
 
-            <div class="row kpx_row-sm-offset-3">
-                <div class="col-xs-12 col-sm-6">
-                    <form class="kpx_loginForm" action="" autocomplete="off" method="POST">
-                        <div class="input-group">
-                            <span class="input-group-addon"><span class="fa fa-user"></span></span>
-                            <input type="text" class="form-control" name="Naam" placeholder="Username">
-                        </div>
-                        <hr />
 
-                        <div class="input-group">
-                            <span class="input-group-addon"><span class="fa fa-key"></span></span>
-                            <input  type="password" class="form-control" name="password" placeholder="Password">
-                        </div>
-                        <hr />
-                        <button class="btn btn-lg btn-outline-primary btn-block" type="submit" name="Login"><i class="fa fa-sign-in"></i> Login</button>
-                    </form>
+                <div class="row kpx_row-sm-offset-3 kpx_loginOr">
+                    <div class="col-xs-12 col-sm-6">
+                        <hr class="kpx_hrOr">
+                        <span class="kpx_spanOr">or</span>
+                    </div>
                 </div>
-            </div>
-                                        </form>  
 
+
+                <form  method="post">
+
+                <div class="row kpx_row-sm-offset-3">
+                    <div class="col-xs-12 col-sm-6">
+                        <form class="kpx_loginForm" action="" autocomplete="off" method="POST">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                <input type="text" class="form-control" name="naam" id="naam" placeholder="Username">
+                            </div>
+                            <hr />
+
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="fa fa-key"></span></span>
+                                <input  type="password" class="form-control" name="wachtwoord" id="wachtwoord" placeholder="Password">
+                            </div>
+                            <hr />
+                            <button class="btn btn-lg btn-outline-primary btn-block" type="submit" name="knop"><i class="fa fa-sign-in"></i> Login</button>
+                        </form>
+                    </div>
+                </div>
+            </form>
+            ';
+}
+
+?>
             <div class="row kpx_row-sm-offset-3">
                 <div class="col-xs-12 col-sm-3">
                     
@@ -260,40 +312,8 @@
                         <a href="#">Forgot password?</a>
                     </p>
                 </div>
-
-                <div class="col-lg-12">
-                    <p class="text-lg-center text-md-center text-sm-center text-xs-center">HI</p>
-                </div>
             </div>
-        </div>
 
 
-
-
-    </div>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
     </body>
-    <?php
-
-       include "connect.php";
-        if (isset($_POST['Login'])) {
-        
-            $sql = "SELECT * FROM `tblgebruikers` WHERE `username` == ". $_POST["Naam"] . " AND `password` == " . md5($_POST["password"]);
-            echo($sql);
-
-            $resultaat = $mysqli->query($sql);
-            
-            
-
-            //$row = $resultaat->fetch_assoc();
-
-        
-        }
-
-
-    ?>
 </html>
