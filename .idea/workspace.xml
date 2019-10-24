@@ -12,14 +12,15 @@
     <session id="-1647398922">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -68,13 +69,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="223" lean-forward="true" selection-start-line="223" selection-end-line="223" />
+            <state relative-caret-position="435">
+              <caret line="364" column="25" selection-start-line="364" selection-start-column="25" selection-end-line="364" selection-end-column="25" />
               <folding>
                 <element signature="e#1064#4674#0" />
                 <element signature="n#!!block;n#geefKaart#0" />
                 <element signature="n#!!block;n#calculateValueOfCard#0" />
-                <element signature="n#!!block;n#checkDealer#0" />
               </folding>
             </state>
           </provider>
@@ -144,7 +144,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -222,15 +222,15 @@
       <workItem from="1571659218985" duration="8446000" />
       <workItem from="1571727947831" duration="1163000" />
       <workItem from="1571734615507" duration="812000" />
+      <workItem from="1571825565316" duration="180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32391000" />
+    <option name="totallyTimeSpent" value="32571000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.1487965" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -329,13 +329,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack_V1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="223" lean-forward="true" selection-start-line="223" selection-end-line="223" />
+        <state relative-caret-position="435">
+          <caret line="364" column="25" selection-start-line="364" selection-start-column="25" selection-end-line="364" selection-end-column="25" />
           <folding>
             <element signature="e#1064#4674#0" />
             <element signature="n#!!block;n#geefKaart#0" />
             <element signature="n#!!block;n#calculateValueOfCard#0" />
-            <element signature="n#!!block;n#checkDealer#0" />
           </folding>
         </state>
       </provider>
