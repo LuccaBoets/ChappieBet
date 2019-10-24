@@ -204,17 +204,20 @@ session_start();
     <div class="container">
     <?php
 
+    if (!empty($_SESSION["id"])){
+        
     $sqlGebruikerIDNaarWWenUsername = "SELECT * FROM tblgebruikers WHERE gebruikerID = ".$_SESSION["id"];
     echo $sqlGebruikerIDNaarWWenUsername;
     $usernameEnWw = $mysqli->query($sqlGebruikerIDNaarWWenUsername);
 
-    if ($usernameEnWw->num_rows > 0){
+        if ($usernameEnWw->num_rows > 0){
 
-        $row = $usernameEnWw ->fetch_assoc();
-        echo $row;
-        echo" test";
+            $row = $usernameEnWw ->fetch_assoc();
+            echo $row;
+            echo" test";
 
-    }
+        }
+    } 
 
 
 
