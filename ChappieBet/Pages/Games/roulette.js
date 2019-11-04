@@ -1,42 +1,56 @@
 var bedrag = document.getElementById("beschikbareBedrag");
-var numbersWhereBettedOn = []
-var extrasWhereBettedOn = []
+var numbersWhereBettedOn = [];
+var extrasWhereBettedOn = [];
+
+var zwarteGetallen = [];
+var rodeGetallen = [];
+
 function onStart()
 {
 	
 	//Zwarte getallen array initialiseren
-	var zwarteGetallen = [];
-	var count = 1;
-	for (var i = 1; i <= 18; i++)
-	{
-		count += 2;
-		zwarteGetallen.push(count); 	
-	}
+	zwarteGetallen.push(2);
+	zwarteGetallen.push(4);
+	zwarteGetallen.push(6);
+	zwarteGetallen.push(8);
+	zwarteGetallen.push(10);
+	zwarteGetallen.push(11);
+	zwarteGetallen.push(13);
+	zwarteGetallen.push(15);
+	zwarteGetallen.push(17);
+	zwarteGetallen.push(20);
+	zwarteGetallen.push(24);
+	zwarteGetallen.push(22);
+	zwarteGetallen.push(26);
+	zwarteGetallen.push(29);
+	zwarteGetallen.push(28);
+	zwarteGetallen.push(31);
+	zwarteGetallen.push(33);
+	zwarteGetallen.push(35);
 
 	//Rode getallen array initialiseren
-	var rodeGetallen = [];
-	count = 2;
-	for (var i = 2; i <= 18; i++)
-	{
-		count += 2;
-		rodeGetallen.push(i); 	
+	for (var i = 1; i <= 36; i++) {
+		if (!zwarteGetallen.includes(i)) {
+			rodeGetallen.push(i);
+		}
 	}
+	document.getElementById("inzet").value = 0;
 }
 
 function onBetNumber(numberWhereBetOn)
 {
-	
-    if (numbersWhereBettedOn.includes(numberWhereBetOn)) //als er nog niet is gegokt op deze nummer, voeg toe in array
+    if (numbersWhereBettedOn.includes(numberWhereBetOn)) //Als er al op dit nummer is gegokt, verwijder het uit de array
     {
         numbersWhereBettedOn.splice(numbersWhereBettedOn.indexOf(numberWhereBetOn) , 1);
     }else
     {
-        numbersWhereBettedOn.push(numberWhereBetOn);
-        alert("je hebt chips gezet op " + numberWhereBetOn);
+    	if (numbersWhereBettedOn.length == 3) {
+    		alert("U kan niet meer inzetten, u heeft al gegokt op het maximale aantal getallen. U heeft gegokt op " + numbersWhereBettedOn[0] + " , " + numbersWhereBettedOn[1] + " , " + numbersWhereBettedOn[2] + "." );
+    	}else{
+    		numbersWhereBettedOn.push(numberWhereBetOn);
+        	alert("je hebt chips gezet op " + numberWhereBetOn);
+    	}
     }
-
-    console.log(numbersWhereBettedOn);
-
 }
 
 function onBetExtra(extraWhereBetOn)
@@ -48,13 +62,13 @@ function onBetExtra(extraWhereBetOn)
     }else
     {
         extrasWhereBettedOn.push(extraWhereBetOn);
+        alert("je hebt chips gezet op " + extraWhereBetOn);
     }
 
 }
 
 function onBet(){
 
-	console.log("dazdz")
 	var Random = Math.floor(Math.random() * 36);
 	document.getElementById("gewordenGetal").innerHTML = Random;
 	document.getElementById("rouletteSlider").value = Random;
@@ -62,53 +76,60 @@ function onBet(){
 	var inzet = document.getElementById("inzet").value;
 	var nieuwbedrag =(parseInt(document.getElementById("beschikbareBedrag").innerHTML));
 
+	nieuwbedrag -= parseInt(inzet);
+
+	if (numbersWhereBettedOn.includes(Random)) 
+	{
+		nieuwbedrag += parseInt(inzet * 35)
+	}
+
 	if (extrasWhereBettedOn.includes(112) && Random > 0 && Random <= 12) 
 	{
-		nieuwbedrag += parseInt(inzet);
+		nieuwbedrag += parseInt(inzet * 3);
 	}
 
 	if (extrasWhereBettedOn.includes(212) && Random > 12 && Random <= 24) 
 	{
-		nieuwbedrag += parseInt(inzet);
+		nieuwbedrag += parseInt(inzet * 3);
 	}
 
 	if (extrasWhereBettedOn.includes(312) && Random > 24 && Random <= 36) 
 	{
-		nieuwbedrag += parseInt(inzet);
+		nieuwbedrag += parseInt(inzet * 3);
 	}
 
 	if (extrasWhereBettedOn.includes(118) && Random > 0 && Random <= 18) 
 	{
-		nieuwbedrag += parseInt(inzet);
+		nieuwbedrag += parseInt(inzet * 2);
 	}
 
 	if (extrasWhereBettedOn.includes(1936) && Random > 18 && Random <= 36) 
 	{
-		nieuwbedrag += parseInt(inzet);
+		nieuwbedrag += parseInt(inzet * 2);
 	}
 
 	if (extrasWhereBettedOn.includes(88) && (Random % 2 == 0)) 
 	{
-		nieuwbedrag += parseInt(inzet);
+		nieuwbedrag += parseInt(inzet * 2);
 	}
 
-	if (extrasWhereBettedOn.includes(1) && (Random % 2 != 0)) 
+	if (extrasWhereBettedOn.includes(1) && (rodeGetallen.includes(Random))) 
 	{
-		nieuwbedrag += parseInt(inzet);
+		nieuwbedrag += parseInt(inzet * 2);
 	}
 
-	if (extrasWhereBettedOn.includes(2) && (Random % 2 == 0)) 
+	if (extrasWhereBettedOn.includes(2) && (zwarteGetallen.includes(Random))) 
 	{
-		nieuwbedrag += parseInt(inzet);
+		nieuwbedrag += parseInt(inzet * 2);
 	}
 
 	if (extrasWhereBettedOn.includes(89) && (Random % 2 != 0)) 
 	{
-		nieuwbedrag += parseInt(inzet);
+		nieuwbedrag += parseInt(inzet * 2);
 	}
 
-
-
-
+	numbersWhereBettedOn = [];
+	extrasWhereBettedOn = [];
+	document.getElementById("inzet").value = 0;
 	document.getElementById("beschikbareBedrag").innerHTML = nieuwbedrag;
 }
