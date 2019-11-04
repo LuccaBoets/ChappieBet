@@ -1,6 +1,38 @@
 <?php
 include 'connect.php';
 session_start();
+
+if (!empty($_SESSION["id"])){
+    header("Location: ../index.html");//ga direct naar home.php
+
+    /*        echo $_SESSION["id"];
+            $sqlGebruikerIDNaarWWenUsername = "SELECT * FROM tblgebruikers WHERE gebruikerID = ".$_SESSION["id"];
+            echo $sqlGebruikerIDNaarWWenUsername;
+            $usernameEnWw = $mysqli->query($sqlGebruikerIDNaarWWenUsername);
+
+            if ($usernameEnWw->num_rows > 0){
+
+                $row = $usernameEnWw ->fetch_assoc();
+                echo $row;*/
+
+    //}
+}
+
+if(isset($_POST["knop"])){
+
+$sql = "SELECT * FROM tblgebruikers WHERE `username` = '".$_POST['naam']."' AND `password` = '" . md5($_POST['wachtwoord']) . "'";//controleer of er iemand bestaat met deze gebruikersnaam en wachtwoord
+echo($sql);
+$resultaat = $mysqli ->query($sql);//uitvoeren van de query
+
+if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
+
+    $row = $resultaat->fetch_assoc();
+
+
+    $_SESSION["id"] = $row['gebruikerID'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
+    header("Location: ../index.html");//ga direct naar home.php
+
+}}
 ?>
 
 <html>
@@ -204,45 +236,7 @@ session_start();
     <div class="container">
     <?php
 
-    if (!empty($_SESSION["id"])){
-        
-    $sqlGebruikerIDNaarWWenUsername = "SELECT * FROM tblgebruikers WHERE gebruikerID = ".$_SESSION["id"];
-    echo $sqlGebruikerIDNaarWWenUsername;
-    $usernameEnWw = $mysqli->query($sqlGebruikerIDNaarWWenUsername);
-
-        if ($usernameEnWw->num_rows > 0){
-
-            $row = $usernameEnWw ->fetch_assoc();
-            echo $row;
-            echo" test";
-
-        }
-    } 
-
-
-
             if(isset($_POST["knop"])){
-
-                $sql = "SELECT * FROM tblgebruikers WHERE `username` = '".$_POST['naam']."' AND `password` = '" . md5($_POST['wachtwoord']) . "'";//controleer of er iemand bestaat met deze gebruikersnaam en wachtwoord
-                $resultaat = $mysqli ->query($sql);//uitvoeren van de query
-
-
-
-
-
-                $sqlSessionLogin = "SELECT * FROM tblgebruikers WHERE `".$_SESSION["id"]."` =  + + +";
-
-                if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
-
-                    $row = $resultaat->fetch_assoc();
-
-
-                    $_SESSION["id"] = $row['gebruikerID'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
-                    header("Location: index.php");//ga direct naar home.php
-
-                }
-
-
 
             }else{
 
