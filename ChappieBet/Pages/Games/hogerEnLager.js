@@ -1,4 +1,5 @@
 var random;
+var geld;
 
 function EersteGetal(){
 	random = parseInt(Math.random() * 13) + 1;
@@ -47,3 +48,31 @@ function Lager(){
 
 	
 }
+function bet(winst){
+    winst = Math.round((winst) * 100) / 100;
+    document.getElementById("geld").disabled = false;
+    document.getElementById("hidden").value = (document.getElementById("geld").value * winst)-document.getElementById("geld").value;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

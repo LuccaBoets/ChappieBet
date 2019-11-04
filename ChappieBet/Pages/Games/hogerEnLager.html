@@ -63,8 +63,8 @@
 </style>
 
     <h1>Hoger en lager</h1>
-    <input type="number" name="ingezetGeld" placeholder="Money">
-    <button>Bet!</button>
+    <input type="number" name="ingezetGeld" placeholder="Money" id="geld">
+    <button onclick="bet();">Bet!</button>
 	<table style="width:120%">
 		<tr>
     		<th><h3 id="Getal1"></h3></th> 	
@@ -74,10 +74,11 @@
     		<th><img id="imgGetal1" src="" style="width:25%"></th>
     		<th><img id="imgGetal2" src="" style="width:25%"></th>
     	</tr>
-    </table>s
+    </table>
    	<button onclick="Hoger()">Hoger</button>
    	<button onclick="Lager()">Lager</button>
    	<h3 id="Resultaat"></h3>
+    <p id="hidden"></p>
 
     <!-- Chart JavaScript -->
     <script src="../../Chart/Chart.min.js"></script>
