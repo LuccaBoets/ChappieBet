@@ -3,6 +3,10 @@
 <head>
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="MainCss.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <title>Front page</title>
 </head>
 <body>
@@ -17,6 +21,9 @@
     ?>
 <ul class="nav flex-column verticalNav">
     <div>
+        <li class="nav-item">
+        <a style="font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';" class="nav-link" href="../index.html">ChappieBet</a>
+        </li>
         <li class="nav-item">
         <a class="nav-link" href="Games/roulette.html">Roulette</a>
         </li>
@@ -44,7 +51,7 @@
     
     
       <section class="page-section" id="portfolio">
-    <div class="container">
+    <div class="container" style="min-width: 20%">
       <div class="row">
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" href="Games/roulette.html">

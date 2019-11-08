@@ -1,3 +1,4 @@
+
 var bedrag = document.getElementById("beschikbareBedrag");
 var numbersWhereBettedOn = [];
 var extrasWhereBettedOn = [];
