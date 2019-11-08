@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="771eece5-806a-45b3-9e6e-4623854ac792" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChappieBet/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChappieBet/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChappieBet/Pages/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/ChappieBet/Pages/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,11 +23,11 @@
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -35,7 +35,7 @@
           <entry key="css" value="5" />
           <entry key="html" value="5" />
           <entry key="js" value="9" />
-          <entry key="php" value="12" />
+          <entry key="php" value="13" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
@@ -44,7 +44,7 @@
           <entry key="CSS" value="5" />
           <entry key="HTML" value="5" />
           <entry key="JavaScript" value="9" />
-          <entry key="PHP" value="12" />
+          <entry key="PHP" value="13" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
@@ -53,7 +53,7 @@
           <entry key="css" value="547" />
           <entry key="html" value="658" />
           <entry key="js" value="5258" />
-          <entry key="php" value="1186" />
+          <entry key="php" value="1198" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -61,7 +61,7 @@
           <entry key="CSS" value="547" />
           <entry key="HTML" value="658" />
           <entry key="JavaScript" value="5258" />
-          <entry key="PHP" value="1186" />
+          <entry key="PHP" value="1198" />
         </counts>
       </usages-collector>
     </session>
@@ -71,17 +71,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="831">
+            <state relative-caret-position="850">
               <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChappieBet/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
               <caret line="172" column="30" selection-start-line="172" selection-start-column="30" selection-end-line="172" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
+            <state relative-caret-position="4573">
               <caret line="269" column="68" selection-start-line="269" selection-start-column="68" selection-end-line="269" selection-end-column="68" />
             </state>
           </provider>
@@ -163,6 +175,7 @@
         <option value="$PROJECT_DIR$/ChappieBet/Pages/logInFormulier.php" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Register.php" />
         <option value="$PROJECT_DIR$/ChappieBet/index.html" />
+        <option value="$PROJECT_DIR$/ChappieBet/Pages/index.php" />
       </list>
     </option>
   </component>
@@ -174,7 +187,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1177" />
+    <option name="width" value="1200" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -249,16 +262,18 @@
       <workItem from="1571917705780" duration="5787000" />
       <workItem from="1571923613542" duration="465000" />
       <workItem from="1572875010624" duration="5329000" />
+      <workItem from="1573203820343" duration="131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52288000" />
+    <option name="totallyTimeSpent" value="52419000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1177" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1200" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23992838" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19649123" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -343,9 +358,6 @@
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/hogerEnLager.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/blackjack.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
@@ -355,20 +367,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/hogerEnLager.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -395,9 +393,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
+        <state relative-caret-position="4573">
           <caret line="269" column="68" selection-start-line="269" selection-start-column="68" selection-end-line="269" selection-end-column="68" />
         </state>
       </provider>
@@ -406,6 +418,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="172" column="30" selection-start-line="172" selection-start-column="30" selection-end-line="172" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

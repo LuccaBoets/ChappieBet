@@ -44,7 +44,7 @@
     
     
       <section class="page-section" id="portfolio">
-    <div class="container">
+    <div class="container" style="min-width: 20%">
       <div class="row">
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" href="Games/roulette.html">
