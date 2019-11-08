@@ -3,6 +3,8 @@
 <head>
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="MainCss.css" rel="stylesheet">
+    <link href="testIndex.css" rel="stylesheet" type="text/css">
+
     <title>Front page</title>
 </head>
 <body>
@@ -15,39 +17,15 @@
     }
     
     ?>
-<ul class="nav flex-column verticalNav">
-    <div>
-        <li class="nav-item">
-        <a class="nav-link" href="Games/roulette.html">Roulette</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="Games/crash.php">crash</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="Games/hogerEnLager.html">hoger en lager</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="Games/blackjack.php">blackjack</a>
-        </li>
-    </div>
-    <div class="bottom">
-        <li class="nav-item">
-            <a class="nav-link" href="profile.html">Profile</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="LogOut.php">Log out</a>
-        </li>
-    </div>
-</ul>
-    
-    <h1 style="text-align: center">Hi There</h1>
-    
-    
+    <h1 class="text-center">Hi There</h1>
+    <a class="nav-link text-center" href="LogOut.php">Log out</a>
+
+
       <section class="page-section" id="portfolio">
-    <div class="container" style="min-width: 20%">
+    <div class="container">
       <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" href="Games/roulette.html">
+        <div class="col-md-6 col-sm-6 portfolio-item">
+          <a class="portfolio-link" href="Games/roulette.html" >
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
@@ -59,7 +37,7 @@
             <h4>Roulette</h4>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-6 col-sm-6 portfolio-item">
           <a class="portfolio-link" href="Games/blackjack.php" >
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -72,7 +50,7 @@
             <h4>Blackjack</h4>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-6 col-sm-6 portfolio-item">
           <a class="portfolio-link" href="Games/crash.php">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -85,7 +63,7 @@
             <h4>Crash</h4>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-6 col-sm-6 portfolio-item">
           <a class="portfolio-link" href="Games/hogerEnLager.html">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -101,7 +79,8 @@
       </div>
     </div>
   </section>
-    
+
+
 
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

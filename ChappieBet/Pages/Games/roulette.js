@@ -71,7 +71,14 @@ function onBetExtra(extraWhereBetOn)
 function onBet(){
 
 	var Random = Math.floor(Math.random() * 36);
-	document.getElementById("gewordenGetal").innerHTML = Random;
+
+	var kleur = "zwart";
+	if (rodeGetallen.includes(Random)) {
+		kleur = "rood";
+	}
+	document.getElementById("gewordenGetal").innerHTML = Random + " " + kleur;
+
+
 	document.getElementById("rouletteSlider").value = Random;
 
 	var inzet = document.getElementById("inzet").value;
