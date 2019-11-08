@@ -12,7 +12,7 @@
     <link href="roulette.css" rel="stylesheet" type="text/css">
     <script src="roulette.js"></script>
 </head>
-<body>
+<body onload="onStart()">
     
       <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -114,8 +114,8 @@
       </tr>
       <tr>
         <td onclick="onBetExtra(88)" colspan="4">Even</td>
-        <td onclick="onBetExtra(1)" colspan="3" class="oneven">Red</td>
-        <td onclick="onBetExtra(2)" colspan="3" class="even">Black</td>
+        <td onclick="onBetExtra(500)" colspan="3" class="oneven">Red</td>
+        <td onclick="onBetExtra(600)" colspan="3" class="even">Black</td>
         <td onclick="onBetExtra(89)" colspan="3">Odd</td>
       </tr>
     </tbody>
