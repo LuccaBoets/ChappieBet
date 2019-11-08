@@ -282,12 +282,12 @@
 
             echo "dklf";
             //Date date = new Date();
-            $sql = "INSERT INTO `tblgebruikers`(`username`, `password`, `mail`, `totaalGeld`, `online`, `coins`, `winstreak`, `lastDate`, `daysOnline`) 
-            VALUES ('".$_POST["Naam"]."','".md5($_POST["Password"])."','".$_POST["Mail"]."',0,0,0,0,'".(date("Y-m-d"))."',0)";
+            $sql = "INSERT INTO `tblgebruikers`(`username`, `password`, `mail`, `totaalGeld`, `online`, `coins`, `winstreak`, `lastDate`, `profImage` ,`daysOnline`) 
+            VALUES ('".$_POST["Naam"]."','".md5($_POST["Password"])."','".$_POST["Mail"]."',0,0,0,0,'".(date("Y-m-d"))."',0,0)";
             echo($sql);
 
             if($mysqli->query($sql)){
-
+                echo"ja";
             }else{
                 echo "Error record toevoegen: ".$mysqli ->error."<br>";
             }
