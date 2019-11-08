@@ -49,8 +49,20 @@ function onBetNumber(numberWhereBetOn)
     		alert("U kan niet meer inzetten, u heeft al gegokt op het maximale aantal getallen. U heeft gegokt op " + numbersWhereBettedOn[0] + " , " + numbersWhereBettedOn[1] + " , " + numbersWhereBettedOn[2] + "." );
     	}else{
     		numbersWhereBettedOn.push(numberWhereBetOn);
-        	alert("je hebt chips gezet op " + numberWhereBetOn);
     	}
+    }
+
+    console.log(numberWhereBetOn);
+
+    if (document.getElementById("gegoktGetal1").innerHTML == ""){
+
+        document.getElementById("gegoktGetal1").innerHTML = numberWhereBetOn;
+    } else if (document.getElementById("gegoktGetal2").innerHTML == ""){
+
+    document.getElementById("gegoktGetal2").innerHTML = numberWhereBetOn;
+    } else if (document.getElementById("gegoktGetal3").innerHTML == ""){
+
+        document.getElementById("gegoktGetal3").innerHTML = numberWhereBetOn;
     }
 }
 
@@ -60,10 +72,6 @@ function onBetExtra(extraWhereBetOn)
 	if (extrasWhereBettedOn.includes(extraWhereBetOn)) //als er nog niet is gegokt op deze nummer, voeg toe in array
     {
         extrasWhereBettedOn.splice(extrasWhereBettedOn.indexOf(extraWhereBetOn) , 1);
-    }else
-    {
-        extrasWhereBettedOn.push(extraWhereBetOn);
-        alert("je hebt chips gezet op " + extraWhereBetOn);
     }
 
 }
@@ -71,6 +79,10 @@ function onBetExtra(extraWhereBetOn)
 function onBet(){
 
 	var Random = Math.floor(Math.random() * 36);
+
+	document.getElementById(Random.toString()).style.backgroundColor = "#08999e";
+
+
 
 	var kleur = "zwart";
 	if (rodeGetallen.includes(Random)) {
@@ -84,7 +96,6 @@ function onBet(){
 	var inzet = document.getElementById("inzet").value;
 
 	if (inzet < 1) {
-	alert("Zet een positief rond getal in");
 	}else{
 
 		var nieuwbedrag = (parseInt(document.getElementById("beschikbareBedrag").innerHTML));

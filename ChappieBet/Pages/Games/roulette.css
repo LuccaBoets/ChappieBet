@@ -6,6 +6,11 @@
     font-weight: bold;
 }
 
+#nummers td:active{
+    background-color: rgba(8, 158, 65,0.5);
+    transform: translateY(3px);
+}
+
 .even{
 
     background-color: #3b3033;
@@ -41,4 +46,16 @@ button:active {
     box-shadow: 0 5px #666;
     transform: translateY(2px);
 
+}
+
+#getallenopgegokt{
+    max-width: 100%;
+    height: 26px;
+}
+
+.gegokteGetalen td{
+
+    background-color: #3b3033;
+    text-align: center;
+    font-weight: bold;
 }
