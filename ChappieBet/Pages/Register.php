@@ -244,9 +244,7 @@
                       <hr />
 
                       <div class="input-group">
-                          <span class="input-group-addon"><i class="far fa-envelope-open"></i>
-
-</span>
+                          <span class="input-group-addon"><i class="fas fa-envelope-open-text"></i></span>
                           <input  type="email" class="form-control" name="Mail" id="Mail" placeholder="E-Mail" required>
                       </div>
 
