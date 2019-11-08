@@ -15,7 +15,9 @@
                 margin-left: 25%;
             }
         }
-
+        h2{
+            text-align: center;
+        }
 
 
         body {
@@ -238,20 +240,17 @@
               <div class="col-xs-12 col-sm-6">
                   <form class="kpx_loginForm" action="" autocomplete="off" method="POST">
                       <div class="input-group">
-                          <span class="input-group-addon"><span class="fa fa-user"></span></span>
                           <input type="text" class="form-control" name="Naam" id="naam" placeholder="Username" required>
                       </div>
                       <hr />
 
                       <div class="input-group">
-                          <span class="input-group-addon"><i class="fas fa-envelope-open-text"></i></span>
                           <input  type="email" class="form-control" name="Mail" id="Mail" placeholder="E-Mail" required>
                       </div>
 
                       <hr />
 
                       <div class="input-group">
-                          <span class="input-group-addon"><span class="fa fa-key"></span></span>
                           <input  type="password" class="form-control" name="Password" id="Password" placeholder="Password" required>
                       </div>
 
@@ -266,11 +265,11 @@
 
 
           </div>
-          <div class="col-xs-12 col-sm-3">
+          <!--<div class="col-xs-12 col-sm-3">
               <p class="kpx_forgotPwd">
                   <a href="#">Forgot password?</a>
               </p>
-          </div>
+          </div>-->
       </div>
 
     <?php
