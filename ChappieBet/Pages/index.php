@@ -4,6 +4,7 @@
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">
+
     <title>Front page</title>
 </head>
 <body>
@@ -16,7 +17,6 @@
     }
     
     ?>
-
     <h1 class="text-center">Hi There</h1>
     <a class="nav-link text-center" href="LogOut.php">Log out</a>
 
