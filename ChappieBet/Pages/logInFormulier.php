@@ -3,7 +3,7 @@ include 'connect.php';
 session_start();
 
 if (!empty($_SESSION["id"])){
-    header("Location: ../index.html");//ga direct naar home.php
+    header("Location: index.php");//ga direct naar home.php
 
     /*        echo $_SESSION["id"];
             $sqlGebruikerIDNaarWWenUsername = "SELECT * FROM tblgebruikers WHERE gebruikerID = ".$_SESSION["id"];
@@ -30,7 +30,7 @@ if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
 
 
     $_SESSION["id"] = $row['gebruikerID'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
-    header("Location: ../index.html");//ga direct naar home.php
+    header("Location: index.php");//ga direct naar home.php
 
 }}
 ?>

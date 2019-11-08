@@ -1,3 +1,5 @@
+var mysql = require('mysql');
+
 var bedrag = document.getElementById("beschikbareBedrag");
 var numbersWhereBettedOn = [];
 var extrasWhereBettedOn = [];
