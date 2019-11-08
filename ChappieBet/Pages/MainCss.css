@@ -169,3 +169,10 @@ font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
+
+.img-fluid {
+   width: 100px; /* Full width */
+  height: 100px;
+}
+
+
