@@ -265,11 +265,11 @@
 
 
           </div>
-          <!--<div class="col-xs-12 col-sm-3">
+          <div class="col-xs-12 col-sm-3">
               <p class="kpx_forgotPwd">
-                  <a href="#">Forgot password?</a>
+                  <a href="../../ChappieBet/index.html">Back to menu</a>
               </p>
-          </div>-->
+          </div>
       </div>
 
     <?php
