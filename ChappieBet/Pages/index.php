@@ -17,10 +17,24 @@
     }
     
     ?>
-    <h1 class="text-center">Hi There</h1>
-    <a class="nav-link text-center" href="LogOut.php">Log out</a>
+    <div style=";" class="NNav">
+        <span></span>
+        <a class="nav-link" href="LogOut.php">Log out</a>
+    </div>
+        <h1 style="text-align:center;">Hi There</h1>
 
-
+<style>
+    img{
+        max-width:100%;
+    }
+    .NNav{
+        font-size: 30px;
+        float: right;
+        position: absolute;
+        right: 0px;
+    }
+    
+</style>
       <section class="page-section" id="portfolio">
     <div class="container">
       <div class="row">
@@ -31,7 +45,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="../img/portfolio/01-thumbnail.jpg" alt="">
+            <img src="../img/Roulettefoto.jfif" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Roulette</h4>
@@ -44,7 +58,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="../img/portfolio/02-thumbnail.jpg" alt="">
+            <img src="../img/Blackjackfoto.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Blackjack</h4>
@@ -57,7 +71,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="../img/portfolio/03-thumbnail.jpg" alt="">
+            <img src="../img/Crashfoto.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Crash</h4>
@@ -70,7 +84,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="../img/portfolio/05-thumbnail.jpg" alt="">
+            <img src="../img/HogerofLager.png"  alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Hoger en lager</h4>

@@ -236,11 +236,7 @@ if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
     <div class="container">
     <?php
 
-            if(isset($_POST["knop"])){
-
-            }else{
-
-            print '
+        print '
             
             <div class="kpx_login">
                 <br>
@@ -296,7 +292,7 @@ if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
                 </div>
             </form>
             ';
-}
+
 
 ?>
             <div class="row kpx_row-sm-offset-3">
