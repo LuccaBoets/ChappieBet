@@ -1,5 +1,6 @@
 var random;
-var geld;
+var coins = document.getElementById("geld").innerHTML-1+1;
+var inzet = document.getElementById("geldInput").value;
 
 function EersteGetal(){
 	random = parseInt(Math.random() * 13) + 1;
@@ -19,10 +20,10 @@ function Hoger(){
 
 	if (random2 > random) {
 		document.getElementById('Resultaat').innerHTML = "Gewonnen";
-
-
+        bet(+inzet);
 	}else{
 		document.getElementById('Resultaat').innerHTML = "Verloren";
+        bet(-inzet);
 	}
 			random = random2;
 		
@@ -40,39 +41,28 @@ function Lager(){
 
 	if (random2 < random) {
 		document.getElementById('Resultaat').innerHTML = "Gewonnen";
-
+        bet(+inzet);
 	}else{
 		document.getElementById('Resultaat').innerHTML = "Verloren";
+        bet(-inzet);
 		}
 			random = random2;
 
 	
 }
-function bet(winst){
-    winst = Math.round((winst) * 100) / 100;
-    document.getElementById("geld").disabled = false;
-    document.getElementById("hidden").value = (document.getElementById("geld").value * winst)-document.getElementById("geld").value;
-    
-    
+
+function inzetten(){
+    inzet = document.getElementById("geldInput").value+1-1;
+    console.log(inzet);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function bet(winst){
+    
+    console.log(coins);
+    console.log(winst);
+    coins += winst;
+    document.getElementById("geld").innerHTML = coins;
+    console.log("bet");
+    
+}

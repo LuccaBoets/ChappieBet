@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>hoger en lager</title>
-	<script type="text/javascript" src="hogerEnLager.js"></script>
 	
 	<title>Crash</title>
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -63,16 +62,18 @@
 </style>
 
     <h1>Hoger en lager</h1>
-    <input type="number" name="ingezetGeld" placeholder="Money" id="geld">
-    <button onclick="bet();">Bet!</button>
-	<table style="width:120%">
-		<tr>
+    
+    <p id="geld">500</p>
+    <input type="number" name="ingezetGeld" placeholder="Money" id="geldInput">
+    <button onclick="inzetten();">Bet!</button>
+	<table>
+        <tr>
     		<th><h3 id="Getal1"></h3></th> 	
     		<th><h3 id="Getal2"></h3></th>
     	</tr>	
     	<tr>
-    		<th><img id="imgGetal1" src="" style="width:25%"></th>
-    		<th><img id="imgGetal2" src="" style="width:25%"></th>
+    		<th><img id="imgGetal1" src="" style="width:200px"></th>
+    		<th><img id="imgGetal2" src="" style="width:200px"></th>
     	</tr>
     </table>
    	<button onclick="Hoger()">Hoger</button>
@@ -82,7 +83,7 @@
 
     <!-- Chart JavaScript -->
     <script src="../../Chart/Chart.min.js"></script>
-	  <script type="text/javascript" src="crash.js"></script>
+	<script type="text/javascript" src="hogerEnLager.js"></script>
     
         
     <!-- Bootstrap core JavaScript -->
