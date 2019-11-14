@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="771eece5-806a-45b3-9e6e-4623854ac792" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css" beforeDir="false" afterPath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js" beforeDir="false" afterPath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,10 +24,10 @@
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -56,7 +54,7 @@
         <counts>
           <entry key="css" value="941" />
           <entry key="html" value="837" />
-          <entry key="js" value="5480" />
+          <entry key="js" value="5985" />
           <entry key="php" value="1386" />
         </counts>
       </usages-collector>
@@ -64,7 +62,7 @@
         <counts>
           <entry key="CSS" value="941" />
           <entry key="HTML" value="837" />
-          <entry key="JavaScript" value="5480" />
+          <entry key="JavaScript" value="5985" />
           <entry key="PHP" value="1386" />
         </counts>
       </usages-collector>
@@ -72,20 +70,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="952">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="372">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
             </state>
           </provider>
         </entry>
@@ -93,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="63" />
+            <state relative-caret-position="304">
+              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
             </state>
           </provider>
         </entry>
@@ -159,9 +157,9 @@
         <option value="$PROJECT_DIR$/ChappieBet/index.html" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/testIndex.css" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/index.php" />
-        <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html" />
         <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css" />
+        <option value="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js" />
       </list>
     </option>
   </component>
@@ -181,7 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,6 +208,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,17 +256,18 @@
       <workItem from="1572875010624" duration="5329000" />
       <workItem from="1573203820343" duration="131000" />
       <workItem from="1573217112471" duration="2759000" />
+      <workItem from="1573737960797" duration="3271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58004000" />
+    <option name="totallyTimeSpent" value="61275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24945295" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2549234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -290,7 +289,7 @@
       <window_info anchor="right" x="0" y="0" width="193" height="847" id="Documentation" order="4" side_tool="true" weight="0.32932165" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27680525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2549234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -408,24 +407,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="63" />
+        <state relative-caret-position="304">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="952">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
         </state>
       </provider>
     </entry>
