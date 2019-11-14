@@ -42,27 +42,38 @@ function onBetNumber(numberWhereBetOn)
 {
     if (numbersWhereBettedOn.includes(numberWhereBetOn)) //Als er al op dit nummer is gegokt, verwijder het uit de array
     {
+
+        if (document.getElementById("gegoktGetal1").innerHTML  == numberWhereBetOn){
+
+            document.getElementById("gegoktGetal1").innerHTML = "";
+        } else if (document.getElementById("gegoktGetal2").innerHTML  == numberWhereBetOn){
+
+        	document.getElementById("gegoktGetal2").innerHTML = "";
+        } else if (document.getElementById("gegoktGetal3").innerHTML == numberWhereBetOn){
+
+            document.getElementById("gegoktGetal3").innerHTML = "";
+        }
         numbersWhereBettedOn.splice(numbersWhereBettedOn.indexOf(numberWhereBetOn) , 1);
+        
     }else
     {
-    	if (numbersWhereBettedOn.length == 3) {
-    		alert("U kan niet meer inzetten, u heeft al gegokt op het maximale aantal getallen. U heeft gegokt op " + numbersWhereBettedOn[0] + " , " + numbersWhereBettedOn[1] + " , " + numbersWhereBettedOn[2] + "." );
+        if (numbersWhereBettedOn.length == 3) {
+            alert("U kan niet meer inzetten, u heeft al gegokt op het maximale aantal getallen. U heeft gegokt op " + numbersWhereBettedOn[0] + " , " + numbersWhereBettedOn[1] + " , " + numbersWhereBettedOn[2] + "." );
     	}else{
+
     		numbersWhereBettedOn.push(numberWhereBetOn);
+
+            if (document.getElementById("gegoktGetal1").innerHTML == ""){
+
+                document.getElementById("gegoktGetal1").innerHTML = numberWhereBetOn;
+            } else if (document.getElementById("gegoktGetal2").innerHTML == ""){
+
+                document.getElementById("gegoktGetal2").innerHTML = numberWhereBetOn;
+            } else if (document.getElementById("gegoktGetal3").innerHTML == ""){
+
+                document.getElementById("gegoktGetal3").innerHTML = numberWhereBetOn;
+            }
     	}
-    }
-
-    console.log(numberWhereBetOn);
-
-    if (document.getElementById("gegoktGetal1").innerHTML == ""){
-
-        document.getElementById("gegoktGetal1").innerHTML = numberWhereBetOn;
-    } else if (document.getElementById("gegoktGetal2").innerHTML == ""){
-
-    document.getElementById("gegoktGetal2").innerHTML = numberWhereBetOn;
-    } else if (document.getElementById("gegoktGetal3").innerHTML == ""){
-
-        document.getElementById("gegoktGetal3").innerHTML = numberWhereBetOn;
     }
 }
 
@@ -72,7 +83,85 @@ function onBetExtra(extraWhereBetOn)
 	if (extrasWhereBettedOn.includes(extraWhereBetOn)) //als er nog niet is gegokt op deze nummer, voeg toe in array
     {
         extrasWhereBettedOn.splice(extrasWhereBettedOn.indexOf(extraWhereBetOn) , 1);
-    }
+
+		if (document.getElementById("gegoktGetal1").innerHTML == extraWhereBetOn){
+
+			document.getElementById("gegoktGetal1").innerHTML = "";
+		} else if (document.getElementById("gegoktGetal2").innerHTML == extraWhereBetOn){
+
+			document.getElementById("gegoktGetal2").innerHTML = "";
+		} else if (document.getElementById("gegoktGetal3").innerHTML == extraWhereBetOn){
+
+			document.getElementById("gegoktGetal3").innerHTML = "";
+		}
+
+
+    }else {
+		extrasWhereBettedOn.push(extraWhereBetOn);
+        if (document.getElementById("gegoktGetal1").innerHTML == ""){
+
+            switch (extraWhereBetOn) {
+
+				case 112:
+                    document.getElementById("gegoktGetal1").innerHTML == "1st 12";
+                    break;
+
+                case 212:
+                    document.getElementById("gegoktGetal1").innerHTML == "2nd 12";
+                    break;
+
+                case 312:
+                    document.getElementById("gegoktGetal1").innerHTML == "3rd 12";
+                    break;
+
+				default:
+                    document.getElementById("gegoktGetal1").innerHTML == "ERROR";
+                    break;
+            }
+
+        } else if (document.getElementById("gegoktGetal2").innerHTML == ""){
+
+            switch (extraWhereBetOn) {
+
+                case 112:
+                    document.getElementById("gegoktGetal2").innerHTML == "1st 12";
+                    break;
+
+                case 212:
+                    document.getElementById("gegoktGetal2").innerHTML == "2nd 12";
+                    break;
+
+                case 312:
+                    document.getElementById("gegoktGetal2").innerHTML == "3rd 12";
+                    break;
+
+                default:
+                    document.getElementById("gegoktGetal2").innerHTML == "ERROR";
+                    break;
+            }
+
+        } else if (document.getElementById("gegoktGetal3").innerHTML == ""){
+
+            switch (extraWhereBetOn) {
+
+                case 112:
+                    document.getElementById("gegoktGetal3").innerHTML == "1st 12";
+                    break;
+
+                case 212:
+                    document.getElementById("gegoktGetal3").innerHTML == "2nd 12";
+                    break;
+
+                case 312:
+                    document.getElementById("gegoktGetal3").innerHTML == "3rd 12";
+                    break;
+
+                default:
+                    document.getElementById("gegoktGetal3").innerHTML == "ERROR";
+                    break;
+            }
+        }
+	}
 
 }
 
