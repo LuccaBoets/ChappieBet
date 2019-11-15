@@ -7,9 +7,10 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <link href="roulette.css" rel="stylesheet" type="text/css">
+    <script src="roulette.js"></script>
 </head>
 <body onload="onStart()">
-    
+
       <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
@@ -41,9 +42,6 @@
   </nav>
   <br>
   <br>
-
-
-	<button class="button" onclick = "onBet()" id="myBtn">Zet in</button>
 
   <input id="inzet" class="button" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000" value="0">
   <p id="beschikbareBedrag">500</p>
@@ -124,6 +122,9 @@
       <td id="gegoktGetal1"></td>
       <td id="gegoktGetal2"></td>
       <td id="gegoktGetal3"></td>
+      <td id="extra1"></td>
+      <td id="extra2"></td>
+      <td id="extra3"></td>
     </tr>
 
   </table>
