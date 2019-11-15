@@ -242,9 +242,7 @@ function onBet(){
 
 	var Random = Math.floor(Math.random() * 36);
 
-	document.getElementById(Random.toString()).style.backgroundColor = "#08999e";
-
-
+    document.getElementById(Random.toString()).style.backgroundColor = "#08999e";
 
 	var kleur = "Black";
 	if (rodeGetallen.includes(Random)) {
@@ -275,43 +273,43 @@ function onBet(){
 
 		if (extrasWhereBettedOn.includes(112) && Random > 0 && Random <= 12) 
 		{
-			nieuwbedrag += parseInt(inzet * 3);
+			nieuwbedrag += parseInt(inzet * 2);
 		}
 
 		if (extrasWhereBettedOn.includes(212) && Random > 12 && Random <= 24) 
 		{
-			nieuwbedrag += parseInt(inzet * 3);
+			nieuwbedrag += parseInt(inzet * 2);
 		}
 
 		if (extrasWhereBettedOn.includes(312) && Random > 24 && Random <= 36) 
 		{
-			nieuwbedrag += parseInt(inzet * 3);
+			nieuwbedrag += parseInt(inzet * 2);
 		}
 
 		if (extrasWhereBettedOn.includes(118) && Random > 0 && Random <= 18) 
 		{
-			nieuwbedrag += parseInt(inzet * 3);
+			nieuwbedrag += parseInt(inzet * 2);
 		}
 
 		if (extrasWhereBettedOn.includes(1936) && Random > 18 && Random <= 36) 
 		{
-			nieuwbedrag += parseInt(inzet * 3);
+			nieuwbedrag += parseInt(inzet * 2);
 		}
 
 		if (extrasWhereBettedOn.includes(88) && (Random % 2 == 0)) 
 		{
-			nieuwbedrag += parseInt(inzet * 3);
+			nieuwbedrag += parseInt(inzet * 2);
 		}
 
 		if (rodeGetallen.includes(Random) && extrasWhereBettedOn.includes(500)) 
 		{
-			nieuwbedrag += parseInt(inzet * 3);
+			nieuwbedrag += parseInt(inzet * 2);
 			console.log("rood juist")
 		}
 
 		if (zwarteGetallen.includes(Random) && extrasWhereBettedOn.includes(600)) 
 		{
-			nieuwbedrag += parseInt(inzet * 3);
+			nieuwbedrag += parseInt(inzet * 2);
 			console.log("zwart juist")
 		}
 
@@ -328,16 +326,19 @@ function onBet(){
         document.getElementById("gegoktGetal1").innerHTML = "";
         document.getElementById("gegoktGetal2").innerHTML = "";
         document.getElementById("gegoktGetal3").innerHTML = "";
-        document.getElementById("getal1").innerHTML = "";
-        document.getElementById("getal2").innerHTML = "";
-        document.getElementById("getal3").innerHTML = "";
+        document.getElementById("extra1").innerHTML = "";
+        document.getElementById("extra2").innerHTML = "";
+        document.getElementById("extra3").innerHTML = "";
 
 
         if (nieuwbedrag < 0) {
 			document.getElementById("beschikbareBedrag").innerHTML = 0;
 		}else{
+
 			document.getElementById("beschikbareBedrag").innerHTML = nieuwbedrag;
 		}
+
+		
 	}
 	
 }
