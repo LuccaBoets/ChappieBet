@@ -16,6 +16,13 @@
         echo $_SESSION["id"];
     }
     
+    $sql = "SELECT totaalGeld,coins FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
+    $resultaat = $mysqli ->query($sql);
+    
+    if($row = $resultaat->fetch_assoc()){
+        
+    }
+
     ?>
     <div style=";" class="NNav">
         <span></span>
