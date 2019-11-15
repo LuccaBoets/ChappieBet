@@ -42,13 +42,13 @@ function onBetNumber(numberWhereBetOn)
     if (numbersWhereBettedOn.includes(numberWhereBetOn)) //Als er al op dit nummer is gegokt, verwijder het uit de array
     {
 
-        if (document.getElementById("gegoktGetal1").innerHTML  = numberWhereBetOn){
+        if (document.getElementById("gegoktGetal1").innerHTML  == numberWhereBetOn){
 
             document.getElementById("gegoktGetal1").innerHTML = "";
-        } else if (document.getElementById("gegoktGetal2").innerHTML  = numberWhereBetOn){
+        } else if (document.getElementById("gegoktGetal2").innerHTML  == numberWhereBetOn){
 
         	document.getElementById("gegoktGetal2").innerHTML = "";
-        } else if (document.getElementById("gegoktGetal3").innerHTML = numberWhereBetOn){
+        } else if (document.getElementById("gegoktGetal3").innerHTML == numberWhereBetOn){
 
             document.getElementById("gegoktGetal3").innerHTML = "";
         }
