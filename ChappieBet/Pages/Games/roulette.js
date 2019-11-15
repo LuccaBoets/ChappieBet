@@ -8,7 +8,6 @@ var rodeGetallen = [];
 
 function onStart()
 {
-	
 	//Zwarte getallen array initialiseren
 	zwarteGetallen.push(2);
 	zwarteGetallen.push(4);
@@ -43,13 +42,13 @@ function onBetNumber(numberWhereBetOn)
     if (numbersWhereBettedOn.includes(numberWhereBetOn)) //Als er al op dit nummer is gegokt, verwijder het uit de array
     {
 
-        if (document.getElementById("gegoktGetal1").innerHTML  == numberWhereBetOn){
+        if (document.getElementById("gegoktGetal1").innerHTML  = numberWhereBetOn){
 
             document.getElementById("gegoktGetal1").innerHTML = "";
-        } else if (document.getElementById("gegoktGetal2").innerHTML  == numberWhereBetOn){
+        } else if (document.getElementById("gegoktGetal2").innerHTML  = numberWhereBetOn){
 
         	document.getElementById("gegoktGetal2").innerHTML = "";
-        } else if (document.getElementById("gegoktGetal3").innerHTML == numberWhereBetOn){
+        } else if (document.getElementById("gegoktGetal3").innerHTML = numberWhereBetOn){
 
             document.getElementById("gegoktGetal3").innerHTML = "";
         }
@@ -63,13 +62,13 @@ function onBetNumber(numberWhereBetOn)
 
     		numbersWhereBettedOn.push(numberWhereBetOn);
 
-            if (document.getElementById("gegoktGetal1").innerHTML == ""){
+            if (document.getElementById("gegoktGetal1").innerHTML = ""){
 
                 document.getElementById("gegoktGetal1").innerHTML = numberWhereBetOn;
-            } else if (document.getElementById("gegoktGetal2").innerHTML == ""){
+            } else if (document.getElementById("gegoktGetal2").innerHTML = ""){
 
                 document.getElementById("gegoktGetal2").innerHTML = numberWhereBetOn;
-            } else if (document.getElementById("gegoktGetal3").innerHTML == ""){
+            } else if (document.getElementById("gegoktGetal3").innerHTML = ""){
 
                 document.getElementById("gegoktGetal3").innerHTML = numberWhereBetOn;
             }
@@ -84,80 +83,154 @@ function onBetExtra(extraWhereBetOn)
     {
         extrasWhereBettedOn.splice(extrasWhereBettedOn.indexOf(extraWhereBetOn) , 1);
 
-		if (document.getElementById("gegoktGetal1").innerHTML == extraWhereBetOn){
+		if (document.getElementById("extra1").innerHTML == extraWhereBetOn){
 
-			document.getElementById("gegoktGetal1").innerHTML = "";
-		} else if (document.getElementById("gegoktGetal2").innerHTML == extraWhereBetOn){
+			document.getElementById("extra1").innerHTML = "";
+		} else if (document.getElementById("extra2").innerHTML == extraWhereBetOn){
 
-			document.getElementById("gegoktGetal2").innerHTML = "";
-		} else if (document.getElementById("gegoktGetal3").innerHTML == extraWhereBetOn){
+			document.getElementById("extra2").innerHTML = "";
+		} else if (document.getElementById("extra3").innerHTML == extraWhereBetOn){
 
-			document.getElementById("gegoktGetal3").innerHTML = "";
+			document.getElementById("extra3").innerHTML = "";
 		}
 
 
     }else {
 		extrasWhereBettedOn.push(extraWhereBetOn);
-        if (document.getElementById("gegoktGetal1").innerHTML == ""){
+        if (document.getElementById("extra1").innerHTML == ""){
 
             switch (extraWhereBetOn) {
 
+
 				case 112:
-                    document.getElementById("gegoktGetal1").innerHTML == "1st 12";
+                    document.getElementById("extra1").innerHTML = "1st 12";
                     break;
 
                 case 212:
-                    document.getElementById("gegoktGetal1").innerHTML == "2nd 12";
+                    document.getElementById("extra1").innerHTML = "2nd 12";
                     break;
 
                 case 312:
-                    document.getElementById("gegoktGetal1").innerHTML == "3rd 12";
+                    document.getElementById("extra1").innerHTML = "3rd 12";
+                    break;
+
+                case 118:
+                    document.getElementById("extra1").innerHTML = "1 to 18";
+                    break;
+
+                case 1936:
+                    document.getElementById("extra1").innerHTML = "19 to 36";
+                    break;
+
+                case 88:
+                    document.getElementById("extra1").innerHTML = "Even";
+                    break;
+
+                case 89:
+                    document.getElementById("extra1").innerHTML = "Odd";
+                    break;
+
+
+                case 500:
+                    document.getElementById("extra1").innerHTML = "Red";
+                    break;
+
+                case 600:
+                    document.getElementById("extra1").innerHTML = "Black";
                     break;
 
 				default:
-                    document.getElementById("gegoktGetal1").innerHTML == "ERROR";
+                    document.getElementById("extra1").innerHTML = "ERROR";
                     break;
             }
 
-        } else if (document.getElementById("gegoktGetal2").innerHTML == ""){
+        } else if (document.getElementById("extra2").innerHTML == ""){
 
             switch (extraWhereBetOn) {
 
                 case 112:
-                    document.getElementById("gegoktGetal2").innerHTML == "1st 12";
+                    document.getElementById("extra2").innerHTML = "1st 12";
                     break;
 
                 case 212:
-                    document.getElementById("gegoktGetal2").innerHTML == "2nd 12";
+                    document.getElementById("extra2").innerHTML = "2nd 12";
                     break;
 
                 case 312:
-                    document.getElementById("gegoktGetal2").innerHTML == "3rd 12";
+                    document.getElementById("extra2").innerHTML = "3rd 12";
+                    break;
+
+                case 118:
+                    document.getElementById("extra2").innerHTML = "1 to 18";
+                    break;
+
+                case 1936:
+                    document.getElementById("extra2").innerHTML = "19 to 36";
+                    break;
+
+                case 88:
+                    document.getElementById("extra2").innerHTML = "Even";
+                    break;
+
+                case 89:
+                    document.getElementById("extra2").innerHTML = "Odd";
+                    break;
+
+                case 500:
+                    document.getElementById("extra2").innerHTML = "Red";
+                    break;
+
+                case 600:
+                    document.getElementById("extra2").innerHTML = "Black";
                     break;
 
                 default:
-                    document.getElementById("gegoktGetal2").innerHTML == "ERROR";
+                    document.getElementById("extra2").innerHTML = "ERROR";
                     break;
             }
 
-        } else if (document.getElementById("gegoktGetal3").innerHTML == ""){
+        } else if (document.getElementById("extra3").innerHTML == ""){
 
             switch (extraWhereBetOn) {
 
                 case 112:
-                    document.getElementById("gegoktGetal3").innerHTML == "1st 12";
+                    document.getElementById("extra3").innerHTML = "1st 12";
                     break;
 
                 case 212:
-                    document.getElementById("gegoktGetal3").innerHTML == "2nd 12";
+                    document.getElementById("extra3").innerHTML = "2nd 12";
                     break;
 
                 case 312:
-                    document.getElementById("gegoktGetal3").innerHTML == "3rd 12";
+                    document.getElementById("extra3").innerHTML = "3rd 12";
+                    break;
+
+                case 118:
+                    document.getElementById("extra3").innerHTML = "1 to 18";
+                    break;
+
+                case 1936:
+                    document.getElementById("extra3").innerHTML = "19 to 36";
+                    break;
+
+                case 88:
+                    document.getElementById("extra3").innerHTML = "Even";
+                    break;
+
+                case 89:
+                    document.getElementById("extra3").innerHTML = "Odd";
+                    break;
+
+                case 500:
+                    document.getElementById("extra3").innerHTML = "Red";
+                    break;
+
+                case 600:
+                    document.getElementById("extra3").innerHTML = "Black";
                     break;
 
                 default:
-                    document.getElementById("gegoktGetal3").innerHTML == "ERROR";
+                    document.getElementById("extra3").innerHTML = "ERROR";
                     break;
             }
         }
@@ -173,9 +246,9 @@ function onBet(){
 
 
 
-	var kleur = "zwart";
+	var kleur = "Black";
 	if (rodeGetallen.includes(Random)) {
-		kleur = "rood";
+		kleur = "Red";
 	}
 	document.getElementById("gewordenGetal").innerHTML = Random + " " + kleur;
 
@@ -197,7 +270,7 @@ function onBet(){
 
 		if (numbersWhereBettedOn.includes(Random)) 
 		{
-			nieuwbedrag += parseInt(inzet * 35)
+			nieuwbedrag += parseInt(inzet * (36 / numbersWhereBettedOn.length))
 		}
 
 		if (extrasWhereBettedOn.includes(112) && Random > 0 && Random <= 12) 
@@ -217,22 +290,22 @@ function onBet(){
 
 		if (extrasWhereBettedOn.includes(118) && Random > 0 && Random <= 18) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 		}
 
 		if (extrasWhereBettedOn.includes(1936) && Random > 18 && Random <= 36) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 		}
 
 		if (extrasWhereBettedOn.includes(88) && (Random % 2 == 0)) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 		}
 
 		if (rodeGetallen.includes(Random) && extrasWhereBettedOn.includes(500)) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 			console.log("rood juist")
 		}
 
@@ -244,7 +317,7 @@ function onBet(){
 
 		if (extrasWhereBettedOn.includes(89) && (Random % 2 != 0)) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 			console.log("Odd")
 		}
 
@@ -252,7 +325,15 @@ function onBet(){
 		extrasWhereBettedOn = [];
 		document.getElementById("inzet").value = 0;
 
-		if (nieuwbedrag < 0) {
+        document.getElementById("gegoktGetal1").innerHTML = "";
+        document.getElementById("gegoktGetal2").innerHTML = "";
+        document.getElementById("gegoktGetal3").innerHTML = "";
+        document.getElementById("getal1").innerHTML = "";
+        document.getElementById("getal2").innerHTML = "";
+        document.getElementById("getal3").innerHTML = "";
+
+
+        if (nieuwbedrag < 0) {
 			document.getElementById("beschikbareBedrag").innerHTML = 0;
 		}else{
 			document.getElementById("beschikbareBedrag").innerHTML = nieuwbedrag;
