@@ -33,8 +33,7 @@
 
         <ul>
             <li><h2><a class="nav-link" href="LogOut.php">Log out</a></h2></li>
-            <li><h2 class="nav-link">Coins: </h2></li>
-            <li><h2 class="nav-link" id="coins">100</h2></li>
+            <li><h2 class="nav-link" id="coins">Coins: 1000000</h2></li>
         </ul>
 
     </nav>
