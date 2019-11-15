@@ -62,13 +62,13 @@ function onBetNumber(numberWhereBetOn)
 
     		numbersWhereBettedOn.push(numberWhereBetOn);
 
-            if (document.getElementById("gegoktGetal1").innerHTML = ""){
+            if (document.getElementById("gegoktGetal1").innerHTML == ""){
 
                 document.getElementById("gegoktGetal1").innerHTML = numberWhereBetOn;
-            } else if (document.getElementById("gegoktGetal2").innerHTML = ""){
+            } else if (document.getElementById("gegoktGetal2").innerHTML == ""){
 
                 document.getElementById("gegoktGetal2").innerHTML = numberWhereBetOn;
-            } else if (document.getElementById("gegoktGetal3").innerHTML = ""){
+            } else if (document.getElementById("gegoktGetal3").innerHTML == ""){
 
                 document.getElementById("gegoktGetal3").innerHTML = numberWhereBetOn;
             }
