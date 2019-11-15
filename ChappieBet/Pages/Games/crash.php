@@ -88,21 +88,7 @@
 </div>
 </div>
 </div>
-    
-<?php
-    if(!empty($_GET['money'])){
-        $result = $_GET['money']; 
-        echo $result; 
-        $sql = "SELECT * FROM tbl_gebruikers WHERE `naam` = '".$_POST['naam']."' AND `wachtwoord` = '" . $_POST['wachtwoord'] . "'";
-        $resultaat = $mysqli ->query($sql);
-    }
-    
-    
-    
 
-
-?>
-    
     <!-- Chart JavaScript -->
     <script src="../../Chart/Chart.min.js"></script>
 	  <script type="text/javascript" src="crash.js"></script>
