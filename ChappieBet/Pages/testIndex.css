@@ -17,3 +17,17 @@ li{
 
     float: left;
 }
+
+h1{
+
+    margin-top: 50px;
+}
+
+h2{
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#coins{
+    padding-left: 10px;
+}
