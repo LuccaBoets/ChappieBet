@@ -242,9 +242,7 @@ function onBet(){
 
 	var Random = Math.floor(Math.random() * 36);
 
-	document.getElementById(Random.toString()).style.backgroundColor = "#08999e";
-
-
+    document.getElementById(Random.toString()).style.backgroundColor = "#08999e";
 
 	var kleur = "Black";
 	if (rodeGetallen.includes(Random)) {
@@ -339,6 +337,8 @@ function onBet(){
 
 			document.getElementById("beschikbareBedrag").innerHTML = nieuwbedrag;
 		}
+
+		
 	}
 	
 }
