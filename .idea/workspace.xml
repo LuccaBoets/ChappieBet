@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="771eece5-806a-45b3-9e6e-4623854ac792" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html" beforeDir="false" afterPath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js" beforeDir="false" afterPath="$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +54,7 @@
         <counts>
           <entry key="css" value="941" />
           <entry key="html" value="886" />
-          <entry key="js" value="6270" />
+          <entry key="js" value="6293" />
           <entry key="php" value="1386" />
         </counts>
       </usages-collector>
@@ -63,7 +62,7 @@
         <counts>
           <entry key="CSS" value="941" />
           <entry key="HTML" value="886" />
-          <entry key="JavaScript" value="6270" />
+          <entry key="JavaScript" value="6293" />
           <entry key="PHP" value="1386" />
         </counts>
       </usages-collector>
@@ -83,11 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="99" column="63" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
-              <folding>
-                <element signature="n#!!block;n#onBet#0" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="91" column="65" selection-start-line="91" selection-start-column="65" selection-end-line="91" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -175,7 +171,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -263,18 +259,18 @@
       <workItem from="1573203820343" duration="131000" />
       <workItem from="1573217112471" duration="2759000" />
       <workItem from="1573737960797" duration="3350000" />
-      <workItem from="1573821747409" duration="2044000" />
+      <workItem from="1573821747409" duration="2359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63398000" />
+    <option name="totallyTimeSpent" value="63713000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25382933" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.123667374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -408,11 +404,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChappieBet/Pages/Games/roulette.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="99" column="63" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
-          <folding>
-            <element signature="n#!!block;n#onBet#0" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="91" column="65" selection-start-line="91" selection-start-column="65" selection-end-line="91" selection-end-column="65" />
         </state>
       </provider>
     </entry>

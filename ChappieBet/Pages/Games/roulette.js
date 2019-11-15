@@ -83,13 +83,13 @@ function onBetExtra(extraWhereBetOn)
     {
         extrasWhereBettedOn.splice(extrasWhereBettedOn.indexOf(extraWhereBetOn) , 1);
 
-		if (document.getElementById("extra1").innerHTML = extraWhereBetOn){
+		if (document.getElementById("extra1").innerHTML == extraWhereBetOn){
 
 			document.getElementById("extra1").innerHTML = "";
-		} else if (document.getElementById("extra2").innerHTML = extraWhereBetOn){
+		} else if (document.getElementById("extra2").innerHTML == extraWhereBetOn){
 
 			document.getElementById("extra2").innerHTML = "";
-		} else if (document.getElementById("extra3").innerHTML = extraWhereBetOn){
+		} else if (document.getElementById("extra3").innerHTML == extraWhereBetOn){
 
 			document.getElementById("extra3").innerHTML = "";
 		}
@@ -270,7 +270,7 @@ function onBet(){
 
 		if (numbersWhereBettedOn.includes(Random)) 
 		{
-			nieuwbedrag += parseInt(inzet * (35 / numbersWhereBettedOn.length))
+			nieuwbedrag += parseInt(inzet * (36 / numbersWhereBettedOn.length))
 		}
 
 		if (extrasWhereBettedOn.includes(112) && Random > 0 && Random <= 12) 
@@ -290,22 +290,22 @@ function onBet(){
 
 		if (extrasWhereBettedOn.includes(118) && Random > 0 && Random <= 18) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 		}
 
 		if (extrasWhereBettedOn.includes(1936) && Random > 18 && Random <= 36) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 		}
 
 		if (extrasWhereBettedOn.includes(88) && (Random % 2 == 0)) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 		}
 
 		if (rodeGetallen.includes(Random) && extrasWhereBettedOn.includes(500)) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 			console.log("rood juist")
 		}
 
@@ -317,7 +317,7 @@ function onBet(){
 
 		if (extrasWhereBettedOn.includes(89) && (Random % 2 != 0)) 
 		{
-			nieuwbedrag += parseInt(inzet * 2);
+			nieuwbedrag += parseInt(inzet * 3);
 			console.log("Odd")
 		}
 
@@ -328,6 +328,9 @@ function onBet(){
         document.getElementById("gegoktGetal1").innerHTML = "";
         document.getElementById("gegoktGetal2").innerHTML = "";
         document.getElementById("gegoktGetal3").innerHTML = "";
+        document.getElementById("getal1").innerHTML = "";
+        document.getElementById("getal2").innerHTML = "";
+        document.getElementById("getal3").innerHTML = "";
 
 
         if (nieuwbedrag < 0) {
