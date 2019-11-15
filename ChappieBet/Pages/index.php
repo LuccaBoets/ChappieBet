@@ -17,12 +17,25 @@
     }
     
     ?>
+
+    <nav>
+
+        <ul>
+            <li><h2><a class="nav-link" href="LogOut.php">Log out</a></h2></li>
+            <li><h2 class="nav-link">Coins: </h2></li>
+            <li><h2 class="nav-link" id="coins">100</h2></li>
+        </ul>
+
+    </nav>
+
+        <br>
+    <!--
     <div style=";" class="NNav">
         <span></span>
         <a class="nav-link" href="LogOut.php">Log out</a>
-        <p>Coins: </p>
-        <p id="coins"></p>
-    </div>
+        <p class="nav-link">Coins: </p>
+        <p class="nav-link" id="coins">100</p>
+    </div> -->
         <h1 style="text-align:center;">Hi There</h1>
 
 <style>
