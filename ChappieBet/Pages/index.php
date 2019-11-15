@@ -11,6 +11,8 @@
         <?php
     
     session_start();
+        include 'connect.php';
+
     if(empty($_SESSION["id"])){
         header("Location:../index.html");
         echo $_SESSION["id"];
