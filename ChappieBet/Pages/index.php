@@ -20,6 +20,8 @@
     <div style=";" class="NNav">
         <span></span>
         <a class="nav-link" href="LogOut.php">Log out</a>
+        <p>Coins: </p>
+        <p id="coins"></p>
     </div>
         <h1 style="text-align:center;">Hi There</h1>
 
