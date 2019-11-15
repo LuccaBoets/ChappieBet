@@ -18,11 +18,13 @@
         echo $_SESSION["id"];
     }
     
-    $sql = "SELECT totaalGeld,coins FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
+    $sql = "SELECT * FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
     $resultaat = $mysqli ->query($sql);
     
     if($row = $resultaat->fetch_assoc()){
-        
+        if($row["online"]){
+            echo('admin');
+        }
     }
 
     ?>
