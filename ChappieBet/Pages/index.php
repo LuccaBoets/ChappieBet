@@ -21,11 +21,8 @@
     $sql = "SELECT * FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
     $resultaat = $mysqli ->query($sql);
     
-    if($row = $resultaat->fetch_assoc()){
-        if($row["online"]){
-            echo('admin');
-        }
-    }
+    
+    
 
     ?>
 
@@ -34,7 +31,7 @@
         <ul>
             <li><h2><a class="nav-link" href="LogOut.php">Log out</a></h2></li>
             <li><h2 class="nav-link">Coins: </h2></li>
-            <li><h2 class="nav-link" id="coins">100</h2></li>
+            <li><h2 class="nav-link" id="coins"><?php echo($row["coins"]) ?></h2></li>
         </ul>
 
     </nav>
