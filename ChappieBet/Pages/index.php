@@ -21,9 +21,7 @@
     $sql = "SELECT * FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
     $resultaat = $mysqli ->query($sql);
     
-    
-    
-
+    $row = $resultaat->fetch_assoc();
     ?>
 
     <nav>
