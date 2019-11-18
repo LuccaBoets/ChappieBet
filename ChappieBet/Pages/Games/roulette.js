@@ -1,3 +1,4 @@
+//            
 
 var bedrag = document.getElementById("beschikbareBedrag");
 var numbersWhereBettedOn = [];
@@ -336,6 +337,7 @@ function onBet(){
 		}else{
 
 			document.getElementById("beschikbareBedrag").innerHTML = nieuwbedrag;
+            document.getElementById("hidden").value = document.getElementById("beschikbareBedrag").innerHTML;
 		}
 
 		

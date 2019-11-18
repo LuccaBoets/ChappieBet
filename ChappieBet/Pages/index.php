@@ -21,8 +21,7 @@
     $sql = "SELECT * FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
     $resultaat = $mysqli ->query($sql);
     
-    $row = $resultaat->fetch_assoc();
-    ?>
+    $row = $resultaat->fetch_assoc();?>
 
     <nav>
 
@@ -59,7 +58,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-6 portfolio-item">
-          <a class="portfolio-link" href="Games/roulette.html" >
+          <a class="portfolio-link" href="Games/roulette.php" >
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
@@ -98,7 +97,7 @@
           </div>
         </div>
         <div class="col-md-6 col-sm-6 portfolio-item">
-          <a class="portfolio-link" href="Games/hogerEnLager.html">
+          <a class="portfolio-link" href="Games/hogerEnLager.php">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>

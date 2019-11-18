@@ -1,3 +1,4 @@
+
 var random;
 var coins = document.getElementById("geld").innerHTML-1+1;
 var inzet = document.getElementById("geldInput").value;
@@ -31,6 +32,7 @@ function Hoger(){
 
 }
 function Lager(){	
+    
 	document.getElementById('Getal1').innerHTML = random;
 		document.getElementById('imgGetal1').src = "imagesBlackjack/" + random + "H.png";
 	do{
@@ -64,5 +66,7 @@ function bet(winst){
     coins += winst;
     document.getElementById("geld").innerHTML = coins;
     console.log("bet");
+        document.getElementById("hidden").value = document.getElementById("geld").innerHTML;
+
     
 }
