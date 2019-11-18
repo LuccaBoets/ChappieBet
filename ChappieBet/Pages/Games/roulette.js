@@ -249,10 +249,8 @@ function onBet(){
 	if (rodeGetallen.includes(Random)) {
 		kleur = "Red";
 	}
+
 	document.getElementById("gewordenGetal").innerHTML = Random + " " + kleur;
-
-
-	document.getElementById("rouletteSlider").value = Random;
 
 	var inzet = document.getElementById("inzet").value;
 
@@ -320,7 +318,51 @@ function onBet(){
 			console.log("Odd")
 		}
 
-		numbersWhereBettedOn = [];
+		switch (Random) {
+            case 26: document.getElementById("rouletteWiel").style.transform = 'rotate(10deg)';break;
+            case 3: document.getElementById("rouletteWiel").style.transform = 'rotate(20deg)';break;
+            case 35: document.getElementById("rouletteWiel").style.transform = 'rotate(30deg)';break;
+            case 12: document.getElementById("rouletteWiel").style.transform = 'rotate(40deg)';break;
+            case 28: document.getElementById("rouletteWiel").style.transform = 'rotate(50deg)';break;
+            case 7: document.getElementById("rouletteWiel").style.transform = 'rotate(60deg)';break;
+            case 29: document.getElementById("rouletteWiel").style.transform = 'rotate(70deg)';break;
+            case 18: document.getElementById("rouletteWiel").style.transform = 'rotate(80deg)';break;
+            case 22: document.getElementById("rouletteWiel").style.transform = 'rotate(90deg)';break;
+            case 9: document.getElementById("rouletteWiel").style.transform = 'rotate(100deg)';break;
+            case 31: document.getElementById("rouletteWiel").style.transform = 'rotate(110deg)';break;
+            case 14: document.getElementById("rouletteWiel").style.transform = 'rotate(120deg)';break;
+            case 20: document.getElementById("rouletteWiel").style.transform = 'rotate(130deg)';break;
+            case 1: document.getElementById("rouletteWiel").style.transform = 'rotate(140deg)';break;
+            case 33: document.getElementById("rouletteWiel").style.transform = 'rotate(150deg)';break;
+            case 16: document.getElementById("rouletteWiel").style.transform = 'rotate(160deg)';break;
+            case 24: document.getElementById("rouletteWiel").style.transform = 'rotate(170deg)';break;
+            case 5: document.getElementById("rouletteWiel").style.transform = 'rotate(180deg)';break;
+            case 10: document.getElementById("rouletteWiel").style.transform = 'rotate(190deg)';break;
+            case 23: document.getElementById("rouletteWiel").style.transform = 'rotate(200deg)';break;
+            case 8: document.getElementById("rouletteWiel").style.transform = 'rotate(210deg)';break;
+            case 30: document.getElementById("rouletteWiel").style.transform = 'rotate(220deg)';break;
+            case 11: document.getElementById("rouletteWiel").style.transform = 'rotate(230deg)';break;
+            case 36: document.getElementById("rouletteWiel").style.transform = 'rotate(240deg)';break;
+            case 13: document.getElementById("rouletteWiel").style.transform = 'rotate(250deg)';break;
+            case 27: document.getElementById("rouletteWiel").style.transform = 'rotate(260deg)';break;
+            case 6: document.getElementById("rouletteWiel").style.transform = 'rotate(270deg)';break;
+            case 34: document.getElementById("rouletteWiel").style.transform = 'rotate(280deg)';break;
+            case 17: document.getElementById("rouletteWiel").style.transform = 'rotate(290deg)';break;
+            case 25: document.getElementById("rouletteWiel").style.transform = 'rotate(300deg)';break;
+            case 2: document.getElementById("rouletteWiel").style.transform = 'rotate(310deg)';break;
+            case 21: document.getElementById("rouletteWiel").style.transform = 'rotate(320deg)';break;
+            case 4: document.getElementById("rouletteWiel").style.transform = 'rotate(330deg)';break;
+            case 19: document.getElementById("rouletteWiel").style.transform = 'rotate(340deg)';break;
+            case 15: document.getElementById("rouletteWiel").style.transform = 'rotate(350deg)';break;
+            case 32: document.getElementById("rouletteWiel").style.transform = 'rotate(360deg)';break;
+            default: document.getElementById("rouletteWiel").style.transform = 'rotate(0deg)';break;
+
+        }
+
+
+
+
+        numbersWhereBettedOn = [];
 		extrasWhereBettedOn = [];
 		document.getElementById("inzet").value = 0;
 
@@ -340,7 +382,7 @@ function onBet(){
             document.getElementById("hidden").value = document.getElementById("beschikbareBedrag").innerHTML;
 		}
 
-		
+
 	}
 	
 }
