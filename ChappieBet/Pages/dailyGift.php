@@ -2,6 +2,15 @@
 
 //Zet hier de de H1 php voor dagen online anders werkt javascript ni
 
+include "connect.php";
+session_start();
+
+$sql = "SELECT `daysOnline` FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
+$resultaat = $mysqli ->query($sql);
+if ($resultaat ->num_rows > 0){
+    $row = $resultaat->fetch_assoc();
+}
+$dagen = $row["daysOnline"];
 echo "
 
 <html>
@@ -10,32 +19,7 @@ echo "
         <link href=\"MainCss.css\" rel=\"stylesheet\">
         <link href=\"testIndex.css\" rel=\"stylesheet\" type=\"text/css\">
         <title>Daily Gifts</title>
-        <script>
         
-         function checkDay() {
-             
-             alert('zad');
-           
-             var daysonline = parseInt(document.getElementById('daysonline').innerHTML);
-     
-             
-             switch (daysonline) {
-                 
-                 case 1:
-                     takeDocumentID(1);                                      
-             }
-                         
-         }
-         
-         function takeDocumentID(dagID) {
-             
-             dagID = 'dag' + dagID;
-             
-             var ereturn = document.getElementById('dag1');
-             return ereturn;
-         }
-        
-        </script>
         
         <style>
         
@@ -62,7 +46,7 @@ echo "
 </style>
         
     </head>
-    <body onload='checkDay()'>
+    <body>
         
         <h1>Daily Gifts</h1>
         
@@ -135,9 +119,18 @@ echo "
         </tr>                       
         </table>        
         
-        <h1 id='daysonline'>1</h1>
-
-    </body> 
+        <h1 id='daysOnline'></h1>
+        <h1></h1>
+<script>
+         document.getElementById('daysOnline').innerHTML = $dagen;
+         var daysonline = parseInt(document.getElementById('daysOnline').innerHTML);
+         var dagen = 'dag' + $dagen;
+         console.log(dagen);
+         document.getElementById(dagen).style.backgroundColor = 'green';                                      
+     
+        
+</script>
+    </body > 
 </html>
 
 

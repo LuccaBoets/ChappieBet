@@ -1,5 +1,3 @@
-<link rel = "stylesheet" href="Styles.css"/>
-
 <?php
 $mysqli = new mysqli("localhost", "root", "", "chappiebet");
 
