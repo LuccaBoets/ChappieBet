@@ -26,12 +26,12 @@ echo "
         #gifts{
             margin-left: auto;
             margin-right: auto;
-            border: 2px red solid;
+            border: 2px rgb(199,73,58) solid;
             width: 50%;
         }
         
         td{
-            border: 1px greenyellow solid;
+            border: 1px #917164 solid;
             border-spacing: 0px;
             padding: 0px;
             font-size: 20px;
@@ -126,7 +126,7 @@ echo "
          var daysonline = parseInt(document.getElementById('daysOnline').innerHTML);
          var dagen = 'dag' + $dagen;
          console.log(dagen);
-         document.getElementById(dagen).style.backgroundColor = 'green';                                      
+         document.getElementById(dagen).style.backgroundColor = '#8E2745';                                      
      
         
 </script>
