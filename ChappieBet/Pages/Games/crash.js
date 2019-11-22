@@ -37,11 +37,12 @@ var geld;
 var cashoutStop;
 var gewonnen = true;
 var lock = false;
+var inzet = document.getElementById("geld").value;
 
 
 
 function randomGetal(){
-    
+    inzet = document.getElementById("geld").value;
     document.getElementById("geld").disabled = true;
     document.getElementById("myBtn").disabled = true;
     document.getElementById("Lock").disabled = false;
@@ -73,7 +74,7 @@ function randomGetal(){
         
         if (lock){
             if(document.getElementById("AutoCash").value == aftellen){
-                winnen(aftellen);
+                winnen(inzet*aftellen);
             }
         }
         
@@ -93,7 +94,7 @@ function randomGetal(){
 		if (aftellen == random) {
 			console.log("STOP");
             if(gewonnen){
-                winnen(0); 
+                winnen(-inzet); 
             }
 			clearInterval(x);
 		}
@@ -106,7 +107,11 @@ function randomGetal(){
 
 }
 function CashOut(){
-    winnen(aftellen);
+    console.log("inzet");
+    console.log(inzet);
+    console.log("aftellen");
+    console.log(aftellen);
+    winnen(inzet*aftellen);
 }
 
 function Lock(){
@@ -122,7 +127,9 @@ function Lock(){
 }
 
 function winnen(winst){
+    console.log(winst);
     winst = Math.round((winst) * 100) / 100;
+    console.log(winst);
     gewonnen =false;
     document.getElementById("geld").disabled = false;
     document.getElementById("myBtn").disabled = false;
@@ -130,8 +137,10 @@ function winnen(winst){
     document.getElementById("CashOut1").disabled = false;
     document.getElementById("AutoCash").disabled = false;
     
-    document.getElementById("hidden").value = (document.getElementById("geld").value * winst)-document.getElementById("geld").value;
-    document.getElementById("myModal").style.display = "block";
+    document.getElementById("totaalGeld").innerHTML = document.getElementById("totaalGeld").innerHTML-1+1  + winst
+    
+    document.getElementById("hidden").value = document.getElementById("totaalGeld").innerHTML;
+
     
 }
 

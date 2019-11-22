@@ -13,49 +13,36 @@
     <script src="../../Chart/Chart.css"></script>
 </head>
 <body>
+        
+    <form method="post">
+        <input type="hidden" id="hidden" name="money" onclick="winst()">
+        <input type="submit" value="Back" name="Back"> 
+    </form>
+    <?php
+        session_start();
+        include '../connect.php';
     
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">ChappieBet</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> 
     
-<!-- The Modal -->
-<div id="myModal" class="modal">
+        $sql = "SELECT * FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
+    $resultaat = $mysqli ->query($sql);
+    
+    $row = $resultaat->fetch_assoc();
+    
+        if(isset($_POST["Back"])){
+            
+            $sql = "UPDATE `tblgebruikers` SET coins = ".$_POST["money"]." WHERE gebruikerID = '".$_SESSION["id"]."'";
+            echo($sql);
+            if($mysqli->query($sql)){
+                echo"ja";
+                //header("location: ../index.html");
+            }else{
+                echo "Error record toevoegen: ".$mysqli ->error."<br>";
+            }
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <form method="get" name="form" action="crash.php"> 
-        <input type="hidden" id="hidden" name="money"> 
-        <input type="submit" value="Next" name="submit"> 
-    </form> 
-  </div>
-
-</div>
+            header("location: ../index.php");
+        }
+    
+    ?>
     
 <div class="container">
   <div class="row" style="margin-top: 200px">
@@ -73,6 +60,7 @@
 <div class="col-sm">
         
 	<button onclick = "randomGetal()" id="myBtn">Generate</button>
+  <p id="totaalGeld"><?php echo($row["coins"]) ?></p>
 
   <p style="color: white">Hoeveel zet je in?</p>
   <input id="geld" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000">

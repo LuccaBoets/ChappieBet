@@ -37,7 +37,8 @@
 </style>
 
     <h1>Higher or lower</h1>
-        <form method="post">
+    
+    <form method="post">
         <input type="hidden" id="hidden" name="money" onclick="winst()">
         <input type="submit" value="Back" name="Back"> 
     </form>
