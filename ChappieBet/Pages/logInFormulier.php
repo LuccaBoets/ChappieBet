@@ -3,25 +3,36 @@ include 'connect.php';
 session_start();
 
 if (!empty($_SESSION["id"])){
-
+/*
     $sqlGetDate = "SELECT `lastDate` FROM tblvrienden WHERE `gebruikerID` = '".$_SESSION['id']."'";
     $getDateResult = $mysqli->query($sqlGetDate);
 
     if ($getDateResult ->num_rows > 0){
         $datum = $resultaat->fetch_assoc();
     }
+*/
 
-    if ($row)
+    $sqlVorigeDatum = "SELECT `lastDate` FROM `tblgebruikers` WHERE `gebruikerID` = ". $_SESSION["id"];
+    $vorigeDatum= $mysqli->query($sqlVorigeDatum);
 
-    $sqlSetDate = "INSERT INTO `tblgebruikers`(`lastDate`) VALUES ()";
+    if ($vorigeDatum->num_rows >0){
+        $vorigeDatum = $vorigeDatum->fetch_assoc();
+    }
+
+    $_SESSION["vorigeDatum"] = $vorigeDatum["lastDate"];
+
+    $datum = date("Y-m-d");
+    $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
+                   WHERE `gebruikerID` =". $_SESSION["id"];
+    $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
+
 
     header("Location: index.php");//ga direct naar home.php
 }
 
 if(isset($_POST["knop"])){
 
-$sql = "SELECT * FROM tblgebruikers WHERE `username` = '".$_POST['naam']."' AND `password` = '" . md5($_POST['wachtwoord']) . "'";//controleer of er iemand bestaat met deze gebruikersnaam en wachtwoord
-echo($sql);
+$sql = "SELECT * FROM tblgebruikers WHERE `username` = '".$_POST['naam']."' AND `password` = '" . md5($_POST['wachtwoord']) . "'";//controleer of er iemand bestaat met deze gebruikersnaam en wachtwoors
 $resultaat = $mysqli ->query($sql);//uitvoeren van de query
 
 if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
@@ -30,6 +41,21 @@ if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
 
 
     $_SESSION["id"] = $row['gebruikerID'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
+
+    $sqlVorigeDatum = "SELECT `lastDate` FROM `tblgebruikers` WHERE `gebruikerID` = ". $_SESSION["id"];
+    $vorigeDatum= $mysqli->query($sqlVorigeDatum);
+
+    if ($vorigeDatum->num_rows >0){
+        $vorigeDatum1 = $vorigeDatum->fetch_assoc();
+    }
+
+    $_SESSION["vorigeDatum"] = $vorigeDatum1["lastDate"];
+
+    $datum = date("Y-m-d");
+    $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
+                   WHERE `gebruikerID` =". $_SESSION["id"];
+    $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
+
     header("Location: index.php");//ga direct naar home.php
 
 }}

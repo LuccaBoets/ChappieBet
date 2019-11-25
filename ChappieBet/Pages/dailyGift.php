@@ -4,13 +4,38 @@
 
 include "connect.php";
 session_start();
+$stop_date = date("Y-m-d");
+$stop_date = date('Y-m-d', strtotime($stop_date . ' -1 day'));
+$vorigeDatum= $_SESSION["vorigeDatum"];
+
 
 $sql = "SELECT `daysOnline` FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
 $resultaat = $mysqli ->query($sql);
+
 if ($resultaat ->num_rows > 0){
     $row = $resultaat->fetch_assoc();
 }
 $dagen = $row["daysOnline"];
+
+echo $stop_date;
+
+if ($vorigeDatum == $stop_date) {
+    $dagen += 1;
+    $sqlSetDagen = "UPDATE `tblgebruikers` SET `daysOnline` = '$dagen' WHERE `gebruikerID` =". $_SESSION['id'];
+    $VOERsqlSetDagenUIT = $mysqli->query($sqlSetDagen);
+
+    echo $sqlSetDagen;
+
+    $sqlGetDate = "SELECT `daysOnline` FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
+    $resultaatDate = $mysqli ->query($sql);
+
+    if ($resultaatDate ->num_rows > 0){
+        $rowDate = $resultaatDate->fetch_assoc();
+    }
+
+    echo $sqlGetDate;
+    $dagen = $rowDate["daysOnline"];
+}
 echo "
 
 <html>
