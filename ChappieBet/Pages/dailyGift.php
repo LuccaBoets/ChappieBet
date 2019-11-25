@@ -17,14 +17,11 @@ if ($resultaat ->num_rows > 0){
 }
 $dagen = $row["daysOnline"];
 
-echo $stop_date;
-
 if ($vorigeDatum == $stop_date) {
     $dagen += 1;
     $sqlSetDagen = "UPDATE `tblgebruikers` SET `daysOnline` = '$dagen' WHERE `gebruikerID` =". $_SESSION['id'];
     $VOERsqlSetDagenUIT = $mysqli->query($sqlSetDagen);
 
-    echo $sqlSetDagen;
 
     $sqlGetDate = "SELECT `daysOnline` FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
     $resultaatDate = $mysqli ->query($sql);
@@ -32,8 +29,6 @@ if ($vorigeDatum == $stop_date) {
     if ($resultaatDate ->num_rows > 0){
         $rowDate = $resultaatDate->fetch_assoc();
     }
-
-    echo $sqlGetDate;
     $dagen = $rowDate["daysOnline"];
 }
 echo "
