@@ -3,19 +3,19 @@ include 'connect.php';
 session_start();
 
 if (!empty($_SESSION["id"])){
+
+    $sqlGetDate = "SELECT `lastDate` FROM tblvrienden WHERE `gebruikerID` = '".$_SESSION['id']."'";
+    $getDateResult = $mysqli->query($sqlGetDate);
+
+    if ($getDateResult ->num_rows > 0){
+        $datum = $resultaat->fetch_assoc();
+    }
+
+    if ($row)
+
+    $sqlSetDate = "INSERT INTO `tblgebruikers`(`lastDate`) VALUES ()";
+
     header("Location: index.php");//ga direct naar home.php
-
-    /*        echo $_SESSION["id"];
-            $sqlGebruikerIDNaarWWenUsername = "SELECT * FROM tblgebruikers WHERE gebruikerID = ".$_SESSION["id"];
-            echo $sqlGebruikerIDNaarWWenUsername;
-            $usernameEnWw = $mysqli->query($sqlGebruikerIDNaarWWenUsername);
-
-            if ($usernameEnWw->num_rows > 0){
-
-                $row = $usernameEnWw ->fetch_assoc();
-                echo $row;*/
-
-    //}
 }
 
 if(isset($_POST["knop"])){
