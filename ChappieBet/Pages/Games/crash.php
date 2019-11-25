@@ -60,7 +60,9 @@
 <div class="col-sm">
         
 	<button onclick = "randomGetal()" id="myBtn">Generate</button>
-  <p id="totaalGeld"><?php echo($row["coins"]) ?></p>
+  <!--<p id="totaalGeld"><?php echo($row["coins"]) ?></p>-->
+  <p id="totaalGeld">5</p>
+
 
   <p style="color: white">Hoeveel zet je in?</p>
   <input id="geld" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000">
