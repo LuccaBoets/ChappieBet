@@ -1,3 +1,29 @@
+<?php
+include 'connect.php';
+session_start();
+
+$getCoins = "SELECT * FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."'";
+$getCoinsVOERUIT = $mysqli->query($getCoins);
+if ($getCoinsVOERUIT->num_rows>0){
+    $COINS = $getCoinsVOERUIT->fetch_assoc();
+}
+$COINS = $COINS["coins"];
+
+if ($COINS < 500){
+    echo "<script>
+myVar = setInterval(function (temp) {
+
+            window.location.href = 'index.php';
+
+        }, 1000);
+alert('JE BENT ONDER DE 500 COINS DUS VERDIEN MEER OF HAAL MEER AF SORRY!!');
+    
+</script>";
+    //header("location: index.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,14 +32,13 @@
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    
-    <?php
-    
-    include 'connect.php';
-    session_start();
-    
-    
+
+<?php
+
+
+
     $sql = "SELECT totaalGeld,coins FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
     $resultaat = $mysqli ->query($sql);
     $row = $resultaat->fetch_assoc();
