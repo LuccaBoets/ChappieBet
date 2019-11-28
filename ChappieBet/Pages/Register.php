@@ -63,6 +63,8 @@
                       <div class="input-group">
                           <input  type="password" class="form-control" name="Password" id="Password" placeholder="Password" required>
                       </div>
+                        <input type="radio"                name="radiocheck"
+  id="18+" required> U hebt 18+ jaar oud
 
                       <hr />
                       <button class="btn btn-lg btn-outline-primary btn-block" type="submit" name="submit"><i class="fa fa-sign-in"></i> Registeren</button>
