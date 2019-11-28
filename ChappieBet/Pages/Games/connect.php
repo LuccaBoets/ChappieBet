@@ -1,6 +1,6 @@
 <?php
 
-    $mysqli = new mysqli("localhost", "root", "", "leerlingen");
+    $mysqli = new mysqli("localhost", "root", "", "tblgebruikers");
 /* 
    Met de voorgaande lijn maken we een verbinding met de databank met de naam cursussql.  
    Onze server is localhost, onze gebruikersnaam root en we hebben geen paswoord ingesteld.
