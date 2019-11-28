@@ -29,7 +29,15 @@
             <li><h2><a class="nav-link" href="LogOut.php">Log out</a></h2></li>
             <li><h2><a class="nav-link" href="dailyGift.php">Daily Gifts</a></h2></li>
             <li><h2><a class="nav-link" href="achievements.php">Achievments</a></h2></li>
+            <li><h2><a class="nav-link" href="afhalen.php">afhalen</a></h2></li>
             <li><h2 class="nav-link" id="coins">Coins: <?php echo($row["coins"]) ?></h2></li>
+            <?php
+            
+            if($row["online"] == 1){
+                echo '<li><h2 class="nav-link"><a class="nav-link" href="admin.php">admin</a></h2></li>';
+            }
+    
+            ?>
         </ul>
 
     </nav>
