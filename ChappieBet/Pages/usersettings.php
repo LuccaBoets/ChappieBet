@@ -1,4 +1,17 @@
-<?php
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>admin</title>
+    
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="MainCss.css" rel="stylesheet">
+   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="MainCss.css" rel="stylesheet">
+</head>
+<body>
+  
+
+    <?php
 
 session_start();
 include "connect.php";
@@ -63,4 +76,6 @@ echo "<br><a href='index.php'>Terug naar menu</a>";
 
 ?>
 
- 
+    
+</body>
+</html> 
