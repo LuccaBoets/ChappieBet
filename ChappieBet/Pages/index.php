@@ -5,6 +5,26 @@
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">
 
+    <script type="text/javascript">
+      
+      function toonRouletteInfo(){
+          alert("Het rad bestaat uit 36 cijfers en elke cijfer heeft een rode of zwarte kleur. Naast het rad bevind zich een tafel en op deze tafel zijn alle inzetmogelijkheden afgebeeld. Je kan gokken op een kleur of getal en nog veel meer.")
+      }
+
+      function toonBlackjackInfo(){
+          alert("Bij blackjack is het de bedoeling dat je zo dicht mogelijk tegen de 21 komt. Als je over 21 gaat ben je verloren. Bij gelijkspel met de dealer verlies je ook.")
+      }
+
+      function toonCrashInfo(){
+          alert("Bij crash is het de bedoeling dat je outcash voor de grafiek crasht.")
+      }
+
+      function toonHogerLagerInfo(){
+        alert("Bij hoger lager is het de bedoeling een hogere kaart te trekken dan de dealer.")
+      }
+
+    </script>
+
     <title>Front page</title>
 </head>
 <body>
@@ -77,6 +97,7 @@
             <img src="../img/Roulettefoto.jfif" alt="">
           </a>
           <div class="portfolio-caption">
+            <button onclick="toonRouletteInfo()">Info</button>
             <h4>Roulette</h4>
           </div>
         </div>
@@ -90,6 +111,7 @@
             <img src="../img/Blackjackfoto.jpg" alt="">
           </a>
           <div class="portfolio-caption">
+            <button onclick="toonBlackjackInfo()">Info</button>
             <h4>Blackjack</h4>
           </div>
         </div>
@@ -103,6 +125,7 @@
             <img src="../img/Crashfoto.jpg" alt="">
           </a>
           <div class="portfolio-caption">
+            <button onclick="toonCrashInfo()">Info</button>
             <h4>Crash</h4>
           </div>
         </div>
@@ -116,6 +139,7 @@
             <img src="../img/HogerofLager.png"  alt="">
           </a>
           <div class="portfolio-caption">
+            <button onclick="toonHogerLagerInfo()">Info</button>
             <h4>Hoger en lager</h4>
           </div>
         </div>
