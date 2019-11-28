@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 30 sep 2019 om 13:17
+-- Gegenereerd op: 28 nov 2019 om 13:03
 -- Serverversie: 5.7.21
 -- PHP-versie: 5.6.35
 
@@ -25,26 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `tblachievements`
---
-
-DROP TABLE IF EXISTS `tblachievements`;
-CREATE TABLE IF NOT EXISTS `tblachievements` (
-  `gebruikerID` int(11) NOT NULL,
-  `achievement_1` int(11) NOT NULL,
-  `achievement_2` int(11) NOT NULL,
-  `achievement_3` int(11) NOT NULL,
-  `achievement_4` int(11) NOT NULL,
-  `achievement_5` int(11) NOT NULL,
-  `achievement_6` int(11) NOT NULL,
-  `achievement_7` int(11) NOT NULL,
-  `achievement_8` int(11) NOT NULL,
-  PRIMARY KEY (`gebruikerID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Tabelstructuur voor tabel `tblgebruikers`
 --
 
@@ -61,8 +41,25 @@ CREATE TABLE IF NOT EXISTS `tblgebruikers` (
   `winstreak` int(11) NOT NULL,
   `lastDate` date NOT NULL,
   `daysOnline` int(11) NOT NULL,
+  `admin` int(11) NOT NULL,
+  `achievement_1` int(11) NOT NULL,
+  `achievement_2` int(11) NOT NULL,
+  `achievement_3` int(11) NOT NULL,
+  `achievement_4` int(11) NOT NULL,
+  `achievement_5` int(11) NOT NULL,
+  `achievement_6` int(11) NOT NULL,
+  `achievement_7` int(11) NOT NULL,
+  `achievement_8` int(11) NOT NULL,
   PRIMARY KEY (`gebruikerID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `tblgebruikers`
+--
+
+INSERT INTO `tblgebruikers` (`gebruikerID`, `username`, `password`, `mail`, `totaalGeld`, `online`, `profImage`, `coins`, `winstreak`, `lastDate`, `daysOnline`, `admin`, `achievement_1`, `achievement_2`, `achievement_3`, `achievement_4`, `achievement_5`, `achievement_6`, `achievement_7`, `achievement_8`) VALUES
+(5, 'gerrit', '4c3b6c7517e9f780744f6582f2d36fb6', 'gerrit@gmail.com', 0, 0, 0, 0, 0, '2019-11-25', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(3, 'Dries', '37583845fe6958c9fba698932c87df3c', 'drekke@gmail.com', 500, 0, 0, 500, 0, '2019-11-28', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
