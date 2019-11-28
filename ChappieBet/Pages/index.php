@@ -28,6 +28,7 @@
         <ul>
             <li><h2><a class="nav-link" href="LogOut.php">Log out</a></h2></li>
             <li><h2><a class="nav-link" href="dailyGift.php">Daily Gifts</a></h2></li>
+            <li><h2><a class="nav-link" href="achievements.php">Achievments</a></h2></li>
             <li><h2 class="nav-link" id="coins">Coins: <?php echo($row["coins"]) ?></h2></li>
         </ul>
 
