@@ -8,7 +8,7 @@ var zwarteGetallen = [];
 var rodeGetallen = [];
 
 function onStart()
-{
+{   
 	//Zwarte getallen array initialiseren
 	zwarteGetallen.push(2);
 	zwarteGetallen.push(4);
@@ -79,25 +79,23 @@ function onBetNumber(numberWhereBetOn)
 
 function onBetExtra(extraWhereBetOn)
 {
-
 	if (extrasWhereBettedOn.includes(extraWhereBetOn)) //als er nog niet is gegokt op deze nummer, voeg toe in array
     {
-        extrasWhereBettedOn.splice(extrasWhereBettedOn.indexOf(extraWhereBetOn) , 1);
-
 		if (document.getElementById("extra1").innerHTML == extraWhereBetOn){
-
 			document.getElementById("extra1").innerHTML = "";
 		} else if (document.getElementById("extra2").innerHTML == extraWhereBetOn){
 
 			document.getElementById("extra2").innerHTML = "";
 		} else if (document.getElementById("extra3").innerHTML == extraWhereBetOn){
-
 			document.getElementById("extra3").innerHTML = "";
 		}
+
+        extrasWhereBettedOn.splice(extrasWhereBettedOn.indexOf(extraWhereBetOn) , 1);
 
 
     }else {
 		extrasWhereBettedOn.push(extraWhereBetOn);
+
         if (document.getElementById("extra1").innerHTML == ""){
 
             switch (extraWhereBetOn) {

@@ -15,7 +15,7 @@ echo "
             margin-left: auto;
             margin-right: auto;
             border: 2px rgb(199,73,58) solid;
-            width: 50%;
+            width: 75%;
             
         }
         
@@ -26,11 +26,8 @@ echo "
             font-size: 20px;
         }
         
-        .giftPic{
-            
+        .giftPic{ 
             height: 100px;
-            width: 10%;
-           
         }
         img{
             
@@ -44,51 +41,40 @@ echo "
     <body>
         <nav><ul><li><h2><a class=\"nav-link\" href='index.php'>Back</a></h2></li></ul></nav>
         <br>
-         <h1 style=\"text-align:center;\">Hi There</h1>
+         <h1 style=\"text-align:center;\">Achievements</h1>
          
          <table id='achievements'>
             <tr>
                 
-                <td class='giftPic'><img id='ach1' src='Games/imagesBlackjack/13H.png'></td>
-                <td class='giftPic'><img id='ach2' src='Games/imagesBlackjack/13S.png'></td>
+                <td class='giftPic'><img id='ach1' src='Games/imagesBlackjack/11H.png'></td>
+                <td class='giftPic'><img id='ach2' src='Games/imagesBlackjack/12S.png'></td>
                 <td class='giftPic'><img id='ach3' src='Games/imagesBlackjack/13C.png'></td>
-                <td class='giftPic'><img id='ach4' src='Games/imagesBlackjack/13D.png'></td>
+                <td class='giftPic'><img id='ach4' src='Games/imagesBlackjack/11D.png'></td>
             </tr>
             <tr>
-                <td>Achievement 1</td>
-                <td>Achievement 2</td>
-                <td>Achievement 3</td>
-                <td>Achievement 4</td>
+                <td>Above 1000 coins</td>
+                <td>Above 500000 coins</td>
+                <td>Above 1000000 coins</td>
+                <td>5 consecutive days online</td>
             </tr>
             <tr>
                 <td class='giftPic'><img id='ach5' src='Games/imagesBlackjack/12H.png' </td>
-                <td class='giftPic'><img id='ach6' src='Games/imagesBlackjack/12S.png' </td>
+                <td class='giftPic'><img id='ach6' src='Games/imagesBlackjack/13S.png' </td>
                 <td class='giftPic'><img id='ach7' src='Games/imagesBlackjack/12C.png' </td>
-                <td class='giftPic'><img id='ach8' src='Games/imagesBlackjack/12D.png' </td>
+                <td class='giftPic'><img id='ach8' src='Games/imagesBlackjack/13D.png' </td>
             </tr> 
             <tr>
-                <td>Achievement 5</td>
-                <td>Achievement 6</td>
-                <td>Achievement 7</td>
-                <td>Achievement 8</td>
+                <td>10 consecutive days online</td>
+                <td>25 consecutive days online</td>
+                <td>5 games won</td>
+                <td>25 games won</td>
             </tr> 
         </table>
     </body>
         
 </html>
 ";
-$getCoins = "SELECT `coins` FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
-$coins = $mysqli->query($getCoins);
-if ($coins ->num_rows>0){
-    $coins = $coins->fetch_assoc();
-}
-$coins = $coins["coins"];
-if ($coins >100){
-    $updateAch1 = "UPDATE `tblachievements` SET `achievement_1` = '1' WHERE `gebruikerID` = '".$_SESSION['id']."'";
-}
-
-
-$sqlAch = "SELECT * FROM `tblachievements` WHERE `gebruikerID` = '".$_SESSION['id']."'";
+$sqlAch = "SELECT * FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
 $achResult = $mysqli->query($sqlAch);
 if ($achResult ->num_rows > 0){
     $achResult = $achResult->fetch_assoc();
@@ -101,6 +87,74 @@ $achBool5 = $achResult["achievement_5"];
 $achBool6 = $achResult["achievement_6"];
 $achBool7 = $achResult["achievement_7"];
 $achBool8 = $achResult["achievement_8"];
+
+
+$getAlles = "SELECT * FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
+$getAllesUITVOER = $mysqli->query($getAlles);
+if ($getAllesUITVOER ->num_rows>0){
+    $row = $getAllesUITVOER->fetch_assoc();
+}
+$coins = $row["coins"];
+$daysonline = $row["daysOnline"];
+$admin = $row["admin"];
+$winstreak = $row["winstreak"];
+
+
+if ($achBool1 != 1) {
+    if ($coins > 1000) {
+        $updateAch1 = "UPDATE `tblgebruikers` SET `achievement_1` = '1' WHERE `gebruikerID` = '" . $_SESSION['id'] . "'";
+        $updateAch1VOERUIT = $mysqli->query($updateAch1);
+    }
+}
+
+if ($achBool2 != 1){
+    if ($coins > 500000){
+        $updateAch2 = "UPDATE `tblgebruikers` SET `achievement_2` = '1' WHERE `gebruikerID` = '" . $_SESSION['id'] . "'";
+        $updateAch2VOERUIT = $mysqli->query($updateAch2);
+    }
+}
+
+if ($achBool3 != 1){
+    if ($coins > 1000000){
+        $updateAch3 = "UPDATE `tblgebruikers` SET `achievement_3` = '1' WHERE `gebruikerID` = '".$_SESSION["id"]."'";
+        $updateAch3VOERUIT = $mysqli->query($updateAch3);
+    }
+}
+
+if ($achBool4 != 1){
+    if ($daysonline >= 5){
+        $updateAch4 = "UPDATE `tblgebruikers` SET `achievement_4` = '1' WHERE `gebruikerID` = '".$_SESSION["id"]."'";
+        $updateAch4VOERUIT = $mysqli->query($updateAch4);
+    }
+}
+
+if ($achBool5 != 1){
+    if ($daysonline > 10){
+        $updateAch5 = "UPDATE `tblgebruikers` SET `achievement_5` = '1' WHERE `gebruikerID` = '".$_SESSION["id"]."'";
+        $updateAch5VOERUIT = $mysqli->query($updateAch5);
+    }
+}
+
+if ($achBool6 != 1){
+    if ($daysonline > 25){
+        $updateAch6 = "UPDATE `tblgebruikers` SET `achievement_6` = '1' WHERE `gebruikerID` = '".$_SESSION["id"]."'";
+        $updateAch6VOERUIT = $mysqli->query($updateAch6);
+    }
+}
+
+if ($achBool7 != 1){
+    if ($winstreak > 5){
+        $updateAch7 = "UPDATE `tblgebruikers` SET `achievement_7` = '1' WHERE `gebruikerID` = '".$_SESSION["id"]."'";
+        $updateAch7VOERUIT = $mysqli->query($updateAch7);
+    }
+}
+
+if ($achBool8 != 1){
+    if ($winstreak > 25){
+        $updateAch8 = "UPDATE `tblgebruikers` SET `achievement_8` = '1' WHERE `gebruikerID` = '".$_SESSION["id"]."'";
+        $updateAch8VOERUIT = $mysqli->query($updateAch8);
+    }
+}
 
 if ($achBool1 == 1){
     echo "<script>document.getElementById('ach1').style.opacity = '100%'</script>";
