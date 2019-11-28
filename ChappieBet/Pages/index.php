@@ -48,16 +48,16 @@
         <ul>
             <li><h2><a class="nav-link" href="LogOut.php">Log out</a></h2></li>
             <li><h2><a class="nav-link" href="dailyGift.php">Daily Gifts</a></h2></li>
-            <li><h2><a class="nav-link" href="achievements.php">Achievments</a></h2></li>
+            <li><h2><a class="nav-link" href="achievements.php">Achievements</a></h2></li>
             <li><h2><a class="nav-link" href="afhalen.php">afhalen</a></h2></li>
-            <li><h2 class="nav-link" id="coins">Coins: <?php echo($row["coins"]) ?></h2></li>
             <?php
             
             if($row["admin"] == 1){
-                echo '<li><h2 class="nav-link"><a class="nav-link" href="admin.php">admin</a></h2></li>';
+                echo '<li><h2><a class="nav-link" href="admin.php">admin</a></h2></li>';
             }
     
             ?>
+            <li><h2 class="nav-link" id="coins">Coins: <?php echo($row["coins"]) ?></h2></li>
         </ul>
 
     </nav>
@@ -97,7 +97,7 @@
             <img src="../img/Roulettefoto.jfif" alt="">
           </a>
           <div class="portfolio-caption">
-            <button onclick="toonRouletteInfo()">Info</button>
+            <a onclick="toonRouletteInfo()"><h4>Info</h4></a>
             <h4>Roulette</h4>
           </div>
         </div>
@@ -111,7 +111,7 @@
             <img src="../img/Blackjackfoto.jpg" alt="">
           </a>
           <div class="portfolio-caption">
-            <button onclick="toonBlackjackInfo()">Info</button>
+            <a onclick="toonBlackjackInfo()"><h4>Info</h4></a>
             <h4>Blackjack</h4>
           </div>
         </div>
@@ -125,7 +125,7 @@
             <img src="../img/Crashfoto.jpg" alt="">
           </a>
           <div class="portfolio-caption">
-            <button onclick="toonCrashInfo()">Info</button>
+            <a onclick="toonCrashInfo()"><h4>Info</h4></a>
             <h4>Crash</h4>
           </div>
         </div>
@@ -139,7 +139,7 @@
             <img src="../img/HogerofLager.png"  alt="">
           </a>
           <div class="portfolio-caption">
-            <button onclick="toonHogerLagerInfo()">Info</button>
+            <a onclick="toonHogerLagerInfo()"><h4>Info</h4></a>
             <h4>Hoger en lager</h4>
           </div>
         </div>
