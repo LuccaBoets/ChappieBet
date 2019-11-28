@@ -97,7 +97,7 @@
             <img src="../img/Roulettefoto.jfif" alt="">
           </a>
           <div class="portfolio-caption">
-            <button onclick="toonRouletteInfo()">Info</button>
+            <a onclick="toonRouletteInfo()"><h4>Info</h4></a>
             <h4>Roulette</h4>
           </div>
         </div>
@@ -111,7 +111,7 @@
             <img src="../img/Blackjackfoto.jpg" alt="">
           </a>
           <div class="portfolio-caption">
-            <button onclick="toonBlackjackInfo()">Info</button>
+            <a onclick="toonBlackjackInfo()"><h4>Info</h4></a>
             <h4>Blackjack</h4>
           </div>
         </div>
@@ -125,7 +125,7 @@
             <img src="../img/Crashfoto.jpg" alt="">
           </a>
           <div class="portfolio-caption">
-            <button onclick="toonCrashInfo()">Info</button>
+            <a onclick="toonCrashInfo()"><h4>Info</h4></a>
             <h4>Crash</h4>
           </div>
         </div>
@@ -139,7 +139,7 @@
             <img src="../img/HogerofLager.png"  alt="">
           </a>
           <div class="portfolio-caption">
-            <button onclick="toonHogerLagerInfo()">Info</button>
+            <a onclick="toonHogerLagerInfo()"><h4>Info</h4></a>
             <h4>Hoger en lager</h4>
           </div>
         </div>
