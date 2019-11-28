@@ -328,7 +328,9 @@ if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
                 </div>
                 <div class="col-xs-12 col-sm-3">
                     <p class="kpx_forgotPwd">
-                        <a href="#">Forgot password?</a>
+                        <a href="#">Forgot password?</a><br>
+                                              <a href="../../ChappieBet/index.html">Back to menu</a>
+
                     </p>
                 </div>
             </div>

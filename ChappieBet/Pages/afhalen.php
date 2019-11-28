@@ -51,8 +51,8 @@
 
     ?>
     
-    <h1 id="geldTotaal"><?php echo $row["totaalGeld"]; ?></h1>
-    <h1 id="coinsTotaal"><?php echo $row["coins"]; ?></h1>
+    <h2 id="geldTotaal"><?php echo $row["totaalGeld"]; ?></h2>
+    <h2 id="coinsTotaal"><?php echo $row["coins"]; ?></h2>
 
     <input type="text" name="afhalenNummer" id="geld">
     <button name="afhalen" onclick="geldDing()">geld afhalen</button>
