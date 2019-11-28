@@ -16,10 +16,10 @@ if (!empty($_SESSION["id"])){
     $vorigeDatum= $mysqli->query($sqlVorigeDatum);
 
     if ($vorigeDatum->num_rows >0){
-        $vorigeDatum = $vorigeDatum->fetch_assoc();
+        $vorigeDatum1 = $vorigeDatum->fetch_assoc();
     }
 
-    $_SESSION["vorigeDatum"] = $vorigeDatum["lastDate"];
+    $_SESSION["vorigeDatum"] = $vorigeDatum1["lastDate"];
 
     $datum = date("Y-m-d");
     $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'

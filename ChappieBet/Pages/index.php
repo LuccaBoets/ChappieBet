@@ -33,7 +33,7 @@
             <li><h2 class="nav-link" id="coins">Coins: <?php echo($row["coins"]) ?></h2></li>
             <?php
             
-            if($row["online"] == 1){
+            if($row["admin"] == 1){
                 echo '<li><h2 class="nav-link"><a class="nav-link" href="admin.php">admin</a></h2></li>';
             }
     
