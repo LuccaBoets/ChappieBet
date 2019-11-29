@@ -77,7 +77,7 @@
 
 
   <br>
-  <table  border="1" id="nummers" width="100%">
+ <table  border="1" id="nummers" width="100%" style="float: left; width: 50%; margin-top:50px">
     <tbody>
       <tr>
         <td></td>
@@ -145,8 +145,9 @@
     <br>
   </table>
 
-  <table class="gegokteGetalen" border="1" id="getallenopgegokt">
+      <img src="../../img/rouletteWiel.png" style="width: 20%" id="rouletteWiel" >
 
+  <table class="gegokteGetalen" border="1" id="getallenopgegokt">
     <tr>
       <td id="gegoktGetal1"></td>
       <td id="gegoktGetal2"></td>
@@ -158,15 +159,12 @@
 
   </table>
 
-
-
-
+      <input id="inzet" class="button" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000" value="0">
+      <p id="beschikbareBedrag">500</p>
 
 </div>
 </div>
 
-
-<input type="range" min="1" max="36" value="0" class="slider" id="rouletteSlider">
 <p id="gewordenGetal"></p>
 <button class="button" onclick="onBet()">Bet</button>
 
