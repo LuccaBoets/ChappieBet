@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Higher or lower</title>
+	<title>Higher or Lower</title>
 	
 	<title>Crash</title>
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -15,10 +15,7 @@
     <script src="../../Chart/Chart.css"></script>
 </head>
 <body onLoad="EersteGetal()">
-    
-    
 
-    
     
 <style type="text/css">
 	img{
@@ -36,7 +33,8 @@
 
 </style>
 
-    <h1>Higher or lower</h1>
+    <h1>Higher or Lower</h1>
+    
     
     <form method="post">
         <input type="hidden" id="hidden" name="money" onclick="winst()">
@@ -54,6 +52,13 @@
     
         if(isset($_POST["Back"])){
             
+            if(!empty($_POST["money"])) {
+                
+            $sql1 = "INSERT INTO `tbllog`(`gebruikerID`, `datum`, `transactie`, `gespeeldSpel`) VALUES (".$_SESSION["id"].",'".(date("Y-m-d H:i:s"))."',".($_POST["money"]-$row["coins"]).",'Higher or lower')";
+            $mysqli->query($sql1);
+            print $sql1;
+            }
+               
             $sql = "UPDATE `tblgebruikers` SET coins = ".$_POST["money"]." WHERE gebruikerID = '".$_SESSION["id"]."'";
             echo($sql);
             if($mysqli->query($sql)){
@@ -68,9 +73,8 @@
     
     ?>
     <p id="geld"><?php echo($row["coins"]) ?></p>
-    <input type="number" name="ingezetGeld" placeholder="Money" id="geldInput" >
+    <input type="number" name="ingezetGeld" placeholder="Money" id="geldInput">
     <button onclick="inzetten();">Bet!</button>
-    <button onclick="winst()">Test</button>
 	<table>
         <tr>
     		<th><h3 id="Getal1"></h3></th> 	
@@ -81,8 +85,8 @@
     		<th><img id="imgGetal2" src="" style="width:200px"></th>
     	</tr>
     </table>
-   	<button onclick="Hoger()">Hoger</button>
-   	<button onclick="Lager()">Lager</button>
+   	<button onclick="Hoger()" id="hoger">Higher</button>
+   	<button onclick="Lager()" id="lager">Lower</button>
    	<h3 id="Resultaat"></h3>
     <p id="hidden"></p>
 

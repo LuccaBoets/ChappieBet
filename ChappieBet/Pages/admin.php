@@ -8,6 +8,11 @@
    
 </head>
 <body>
+    <style>
+        td{
+            padding-right:20px;
+        }
+    </style>
   <div class="header" style="margin: 50px">
   <h2>Admin</h2>
   </div>
@@ -39,7 +44,8 @@ while ($row = $resultaat->fetch_assoc()) {
     		</td><td>".$row['daysOnline']."
     		</td><td>".$row['online']."
     		</td>
-    <td style='padding-right:20px'><a href='verwijderen.php?tewissen=".$row['gebruikerID']."'>Wissen</a></td><td><a href='changeAdmin.php?teveranderen=".$row['gebruikerID']."'>Change admin</a></td></tr>";
+    <td><a href='verwijderen.php?tewissen=".$row['gebruikerID']."'>Wissen</a></td><td><a href='changeAdmin.php?teveranderen=".$row['gebruikerID']."'>Change admin</a></td>
+    <td><a href='logs.php?show=".$row['gebruikerID']."'>Logs</a></td></tr>";
 }
 //    <td><a href='wissen.php?tewissen=".$row['leerlingenNr']."'>Wissen</a></td><td><a href='wijzingen.php?teveranderen=".$row['leerlingenNr']."'>Veranderen</a></td>
 echo "</table>";
