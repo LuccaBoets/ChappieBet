@@ -43,6 +43,7 @@ function onBetNumber(numberWhereBetOn)
     if (numbersWhereBettedOn.includes(numberWhereBetOn)) //Als er al op dit nummer is gegokt, verwijder het uit de array
     {
 
+
         if (document.getElementById("gegoktGetal1").innerHTML  == numberWhereBetOn){
 
             document.getElementById("gegoktGetal1").innerHTML = "";
@@ -81,15 +82,61 @@ function onBetExtra(extraWhereBetOn)
 {
 	if (extrasWhereBettedOn.includes(extraWhereBetOn)) //als er nog niet is gegokt op deze nummer, voeg toe in array
     {
-		if (document.getElementById("extra1").innerHTML == extraWhereBetOn){
-			document.getElementById("extra1").innerHTML = "";
-		} else if (document.getElementById("extra2").innerHTML == extraWhereBetOn){
+        var extraWhereBetOn1 = "";
+         switch (extraWhereBetOn) {
 
+
+                case 112:
+                    extraWhereBetOn1 = "1st 12";
+                    break;
+
+                case 212:
+                    extraWhereBetOn1 = "2nd 12";
+                    break;
+
+                case 312:
+                    extraWhereBetOn1 = "3rd 12";
+                    break;
+
+                case 118:
+                    extraWhereBetOn1 = "1 to 18";
+                    break;
+
+                case 1936:
+                    extraWhereBetOn1 = "19 to 36";
+                    break;
+
+                case 88:
+                    extraWhereBetOn1 = "Even";
+                    break;
+
+                case 89:
+                    extraWhereBetOn1 = "Odd";
+                    break;
+
+
+                case 500:
+                    extraWhereBetOn1 = "Red";
+                    break;
+
+                case 600:
+                    extraWhereBetOn1 = "Black";
+                    break;
+
+                default:
+                    extraWhereBetOn1 = "ERROR";
+                    break;
+            }
+
+		if (document.getElementById("extra1").innerHTML == extraWhereBetOn1){
+			document.getElementById("extra1").innerHTML = "";
+            console.log("jk");
+		} else if (document.getElementById("extra2").innerHTML == extraWhereBetOn1){
 			document.getElementById("extra2").innerHTML = "";
-		} else if (document.getElementById("extra3").innerHTML == extraWhereBetOn){
+		} else if (document.getElementById("extra3").innerHTML == extraWhereBetOn1){
 			document.getElementById("extra3").innerHTML = "";
 		}
-
+        console.log("1");
         extrasWhereBettedOn.splice(extrasWhereBettedOn.indexOf(extraWhereBetOn) , 1);
 
 
