@@ -30,6 +30,14 @@
     
         if(isset($_POST["Back"])){
             
+            if(!empty($_POST["money"])) {
+                
+            $sql1 = "INSERT INTO `tbllog`(`gebruikerID`, `datum`, `transactie`, `gespeeldSpel`) VALUES (".$_SESSION["id"].",'".(date("Y-m-d H:i:s"))."',".($row["coins"]-$_POST["money"]).",'Crash')";
+            $mysqli->query($sql1);
+            print $sql1;
+            }
+               
+            
             $sql = "UPDATE `tblgebruikers` SET coins = ".$_POST["money"]." WHERE gebruikerID = '".$_SESSION["id"]."'";
             echo($sql);
             if($mysqli->query($sql)){

@@ -10,19 +10,19 @@
     <script type="text/javascript">
       
       function toonRouletteInfo(){
-          alert("Het rad bestaat uit 36 cijfers en elke cijfer heeft een rode of zwarte kleur. Naast het rad bevind zich een tafel en op deze tafel zijn alle inzetmogelijkheden afgebeeld. Je kan gokken op een kleur of getal en nog veel meer.")
+          alert("The wheel consists of 36 digits and each digit has a red or black color. There is a table next to the wheel and all betting options are shown on this table. You can gamble on a color or number and much more.")
       }
 
       function toonBlackjackInfo(){
-          alert("Bij blackjack is het de bedoeling dat je zo dicht mogelijk tegen de 21 komt. Als je over 21 gaat ben je verloren. Bij gelijkspel met de dealer verlies je ook.")
+          alert("With blackjack you have to get as close to 21 as possible. If you go over 21 you are lost. In the event of a tie, the dealer wins.")
       }
 
       function toonCrashInfo(){
-          alert("Bij crash is het de bedoeling dat je outcash voor de grafiek crasht.")
+          alert("With the game crash you wait while the percentage of the grafik go up and you will need to cashout before it hits its limit.")
       }
 
       function toonHogerLagerInfo(){
-        alert("Bij hoger lager is het de bedoeling een hogere kaart te trekken dan de dealer.")
+          alert("At higher lower, the intention is to predict that your card will be higher or lower than that of the dealer.")
       }
 
     </script>
@@ -51,8 +51,7 @@ $row = $resultaat->fetch_assoc();
     <h2><a class="nav-link" href="dailyGift.php">Daily Gifts</a></h2>
     <h2><a class="nav-link" href="achievements.php">Achievements</a></h2>
     <h2><a class="nav-link" href="scoreboard.php">Leaderboard</a></h2>
-    <h2><a class="nav-link" href="afhalen.php">Withdrawal</a></h2>
-
+    <h2><a class="nav-link" href="afhalen.php">Deposit</a></h2>
     <?php
     if($row["admin"] == 1){
         echo '<h2><a class="nav-link" href="admin.php">admin</a></h2>';
@@ -81,7 +80,7 @@ $row = $resultaat->fetch_assoc();
         <p class="nav-link">Coins: </p>
         <p class="nav-link" id="coins">100</p>
     </div> -->
-        <h1 style="text-align:center;">Hi There</h1>
+        <h1 style="text-align:center;">Chappiebet Games</h1>
 
 <style>
     img{
@@ -151,7 +150,7 @@ $row = $resultaat->fetch_assoc();
           </a>
           <div class="portfolio-caption">
             <a onclick="toonHogerLagerInfo()"><h4>Info</h4></a>
-            <h4>Hoger en lager</h4>
+            <h4>Higher or Lower</h4>
           </div>
         </div>
       </div>

@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../MainCss.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="../../Chart/Chart.css"></script>
 
     <script type="text/javascript" src="blackjack_V1.js"></script>
 </head>
 <bodys>
-
+    
     <style>
 
         td{
@@ -27,8 +35,12 @@
         #button_stand{
             visibility: hidden;
         }
+        h1{
+            color: #C7493A;
+        }
 
     </style>
+    <h1>Blackjack</h1>
 
     <table border="1">
         <tr>
@@ -48,11 +60,12 @@
     </table>
 
     <button id="button_bet" onclick="onBet()">BET</button><br>
-    <button id="button_hit" onclick="onHit()">HIT</button><br>
+    <button id="button_hit" onclick="onHit()">HIT</button>
     <button id="button_stand" onclick="onStand()">Stand</button>
 
-    <h2 id="puntenDealer">test</h2>
-    <h2 id="puntenPlayer">test</h2>
+    <h2>Dealer <span id="puntenDealer"></span></h2>
+    
+    <h2>Player <span id="puntenPlayer"></span></h2>
     <h2 id="uikomstSpel"></h2>
 
 </bodys>
