@@ -23,7 +23,7 @@
             margin-left: auto;
             margin-right: auto;
             border: 2px rgb(199,73,58) solid;
-            width: 50%;
+            width: 75%;
         }
 
         td{
@@ -39,6 +39,10 @@
             width: 10%;
         }
 
+        img{
+            width: 100%;
+        }
+
     </style>
 
 </head>
@@ -52,31 +56,41 @@ include "connect.php";
 session_start();
 $stop_date = date("Y-m-d");
 $stop_date = date('Y-m-d', strtotime($stop_date . ' -1 day'));
-$vorigeDatum= $_SESSION["vorigeDatum"];
 
+echo "$stop_date";
 
-$sql = "SELECT `daysOnline` FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
+$sql = "SELECT * FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
 $resultaat = $mysqli ->query($sql);
 
-if ($resultaat ->num_rows > 0){
+if ($resultaat->num_rows > 0){
     $row = $resultaat->fetch_assoc();
 }
-$dagen = $row["daysOnline"];
+$daysOnline = $row["daysOnline"];
+$lastDate = $row["lastDate"];
 
-if ($vorigeDatum == $stop_date) {
-    $dagen += 1;
-    $sqlSetDagen = "UPDATE `tblgebruikers` SET `daysOnline` = '$dagen' WHERE `gebruikerID` =". $_SESSION['id'];
-    $VOERsqlSetDagenUIT = $mysqli->query($sqlSetDagen);
+if ($lastDate == $stop_date){
+    $daysOnline+=1;
+    $updateDaysonline = "UPDATE tblgebruikers SET daysOnline = '".$daysOnline."'";
+    $updateDaysonlineVOERUIT = $mysqli->query($updateDaysonline);
 
+    $datum = date("Y-m-d");
+    $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
+                   WHERE `gebruikerID` =". $_SESSION["id"];
+    $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
+    
+}else{
+    $daysOnline = 0;
+    $updateDaysonline = "UPDATE tblgebruikers SET daysOnline = '".$daysOnline."'";
+    $updateDaysonlineVOERUIT = $mysqli->query($updateDaysonline);
 
-    $sqlGetDate = "SELECT `daysOnline` FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
-    $resultaatDate = $mysqli ->query($sql);
+    $datum = date("Y-m-d");
+    $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
+                   WHERE `gebruikerID` =". $_SESSION["id"];
 
-    if ($resultaatDate ->num_rows > 0){
-        $rowDate = $resultaatDate->fetch_assoc();
-    }
-    $dagen = $rowDate["daysOnline"];
+    $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
 }
+
+
 echo "
 
         
@@ -86,13 +100,13 @@ echo "
         
         <tr>
             <td class='giftPic'>Week 1: </td>
-            <td class='giftPic' id='dag1'>Gift 1</td>
+            <td class='giftPic' id='dag1'></td>
             <td class='giftPic' id='dag2'></td>
-            <td class='giftPic' id='dag3'>Gift 2</td>
+            <td class='giftPic' id='dag3'></td>
             <td class='giftPic' id='dag4'></td>
-            <td class='giftPic' id='dag5'>Gift 3</td>
+            <td class='giftPic' id='dag5'><img src='../img/goldCoin.png'></td>
             <td class='giftPic' id='dag6'></td>
-            <td class='giftPic' id='dag7'>Gift 4</td>
+            <td class='giftPic' id='dag7'><img src='../img/goldCoin.png'></td>
         </tr>
         
         <tr class='giftDagen'>
@@ -108,13 +122,13 @@ echo "
         
         <tr>
             <td class='giftPic'>Week 2: </td>
-            <td class='giftPic' id='dag8'>Gift 1</td>
-            <td class='giftPic' id='dag9'></td>
-            <td class='giftPic' id='dag10'>Gift 2</td>
+            <td class='giftPic' id='dag8'></td>
+            <td class='giftPic' id='dag9'><img src='../img/goldCoin2.png'></td>
+            <td class='giftPic' id='dag10'></td>
             <td class='giftPic' id='dag11'></td>
-            <td class='giftPic' id='dag12'>Gift 3</td>
-            <td class='giftPic' id='dag13'></td>
-            <td class='giftPic' id='dag14'>Gift 4</td>
+            <td class='giftPic' id='dag12'></td>
+            <td class='giftPic' id='dag13'><img src='../img/goldCoin.png'></td>
+            <td class='giftPic' id='dag14'></td>
         </tr>
         
         <tr class='giftDagen'>
@@ -130,13 +144,13 @@ echo "
         
         <tr>
             <td class='giftPic'>Week 3: </td>
-            <td class='giftPic' id='dag15'>Gift 1</td>
+            <td class='giftPic' id='dag15'></td>
             <td class='giftPic' id='dag16'></td>
-            <td class='giftPic' id='dag17'>Gift 2</td>
+            <td class='giftPic' id='dag17'></td>
             <td class='giftPic' id='dag18'></td>
-            <td class='giftPic' id='dag19'>Gift 3</td>
+            <td class='giftPic' id='dag19'><img src='../img/goldCoin.png'></td>
             <td class='giftPic' id='dag20'></td>
-            <td class='giftPic' id='dag21'>Gift 4</td>
+            <td class='giftPic' id='dag21'><img src='../img/goldCoin2.png'></td>
         </tr>
         
         <tr class='giftDagen'>
@@ -154,18 +168,14 @@ echo "
         <h1 id='daysOnline'></h1>
         <h1></h1>
 <script>
-         document.getElementById('daysOnline').innerHTML = $dagen;
+         document.getElementById('daysOnline').innerHTML = $daysOnline;
          var daysonline = parseInt(document.getElementById('daysOnline').innerHTML);
-         var dagen = 'dag' + $dagen;
+         var dagen = 'dag' + $daysOnline;
          console.log(dagen);
          document.getElementById(dagen).style.backgroundColor = '#8E2745';                                      
      
         
 </script>
-
-
-
-
 ";
 ?>
     </body >

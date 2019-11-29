@@ -11,7 +11,7 @@ if (!empty($_SESSION["id"])){
         $datum = $resultaat->fetch_assoc();
     }
 */
-
+/*
     $sqlVorigeDatum = "SELECT `lastDate` FROM `tblgebruikers` WHERE `gebruikerID` = ". $_SESSION["id"];
     $vorigeDatum= $mysqli->query($sqlVorigeDatum);
 
@@ -25,7 +25,7 @@ if (!empty($_SESSION["id"])){
     $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
                    WHERE `gebruikerID` =". $_SESSION["id"];
     $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
-
+*/
 
     header("Location: index.php");//ga direct naar home.php
 }
@@ -41,7 +41,7 @@ if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
 
 
     $_SESSION["id"] = $row['gebruikerID'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
-
+/*
     $sqlVorigeDatum = "SELECT `lastDate` FROM `tblgebruikers` WHERE `gebruikerID` = ". $_SESSION["id"];
     $vorigeDatum= $mysqli->query($sqlVorigeDatum);
 
@@ -55,7 +55,7 @@ if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
     $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
                    WHERE `gebruikerID` =". $_SESSION["id"];
     $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
-
+*/
     header("Location: index.php");//ga direct naar home.php
 
 }}
