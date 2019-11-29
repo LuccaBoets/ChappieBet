@@ -38,7 +38,7 @@ var cashoutStop;
 var gewonnen = true;
 var lock = false;
 var inzet = document.getElementById("geld").value;
-
+var x;
 
 
 function randomGetal(){
@@ -82,13 +82,12 @@ function randomGetal(){
     document.getElementById("getal").innerHTML = "0";
     aftellen = 0;
 
-	var x = setInterval(function() {
+	x = setInterval(function() {
         
 		aftellen = Math.round((aftellen + 0.01) * 100) / 100;
         myChart.data.datasets[0].data = [0,aftellen/10,aftellen];
         
         if (lock){
-            clearInterval(x);
             if(document.getElementById("AutoCash").value == aftellen){
                 winnen(inzet*aftellen);
             }
@@ -146,7 +145,7 @@ function Lock(){
         document.getElementById('resultaat').innerHTML = "Auto cash is on";
     } else {
            
-    document.getElementById('resultaat').innerHTML = "Auto cash is off";
+    document.getElementById('resultaat').innerHTML = "";
     }
     
 }
@@ -162,10 +161,11 @@ function winnen(winst){
     document.getElementById("Lock").disabled = false;
     document.getElementById("CashOut1").disabled = false;
     document.getElementById("AutoCash").disabled = false;
-    document.getElementById("hidden").value = document.getElementById("totaalGeld").innerHTML;
+    document.getElementById("hidden").value = document.getElementById("totaalGeld").innerHTML + winst;
     document.getElementById("totaalGeld").innerHTML = document.getElementById("totaalGeld").innerHTML-1+1  + winst;
-    
-    clearInterval(0);
+    clearInterval(x);
+
+
     aftellen = 0;
     
 }
