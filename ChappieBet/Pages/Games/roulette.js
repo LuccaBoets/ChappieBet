@@ -43,6 +43,7 @@ function onBetNumber(numberWhereBetOn)
     if (numbersWhereBettedOn.includes(numberWhereBetOn)) //Als er al op dit nummer is gegokt, verwijder het uit de array
     {
 
+
         if (document.getElementById("gegoktGetal1").innerHTML  == numberWhereBetOn){
 
             document.getElementById("gegoktGetal1").innerHTML = "";
@@ -81,15 +82,61 @@ function onBetExtra(extraWhereBetOn)
 {
 	if (extrasWhereBettedOn.includes(extraWhereBetOn)) //als er nog niet is gegokt op deze nummer, voeg toe in array
     {
-		if (document.getElementById("extra1").innerHTML == extraWhereBetOn){
-			document.getElementById("extra1").innerHTML = "";
-		} else if (document.getElementById("extra2").innerHTML == extraWhereBetOn){
+        var extraWhereBetOn1 = "";
+         switch (extraWhereBetOn) {
 
+
+                case 112:
+                    extraWhereBetOn1 = "1st 12";
+                    break;
+
+                case 212:
+                    extraWhereBetOn1 = "2nd 12";
+                    break;
+
+                case 312:
+                    extraWhereBetOn1 = "3rd 12";
+                    break;
+
+                case 118:
+                    extraWhereBetOn1 = "1 to 18";
+                    break;
+
+                case 1936:
+                    extraWhereBetOn1 = "19 to 36";
+                    break;
+
+                case 88:
+                    extraWhereBetOn1 = "Even";
+                    break;
+
+                case 89:
+                    extraWhereBetOn1 = "Odd";
+                    break;
+
+
+                case 500:
+                    extraWhereBetOn1 = "Red";
+                    break;
+
+                case 600:
+                    extraWhereBetOn1 = "Black";
+                    break;
+
+                default:
+                    extraWhereBetOn1 = "ERROR";
+                    break;
+            }
+
+		if (document.getElementById("extra1").innerHTML == extraWhereBetOn1){
+			document.getElementById("extra1").innerHTML = "";
+            console.log("jk");
+		} else if (document.getElementById("extra2").innerHTML == extraWhereBetOn1){
 			document.getElementById("extra2").innerHTML = "";
-		} else if (document.getElementById("extra3").innerHTML == extraWhereBetOn){
+		} else if (document.getElementById("extra3").innerHTML == extraWhereBetOn1){
 			document.getElementById("extra3").innerHTML = "";
 		}
-
+        console.log("1");
         extrasWhereBettedOn.splice(extrasWhereBettedOn.indexOf(extraWhereBetOn) , 1);
 
 
@@ -246,13 +293,71 @@ function onBet(){
 	var kleur = "Black";
 	if (rodeGetallen.includes(Random)) {
 		kleur = "Red";
-	}
+	}else if(!(rodeGetallen.includes(Random) && zwarteGetallen.includes(Random))){
+        kleur = "Green";
+    }
 
 	document.getElementById("gewordenGetal").innerHTML = Random + " " + kleur;
 
 	var inzet = document.getElementById("inzet").value;
 
 	if (inzet < 1) {
+
+        if (rodeGetallen.includes(Random) && extrasWhereBettedOn.includes(500)) 
+        {
+            console.log("rood juist")
+        }
+
+        if (zwarteGetallen.includes(Random) && extrasWhereBettedOn.includes(600)) 
+        {
+            console.log("zwart juist")
+        }
+
+        if (extrasWhereBettedOn.includes(89) && (Random % 2 != 0)) 
+        {
+            console.log("Odd")
+        }
+
+        switch (Random) {
+            case 26: document.getElementById("rouletteWiel").style.transform = 'rotate(9.7deg)';break;
+            case 3: document.getElementById("rouletteWiel").style.transform = 'rotate(19.4deg)';break;
+            case 35: document.getElementById("rouletteWiel").style.transform = 'rotate(29.1deg)';break;
+            case 12: document.getElementById("rouletteWiel").style.transform = 'rotate(38.8deg)';break;
+            case 28: document.getElementById("rouletteWiel").style.transform = 'rotate(48.5deg)';break;
+            case 7: document.getElementById("rouletteWiel").style.transform = 'rotate(58.2deg)';break;
+            case 29: document.getElementById("rouletteWiel").style.transform = 'rotate(67.9deg)';break;
+            case 18: document.getElementById("rouletteWiel").style.transform = 'rotate(77.6deg)';break;
+            case 22: document.getElementById("rouletteWiel").style.transform = 'rotate(87.3deg)';break;
+            case 9: document.getElementById("rouletteWiel").style.transform = 'rotate(97deg)';break;
+            case 31: document.getElementById("rouletteWiel").style.transform = 'rotate(106.7deg)';break;
+            case 14: document.getElementById("rouletteWiel").style.transform = 'rotate(116.4deg)';break;
+            case 20: document.getElementById("rouletteWiel").style.transform = 'rotate(126.1deg)';break;
+            case 1: document.getElementById("rouletteWiel").style.transform = 'rotate(135.8deg)';break;
+            case 33: document.getElementById("rouletteWiel").style.transform = 'rotate(145.5deg)';break;
+            case 16: document.getElementById("rouletteWiel").style.transform = 'rotate(155.2deg)';break;
+            case 24: document.getElementById("rouletteWiel").style.transform = 'rotate(164.9deg)';break;
+            case 5: document.getElementById("rouletteWiel").style.transform = 'rotate(174.6deg)';break;
+            case 10: document.getElementById("rouletteWiel").style.transform = 'rotate(184.3deg)';break;
+            case 23: document.getElementById("rouletteWiel").style.transform = 'rotate(194deg)';break;
+            case 8: document.getElementById("rouletteWiel").style.transform = 'rotate(203.7deg)';break;
+            case 30: document.getElementById("rouletteWiel").style.transform = 'rotate(213.4deg)';break;
+            case 11: document.getElementById("rouletteWiel").style.transform = 'rotate(223.1deg)';break;
+            case 36: document.getElementById("rouletteWiel").style.transform = 'rotate(232.8deg)';break;
+            case 13: document.getElementById("rouletteWiel").style.transform = 'rotate(242.5deg)';break;
+            case 27: document.getElementById("rouletteWiel").style.transform = 'rotate(252.2deg)';break;
+            case 6: document.getElementById("rouletteWiel").style.transform = 'rotate(261.9deg)';break;
+            case 34: document.getElementById("rouletteWiel").style.transform = 'rotate(271.6deg)';break;
+            case 17: document.getElementById("rouletteWiel").style.transform = 'rotate(281.3deg)';break;
+            case 25: document.getElementById("rouletteWiel").style.transform = 'rotate(291deg)';break;
+            case 2: document.getElementById("rouletteWiel").style.transform = 'rotate(300.7deg)';break;
+            case 21: document.getElementById("rouletteWiel").style.transform = 'rotate(310.4deg)';break;
+            case 4: document.getElementById("rouletteWiel").style.transform = 'rotate(320.1deg)';break;
+            case 19: document.getElementById("rouletteWiel").style.transform = 'rotate(329.8deg)';break;
+            case 15: document.getElementById("rouletteWiel").style.transform = 'rotate(339.5deg)';break;
+            case 32: document.getElementById("rouletteWiel").style.transform = 'rotate(349.2deg)';break;
+            default: document.getElementById("rouletteWiel").style.transform = 'rotate(0deg)';break;
+
+        }
 	}else{
 
 		var nieuwbedrag = (parseInt(document.getElementById("beschikbareBedrag").innerHTML));
