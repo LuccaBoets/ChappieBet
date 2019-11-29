@@ -62,6 +62,13 @@ alert('JE BENT ONDER DE 500 COINS DUS VERDIEN MEER OF HAAL MEER AF SORRY!!');
     
         if(isset($_POST["Back"])){
             
+            if(!empty($_POST["money"])) {
+                
+                $sql1 = "INSERT INTO `tbllogcoins`(`gebruikerID`, `datum`, `transactie`) VALUES (".$_SESSION["id"].",'".(date("Y-m-d H:i:s"))."',".($_POST["money"]-$row["totaalGeld"]).")";
+                $mysqli->query($sql1);
+                print $sql1;
+            }
+            
             $sql = "UPDATE `tblgebruikers` SET coins = ".$_POST["coins"].",totaalGeld = ".$_POST["money"]." WHERE gebruikerID = '".$_SESSION["id"]."'";
             echo($sql);
             if($mysqli->query($sql)){
@@ -71,7 +78,7 @@ alert('JE BENT ONDER DE 500 COINS DUS VERDIEN MEER OF HAAL MEER AF SORRY!!');
                 echo "Error record toevoegen: ".$mysqli ->error."<br>";
             }
 
-            //header("location: index.php");
+            header("location: index.php");
         }
 
     ?>
