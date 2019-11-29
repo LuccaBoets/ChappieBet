@@ -50,8 +50,9 @@ $row = $resultaat->fetch_assoc();
     <h2><a class="nav-link" href="LogOut.php">Log out</a></h2>
     <h2><a class="nav-link" href="dailyGift.php">Daily Gifts</a></h2>
     <h2><a class="nav-link" href="achievements.php">Achievements</a></h2>
-    <h2><a class="nav-link" href="scoreboard.php.php">Leaderboard</a></h2>
+    <h2><a class="nav-link" href="scoreboard.php">Leaderboard</a></h2>
     <h2><a class="nav-link" href="afhalen.php">Withdrawal</a></h2>
+    
     <?php
     if($row["admin"] == 1){
         echo '<h2><a class="nav-link" href="admin.php">admin</a></h2>';
