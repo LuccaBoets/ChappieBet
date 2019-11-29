@@ -12,36 +12,6 @@
 <body onload="onStart()">
 
       <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">ChappieBet</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        PRANK
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <br>
-  <br>
 
 <form method="post">
         <input type="hidden" id="hidden" name="money" onclick="winst()"> 
@@ -77,7 +47,7 @@
 
 
   <br>
-  <table  border="1" id="nummers" width="100%">
+ <table  border="1" id="nummers" width="100%" style="float: left; width: 50%; margin-top:50px">
     <tbody>
       <tr>
         <td></td>
@@ -145,8 +115,9 @@
     <br>
   </table>
 
-  <table class="gegokteGetalen" border="1" id="getallenopgegokt">
+      <img src="../../img/rouletteWiel.png" style="width: 20%" id="rouletteWiel" >
 
+  <table class="gegokteGetalen" border="1" id="getallenopgegokt">
     <tr>
       <td id="gegoktGetal1"></td>
       <td id="gegoktGetal2"></td>
@@ -158,15 +129,12 @@
 
   </table>
 
-
-
-
+      <input id="inzet" class="button" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000" value="0">
+      <p id="beschikbareBedrag">500</p>
 
 </div>
 </div>
 
-
-<input type="range" min="1" max="36" value="0" class="slider" id="rouletteSlider">
 <p id="gewordenGetal"></p>
 <button class="button" onclick="onBet()">Bet</button>
 
