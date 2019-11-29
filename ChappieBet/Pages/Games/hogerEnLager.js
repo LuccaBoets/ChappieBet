@@ -5,8 +5,7 @@ var inzet = document.getElementById("geldInput").value;
 
 
 
-
-setInterval(EersteGetal, 6000);
+var x;
 
 
 function EersteGetal(){
@@ -19,6 +18,8 @@ function EersteGetal(){
     document.getElementById('Getal2').innerHTML = "";
     document.getElementById('Resultaat').innerHTML = "";
 
+    clearInterval(x);
+    console.log("clear");
 
 
 
@@ -71,13 +72,14 @@ function Lager(){
 }
 
 function inzetten(){
-    inzet = document.getElementById("geldInput").value+1-1;
+    inzet = parseInt(document.getElementById("geldInput").value);
     console.log(inzet);
 }
 
 
 function bet(winst){
-    
+    x = setInterval(EersteGetal, 6000);
+
     console.log(coins);
     console.log(winst);
     coins += winst;

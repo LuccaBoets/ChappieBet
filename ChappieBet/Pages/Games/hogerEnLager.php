@@ -52,9 +52,13 @@
     
         if(isset($_POST["Back"])){
             
-            $sql1 = "INSERT INTO `tbllogcoins`(`gebruikerID`, `datum`, `transactie`, `gespeeldSpel`) VALUES (".$_SESSION["id"].",'".(date("Y-m-d H:i:s"))."',".($row["coins"]-$_POST["money"]).",'Higher or lower')";
+            if(!empty($_POST["money"])) {
+                
+            $sql1 = "INSERT INTO `tbllog`(`gebruikerID`, `datum`, `transactie`, `gespeeldSpel`) VALUES (".$_SESSION["id"].",'".(date("Y-m-d H:i:s"))."',".($_POST["money"]-$row["coins"]).",'Higher or lower')";
             $mysqli->query($sql1);
             print $sql1;
+            }
+               
             $sql = "UPDATE `tblgebruikers` SET coins = ".$_POST["money"]." WHERE gebruikerID = '".$_SESSION["id"]."'";
             echo($sql);
             if($mysqli->query($sql)){
@@ -64,7 +68,7 @@
                 echo "Error record toevoegen: ".$mysqli ->error."<br>";
             }
 
-            //header("location: ../index.php");
+            header("location: ../index.php");
         }
     
     ?>
