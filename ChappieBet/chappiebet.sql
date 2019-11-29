@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 28 nov 2019 om 13:03
+-- Gegenereerd op: 29 nov 2019 om 09:34
 -- Serverversie: 5.7.21
 -- PHP-versie: 5.6.35
 
@@ -51,15 +51,15 @@ CREATE TABLE IF NOT EXISTS `tblgebruikers` (
   `achievement_7` int(11) NOT NULL,
   `achievement_8` int(11) NOT NULL,
   PRIMARY KEY (`gebruikerID`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `tblgebruikers`
 --
 
 INSERT INTO `tblgebruikers` (`gebruikerID`, `username`, `password`, `mail`, `totaalGeld`, `online`, `profImage`, `coins`, `winstreak`, `lastDate`, `daysOnline`, `admin`, `achievement_1`, `achievement_2`, `achievement_3`, `achievement_4`, `achievement_5`, `achievement_6`, `achievement_7`, `achievement_8`) VALUES
-(5, 'gerrit', '4c3b6c7517e9f780744f6582f2d36fb6', 'gerrit@gmail.com', 0, 0, 0, 0, 0, '2019-11-25', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(3, 'Dries', '37583845fe6958c9fba698932c87df3c', 'drekke@gmail.com', 500, 0, 0, 500, 0, '2019-11-28', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(3, 'Dries', '37583845fe6958c9fba698932c87df3c', 'drekke@gmail.com', 500, 0, 0, 500, 0, '2019-11-28', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(6, 'Test', '202cb962ac59075b964b07152d234b70', 'test@gmail.com', 10000, 0, 0, 102000, 0, '2019-11-29', 0, 1, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -85,10 +85,20 @@ CREATE TABLE IF NOT EXISTS `tbllog` (
 DROP TABLE IF EXISTS `tbllogcoins`;
 CREATE TABLE IF NOT EXISTS `tbllogcoins` (
   `gebruikerID` int(11) NOT NULL,
-  `datum` date NOT NULL,
+  `datum` datetime NOT NULL,
   `transactie` int(11) NOT NULL,
+  `spel` text NOT NULL,
   PRIMARY KEY (`gebruikerID`,`datum`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `tbllogcoins`
+--
+
+INSERT INTO `tbllogcoins` (`gebruikerID`, `datum`, `transactie`, `spel`) VALUES
+(6, '2019-11-29 00:00:00', 0, ''),
+(6, '2019-11-29 09:31:15', 0, ''),
+(6, '2019-11-29 09:31:27', 0, '');
 
 -- --------------------------------------------------------
 
