@@ -39,7 +39,7 @@ echo "
         <title>Achievements</title>
     </head>
     <body>
-        <nav><ul><li><h2><a class=\"nav-link\" href='index.php'>Back</a></h2></li></ul></nav>
+        <ul><li><h2><a class=\"nav-link\" href='index.php'>Back</a></h2></li></ul>
         <br>
          <h1 style=\"text-align:center;\">Achievements</h1>
          

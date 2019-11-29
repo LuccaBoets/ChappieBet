@@ -14,3 +14,6 @@ $daysOnline = $row["daysOnline"];
 sort($coins);
 
 echo $coins[0] + " " + $coins[1];
+?>
+
+<ul><li><h2><a class="nav-link" href='index.php'>Back</a></h2></li></ul>

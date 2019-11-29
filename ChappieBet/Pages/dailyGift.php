@@ -1,3 +1,49 @@
+<html>
+<head>
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="MainCss.css" rel="stylesheet">
+    <link href="testIndex.css" rel="stylesheet" type="text/css">
+    <title>Daily Gifts</title>
+
+
+    <style>
+
+        h1{
+            padding-top: 50px;
+            margin: 0px;
+            margin-bottom: 50px;
+        }
+
+        h2{
+            margin-top: 0px;
+            float: left;
+        }
+
+        #gifts{
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px rgb(199,73,58) solid;
+            width: 50%;
+        }
+
+        td{
+            border: 1px #917164 solid;
+            border-spacing: 0px;
+            padding: 0px;
+            font-size: 20px;
+        }
+
+        .giftPic{
+
+            height: 100px;
+            width: 10%;
+        }
+
+    </style>
+
+</head>
+<body>
+
 <?php
 
 //Zet hier de de H1 php voor dagen online anders werkt javascript ni
@@ -33,43 +79,9 @@ if ($vorigeDatum == $stop_date) {
 }
 echo "
 
-<html>
-    <head>
-        <link href=\"../vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">
-        <link href=\"MainCss.css\" rel=\"stylesheet\">
-        <link href=\"testIndex.css\" rel=\"stylesheet\" type=\"text/css\">
-        <title>Daily Gifts</title>
         
-        
-        <style>
-        
-        #gifts{
-            margin-left: auto;
-            margin-right: auto;
-            border: 2px rgb(199,73,58) solid;
-            width: 50%;
-        }
-        
-        td{
-            border: 1px #917164 solid;
-            border-spacing: 0px;
-            padding: 0px;
-            font-size: 20px;
-        }
-        
-        .giftPic{
-            
-            height: 100px;
-            width: 10%;
-        }
-        
-</style>
-        
-    </head>
-    <body>
-        
-        <h1>Daily Gifts</h1>
-        
+        <h2><a class='nav-link' href='index.php'>Back</a></h2>
+        <h1 style='text-align: center'>Daily Gifts</h1>
         <table id='gifts'>
         
         <tr>
@@ -150,10 +162,11 @@ echo "
      
         
 </script>
-    </body > 
-</html>
 
 
 
 
 ";
+?>
+    </body >
+</html>
