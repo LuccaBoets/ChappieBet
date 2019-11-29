@@ -26,7 +26,7 @@ function EersteGetal(){
 function Hoger(){	
     document.getElementById('hoger').disabled = true;
     document.getElementById('lager').disabled = true;
-	document.getElementById('Getal1').innerHTML = random;
+	document.getElementById('Getal1').innerHTML = "Dealer: " + random;
 	document.getElementById('imgGetal1').src = "imagesBlackjack/" + random + "H.png";
 	do{
 		var random2 = parseInt(Math.random() * 13) + 1;
@@ -50,7 +50,7 @@ function Hoger(){
 function Lager(){	
     document.getElementById('hoger').disabled = true;
     document.getElementById('lager').disabled = true;
-	document.getElementById('Getal1').innerHTML = random;
+	document.getElementById('Getal1').innerHTML = "Dealer:" + random;
 		document.getElementById('imgGetal1').src = "imagesBlackjack/" + random + "H.png";
 	do{
 		var random2 = parseInt(Math.random() * 13) + 1;
