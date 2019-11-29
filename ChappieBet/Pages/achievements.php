@@ -53,8 +53,8 @@ echo "
             </tr>
             <tr>
                 <td>Above 1000 coins</td>
-                <td>Above 500000 coins</td>
-                <td>Above 1000000 coins</td>
+                <td>Above 500.000 coins</td>
+                <td>Above 1000.000 coins</td>
                 <td>5 consecutive days online</td>
             </tr>
             <tr>
