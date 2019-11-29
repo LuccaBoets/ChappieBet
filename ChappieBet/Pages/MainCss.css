@@ -15,6 +15,17 @@ h1 {
     
 }
 
+input[type=submit]{
+    padding: 0;
+border: none;
+background: none;
+    color: #C7493A;
+    text-decoration: none;
+    display: block;
+    padding: .5rem 1rem;
+        font-size: 2rem;
+}
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
