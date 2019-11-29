@@ -4,6 +4,8 @@
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">
+    <link href="collapsingNav.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="collapsingNav.js"></script>
 
     <script type="text/javascript">
       
@@ -28,39 +30,47 @@
     <title>Front page</title>
 </head>
 <body>
-        <?php
-    
-    session_start();
-        include 'connect.php';
+<?php
 
-    if(empty($_SESSION["id"])){
-        header("Location:../index.html");
-        echo $_SESSION["id"];
+session_start();
+include 'connect.php';
+
+if(empty($_SESSION["id"])){
+    header("Location:../index.html");
+    echo $_SESSION["id"];
+}
+
+$sql = "SELECT * FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
+$resultaat = $mysqli ->query($sql);
+
+$row = $resultaat->fetch_assoc();
+?>
+<div id="mySidebar" class="sidebar">
+    <h2><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></h2>
+    <h2><a class="nav-link" href="LogOut.php">Log out</a></h2>
+    <h2><a class="nav-link" href="dailyGift.php">Daily Gifts</a></h2>
+    <h2><a class="nav-link" href="achievements.php">Achievements</a></h2>
+    <h2><a class="nav-link" href="scoreboard.php.php">Leaderboard</a></h2>
+    <h2><a class="nav-link" href="afhalen.php">afhalen</a></h2>
+    <?php
+    if($row["admin"] == 1){
+        echo '<h2><a class="nav-link" href="admin.php">admin</a></h2>';
     }
-    
-    $sql = "SELECT * FROM tblgebruikers WHERE gebruikerID = '".$_SESSION["id"]."' ";
-    $resultaat = $mysqli ->query($sql);
-    
-    $row = $resultaat->fetch_assoc();?>
 
-    <nav>
+    ?>
+    <h2 class="nav-link" id="coins">Coins: <?php echo($row["coins"]) ?></h2>
+</div>
+<div id="main">
 
-        <ul>
-            <li><h2><a class="nav-link" href="LogOut.php">Log out</a></h2></li>
-            <li><h2><a class="nav-link" href="dailyGift.php">Daily Gifts</a></h2></li>
-            <li><h2><a class="nav-link" href="achievements.php">Achievements</a></h2></li>
-            <li><h2><a class="nav-link" href="afhalen.php">afhalen</a></h2></li>
-            <?php
-            
-            if($row["admin"] == 1){
-                echo '<li><h2><a class="nav-link" href="admin.php">admin</a></h2></li>';
-            }
-    
-            ?>
-            <li><h2 class="nav-link" id="coins">Coins: <?php echo($row["coins"]) ?></h2></li>
-        </ul>
 
-    </nav>
+
+
+
+        <nav>
+            <ul>
+                <li> <a class="openbtn" onClick="openNav()">Open sidebar</a></li>
+            </ul>
+        </nav>
 
         <br>
     <!--
@@ -151,6 +161,6 @@
 
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+</div>
 </body>
 </html>
