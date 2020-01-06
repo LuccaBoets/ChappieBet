@@ -4,6 +4,7 @@
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">
     <title>Daily Gifts</title>
+    <link rel="icon" type="image/png" href="icon.png"/>
 
 
     <style>

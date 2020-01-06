@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Registration</title>
+  <link rel="icon" type="image/png" href="icon.png"/>
     <style>
 
         /*

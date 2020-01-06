@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>logs</title>
-<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icon.png"/>
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="MainCss.css" rel="stylesheet">
    
 </head>

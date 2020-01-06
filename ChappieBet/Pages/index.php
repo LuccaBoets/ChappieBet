@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
+    <title>Front page</title>
+    <link rel="icon" type="image/png" href="icon.png"/>
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">
@@ -26,8 +29,6 @@
       }
 
     </script>
-
-    <title>Front page</title>
 </head>
 <body>
 <?php

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Roulette</title>
+    <link rel="icon" type="image/png" href="icon2.png"/>
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../MainCss.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>

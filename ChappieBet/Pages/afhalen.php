@@ -28,6 +28,7 @@ alert('JE BENT ONDER DE 500 COINS DUS VERDIEN MEER OF HAAL MEER AF SORRY!!');
 <html>
 <head>
   <title>Withdraw</title>
+    <link rel="icon" type="image/png" href="icon.png"/>
    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">

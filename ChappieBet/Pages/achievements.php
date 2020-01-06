@@ -5,6 +5,7 @@ session_start();
 echo "
 <html>
     <head>
+        <link rel='icon' type='image/png' href='icon.png'/>
         <link href=\"../vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">
         <link href=\"MainCss.css\" rel=\"stylesheet\">
         <link href=\"testIndex.css\" rel=\"stylesheet\" type=\"text/css\">
