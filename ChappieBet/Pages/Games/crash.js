@@ -161,7 +161,7 @@ function winnen(winst){
     document.getElementById("Lock").disabled = false;
     document.getElementById("CashOut1").disabled = false;
     document.getElementById("AutoCash").disabled = false;
-    document.getElementById("hidden").value = document.getElementById("totaalGeld").innerHTML + winst;
+    document.getElementById("hidden").value = parseInt(document.getElementById("totaalGeld").innerHTML) + winst;
     document.getElementById("totaalGeld").innerHTML = document.getElementById("totaalGeld").innerHTML-1+1  + winst;
     clearInterval(x);
 

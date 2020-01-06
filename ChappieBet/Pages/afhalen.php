@@ -9,14 +9,14 @@ if ($getCoinsVOERUIT->num_rows>0){
 }
 $COINS = $COINS["coins"];
 
-if ($COINS < 500){
-    echo "<script>
+if ($COINS == 500){
+    echo "<cript>
 myVar = setInterval(function (temp) {
 
             window.location.href = 'index.php';
 
         }, 1000);
-alert('JE BENT ONDER DE 500 COINS DUS VERDIEN MEER OF HAAL MEER AF SORRY!!');
+alert('You have less than 500 coins, you can only deposit if you have more than 500 coins.');
     
 </script>";
     //header("location: index.php");
