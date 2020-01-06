@@ -27,7 +27,7 @@ alert('JE BENT ONDER DE 500 COINS DUS VERDIEN MEER OF HAAL MEER AF SORRY!!');
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Afhalen</title>
+  <title>Withdraw</title>
    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">
@@ -87,10 +87,10 @@ alert('JE BENT ONDER DE 500 COINS DUS VERDIEN MEER OF HAAL MEER AF SORRY!!');
     <h2 id="coinsTotaal"><?php echo $row["coins"]; ?></h2>
 
     <input type="text" name="afhalenNummer" id="geld">
-    <button name="afhalen" onclick="geldDing()">geld afhalen</button>
+    <button name="afhalen" onclick="geldDing()">Withdraw money</button>
 
     <input type="text" name="coins" id="coins">
-    <button name="stortCoinsknop" onclick="coinsDing()">Coins krijgen</button>
+    <button name="stortCoinsknop" onclick="coinsDing()">Get coins</button>
     
     <script>
         console.log("js");

@@ -31,7 +31,7 @@ $resultaat = $mysqli->query($sql);
 // in de variabele $row.  We gebruiken daarvoor fetch_assoc()
 
 echo "<table>";
-echo "<tr><td>ID</td><td>Username</td><td>Mail</td><td>totaalGeld</td><td>Admin</td><td>Coins</td><td>last Date</td><td>Days Online</td></tr>";
+echo "<tr><td>ID</td><td>Username</td><td>Mail</td><td>Money</td><td>Admin</td><td>Coins</td><td>Last Date</td><td>Days Online</td></tr>";
 while ($row = $resultaat->fetch_assoc()) {
 	
     echo "<tr><td>".$row['gebruikerID']."
@@ -44,7 +44,7 @@ while ($row = $resultaat->fetch_assoc()) {
     		</td><td>".$row['daysOnline']."
     		</td><td>".$row['online']."
     		</td>
-    <td><a href='verwijderen.php?tewissen=".$row['gebruikerID']."'>Wissen</a></td><td><a href='changeAdmin.php?teveranderen=".$row['gebruikerID']."'>Change admin</a></td>
+    <td><a href='verwijderen.php?tewissen=".$row['gebruikerID']."'>Delete</a></td><td><a href='changeAdmin.php?teveranderen=".$row['gebruikerID']."'>Change admin</a></td>
     <td><a href='logs.php?show=".$row['gebruikerID']."'>Logs</a></td></tr>";
 }
 //    <td><a href='wissen.php?tewissen=".$row['leerlingenNr']."'>Wissen</a></td><td><a href='wijzingen.php?teveranderen=".$row['leerlingenNr']."'>Veranderen</a></td>

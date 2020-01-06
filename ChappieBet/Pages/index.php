@@ -18,7 +18,7 @@
       }
 
       function toonCrashInfo(){
-          alert("With the game crash you wait while the percentage of the grafik go up and you will need to cashout before it hits its limit.")
+          alert("With the game crash you wait while the percentage of the grafic chart go up and you will need to cashout before it hits its limit.")
       }
 
       function toonHogerLagerInfo(){

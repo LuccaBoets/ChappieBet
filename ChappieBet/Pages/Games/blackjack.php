@@ -59,8 +59,8 @@
         </tr>
     </table>
 
-    <button id="button_bet" onclick="onBet()">BET</button><br>
-    <button id="button_hit" onclick="onHit()">HIT</button>
+    <button id="button_bet" onclick="onBet()">Bet</button><br>
+    <button id="button_hit" onclick="onHit()">Hit</button>
     <button id="button_stand" onclick="onStand()">Stand</button>
 
     <h2>Dealer <span id="puntenDealer"></span></h2>
