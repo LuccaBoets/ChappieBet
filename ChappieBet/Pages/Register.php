@@ -93,7 +93,7 @@
             echo "dklf";
             //Date date = new Date(); //INSERT INTO `tblgebruikers`(`gebruikerID`, `username`, `password`, `mail`, `totaalGeld`, `online`, `profImage`, `coins`, `winstreak`, `lastDate`, `daysOnline`, `admin`, `achievement_1`, `achievement_2`, `achievement_3`, `achievement_4`, `achievement_5`, `achievement_6`, `achievement_7`, `achievement_8`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11],[value-12],[value-13],[value-14],[value-15],[value-16],[value-17],[value-18],[value-19],[value-20])
             $sql = "INSERT INTO `tblgebruikers`(`username`, `password`, `mail`, `totaalGeld`, `online`, `coins`, `winstreak`, `lastDate`, `daysOnline`, `admin`, `achievement_1`, `achievement_2`, `achievement_3`, `achievement_4`, `achievement_5`, `achievement_6`, `achievement_7`, `achievement_8`,`profImage`) 
-            VALUES ('".$_POST["Naam"]."','".md5($_POST["Password"])."','".$_POST["Mail"]."',0,0,0,0,'".(date("Y-m-d"))."',0,0,0,0,0,0,0,0,0,0,0)";
+            VALUES ('".$_POST["Naam"]."','".md5($_POST["Password"])."','".$_POST["Mail"]."',0,0,500,0,'".(date("Y-m-d"))."',0,0,0,0,0,0,0,0,0,0,0)";
             echo($sql);
 
             if($mysqli->query($sql)){
