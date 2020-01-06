@@ -30,7 +30,7 @@ $resultaat = $mysqli->query($sql);
 // in de variabele $row.  We gebruiken daarvoor fetch_assoc()
 
 echo "<table>";
-echo "<tr><td>datum</td><td>transactie</td><td>gespeeld Spel</td></tr>";
+echo "<tr><td>date</td><td>transaction</td><td>played games</td></tr>";
 while ($row = $resultaat->fetch_assoc()) {
 	
     echo "<tr><td>".$row['datum']."
@@ -44,7 +44,7 @@ echo "</table>";
 ?>
     
     <div class="header" style="margin: 50px">
-  <h2>game logs</h2>
+  <h2>coins logs</h2>
   </div>
 
     <?php
@@ -60,7 +60,7 @@ $resultaat = $mysqli->query($sql);
 // in de variabele $row.  We gebruiken daarvoor fetch_assoc()
 
 echo "<table>";
-echo "<tr><td>datum</td><td>transactie</td></tr>";
+echo "<tr><td>Date</td><td>transaction</td></tr>";
 while ($row = $resultaat->fetch_assoc()) {
 	
     echo "<tr><td>".$row['datum']."
