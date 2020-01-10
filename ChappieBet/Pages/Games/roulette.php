@@ -32,7 +32,7 @@
             
             if(!empty($_POST["money"])) {
                 
-            $sql1 = "INSERT INTO `tbllog`(`gebruikerID`, `datum`, `transactie`, `gespeeldSpel`) VALUES (".$_SESSION["id"].",'".(date("Y-m-d H:i:s"))."',".($row["coins"]-$_POST["money"]).",'Roulette')";
+            $sql1 = "INSERT INTO `tbllog`(`gebruikerID`, `datum`, `transactie`, `gespeeldSpel`) VALUES (".$_SESSION["id"].",'".(date("Y-m-d H:i:s"))."',".($_POST["money"]-$row["coins"]).",'Roulette')";
             $mysqli->query($sql1);
             print $sql1;
             }

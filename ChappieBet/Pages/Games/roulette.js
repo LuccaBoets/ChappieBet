@@ -489,7 +489,6 @@ function onBet(){
         if (nieuwbedrag < 0) {
 			document.getElementById("beschikbareBedrag").innerHTML = 0;
 		}else{
-
 			document.getElementById("beschikbareBedrag").innerHTML = nieuwbedrag;
             document.getElementById("hidden").value = document.getElementById("beschikbareBedrag").innerHTML;
 		}
