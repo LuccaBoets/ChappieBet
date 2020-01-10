@@ -27,7 +27,8 @@ alert('You have less than 500 coins, you can only deposit if you have more than 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Afhalen</title>
+  <title>Withdraw</title>
+    <link rel="icon" type="image/png" href="icon.png"/>
    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">
@@ -87,10 +88,10 @@ alert('You have less than 500 coins, you can only deposit if you have more than 
     <h2 id="coinsTotaal"><?php echo $row["coins"]; ?></h2>
 
     <input type="text" name="afhalenNummer" id="geld">
-    <button name="afhalen" onclick="geldDing()">geld afhalen</button>
+    <button name="afhalen" onclick="geldDing()">Withdraw money</button>
 
     <input type="text" name="coins" id="coins">
-    <button name="stortCoinsknop" onclick="coinsDing()">Coins krijgen</button>
+    <button name="stortCoinsknop" onclick="coinsDing()">Get coins</button>
     
     <script>
         console.log("js");

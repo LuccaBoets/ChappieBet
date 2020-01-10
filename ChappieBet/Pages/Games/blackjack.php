@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Blackjack</title>
+    <link rel="icon" type="image/png" href="icon2.png"/>
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="../MainCss.css" rel="stylesheet" type="text/css">
@@ -59,8 +60,8 @@
         </tr>
     </table>
 
-    <button id="button_bet" onclick="onBet()">BET</button><br>
-    <button id="button_hit" onclick="onHit()">HIT</button>
+    <button id="button_bet" onclick="onBet()">Bet</button><br>
+    <button id="button_hit" onclick="onHit()">Hit</button>
     <button id="button_stand" onclick="onStand()">Stand</button>
 
     <h2>Dealer <span id="puntenDealer"></span></h2>

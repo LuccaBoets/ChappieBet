@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Crash</title>
+    <link rel="icon" type="image/png" href="icon2.png"/>
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="../MainCss.css" rel="stylesheet" type="text/css">

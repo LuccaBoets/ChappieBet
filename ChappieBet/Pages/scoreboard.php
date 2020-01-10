@@ -9,6 +9,7 @@ include "connect.php";
     <link href="MainCss.css" rel="stylesheet">
     <link href="testIndex.css" rel="stylesheet" type="text/css">
     <title>Leaderboard</title>
+    <link rel="icon" type="image/png" href="icon.png"/>
     <style>
         #achievements{
             margin-left: auto;

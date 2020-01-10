@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Roulette</title>
+    <link rel="icon" type="image/png" href="icon2.png"/>
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../MainCss.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -50,7 +51,9 @@
         }
 
     ?>
+<!--
   <input id="inzet" class="button" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000" value="0">
+-->
   <p id="beschikbareBedrag"><?php echo($row["coins"])?></p>
 
 
@@ -138,7 +141,6 @@
   </table>
 
       <input id="inzet" class="button" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000" value="0">
-      <p id="beschikbareBedrag">500</p>
 
 </div>
 </div>

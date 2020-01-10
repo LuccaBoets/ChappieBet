@@ -25,6 +25,7 @@ if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
 
 <html>
     <head>
+        <link rel="icon" type="image/png" href="icon.png"/>
         <style>
 
             @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
