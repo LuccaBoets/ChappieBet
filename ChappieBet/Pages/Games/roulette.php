@@ -51,7 +51,9 @@
         }
 
     ?>
+<!--
   <input id="inzet" class="button" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000" value="0">
+-->
   <p id="beschikbareBedrag"><?php echo($row["coins"])?></p>
 
 
@@ -139,7 +141,6 @@
   </table>
 
       <input id="inzet" class="button" width="10px" style="background-color: darkred" type="number" name="quantity" min="1" max="100000000000" value="0">
-      <p id="beschikbareBedrag">500</p>
 
 </div>
 </div>

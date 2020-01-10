@@ -33,6 +33,7 @@ function onStart()
 	for (var i = 1; i <= 36; i++) {
 		if (!zwarteGetallen.includes(i)) {
 			rodeGetallen.push(i);
+            
 		}
 	}
 	document.getElementById("inzet").value = 0;
@@ -283,19 +284,27 @@ function onBetExtra(extraWhereBetOn)
 	}
 
 }
-
+var Random = Math.floor(Math.random() * 36);
 function onBet(){
 
-	var Random = Math.floor(Math.random() * 36);
+    if(document.getElementById(Random.toString()).style.backgroundColor == "#ff0000"){
+       
+    document.getElementById(Random.toString()).style.backgroundColor = "#ff0000";
+       } else {
+    document.getElementById(Random.toString()).style.backgroundColor = "#3b3033";
+           
+       }
+	Random = Math.floor(Math.random() * 36);
 
     document.getElementById(Random.toString()).style.backgroundColor = "#08999e";
 
 	var kleur = "Black";
 	if (rodeGetallen.includes(Random)) {
 		kleur = "Red";
-	}else if(!(rodeGetallen.includes(Random) && zwarteGetallen.includes(Random))){
+	}else if(!(rodeGetallen.includes(Random) || zwarteGetallen.includes(Random))){
         kleur = "Green";
     }
+    console.log(kleur);
 
 	document.getElementById("gewordenGetal").innerHTML = Random + " " + kleur;
 
