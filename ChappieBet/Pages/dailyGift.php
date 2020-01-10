@@ -57,8 +57,6 @@ session_start();
 $stop_date = date("Y-m-d");
 $stop_date = date('Y-m-d', strtotime($stop_date . ' -1 day'));
 
-echo "$stop_date";
-
 $sql = "SELECT * FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
 $resultaat = $mysqli ->query($sql);
 
