@@ -3,29 +3,6 @@ include 'connect.php';
 session_start();
 
 if (!empty($_SESSION["id"])){
-/*
-    $sqlGetDate = "SELECT `lastDate` FROM tblvrienden WHERE `gebruikerID` = '".$_SESSION['id']."'";
-    $getDateResult = $mysqli->query($sqlGetDate);
-
-    if ($getDateResult ->num_rows > 0){
-        $datum = $resultaat->fetch_assoc();
-    }
-*/
-/*
-    $sqlVorigeDatum = "SELECT `lastDate` FROM `tblgebruikers` WHERE `gebruikerID` = ". $_SESSION["id"];
-    $vorigeDatum= $mysqli->query($sqlVorigeDatum);
-
-    if ($vorigeDatum->num_rows >0){
-        $vorigeDatum1 = $vorigeDatum->fetch_assoc();
-    }
-
-    $_SESSION["vorigeDatum"] = $vorigeDatum1["lastDate"];
-
-    $datum = date("Y-m-d");
-    $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
-                   WHERE `gebruikerID` =". $_SESSION["id"];
-    $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
-*/
 
     header("Location: index.php");//ga direct naar home.php
 }
@@ -35,30 +12,49 @@ if(isset($_POST["knop"])){
 $sql = "SELECT * FROM tblgebruikers WHERE `username` = '".$_POST['naam']."' AND `password` = '" . md5($_POST['wachtwoord']) . "'";//controleer of er iemand bestaat met deze gebruikersnaam en wachtwoors
 $resultaat = $mysqli ->query($sql);//uitvoeren van de query
 
-if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
+    if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
 
     $row = $resultaat->fetch_assoc();
-
-
-    $_SESSION["id"] = $row['gebruikerID'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
-/*
-    $sqlVorigeDatum = "SELECT `lastDate` FROM `tblgebruikers` WHERE `gebruikerID` = ". $_SESSION["id"];
-    $vorigeDatum= $mysqli->query($sqlVorigeDatum);
-
-    if ($vorigeDatum->num_rows >0){
-        $vorigeDatum1 = $vorigeDatum->fetch_assoc();
     }
+$_SESSION["id"] = $row['gebruikerID'];//maak de sessie gebruiker aan met de waarde gebruikersnaam van de gebruiker
+$stop_date = date("Y-m-d");
+$stop_date = date('Y-m-d', strtotime($stop_date . ' -1 day'));
 
-    $_SESSION["vorigeDatum"] = $vorigeDatum1["lastDate"];
+$sql = "SELECT * FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
+$resultaat = $mysqli ->query($sql);
+
+if ($resultaat->num_rows > 0){
+    $row = $resultaat->fetch_assoc();
+}
+$daysOnline = $row["daysOnline"];
+$lastDate = $row["lastDate"];
+
+if ($lastDate == $stop_date){
+    $daysOnline+=1;
+    $updateDaysonline = "UPDATE tblgebruikers SET daysOnline = '".$daysOnline."'";
+    $updateDaysonlineVOERUIT = $mysqli->query($updateDaysonline);
 
     $datum = date("Y-m-d");
     $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
-                   WHERE `gebruikerID` =". $_SESSION["id"];
+               WHERE `gebruikerID` =". $_SESSION["id"];
     $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
-*/
-    header("Location: index.php");//ga direct naar home.php
 
-}}
+}else{
+    $daysOnline = 0;
+    $updateDaysonline = "UPDATE tblgebruikers SET daysOnline = '".$daysOnline."'";
+    $updateDaysonlineVOERUIT = $mysqli->query($updateDaysonline);
+
+    $datum = date("Y-m-d");
+    $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
+               WHERE `gebruikerID` =". $_SESSION["id"];
+
+    $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
+    }
+
+$_SESSION["daysOnline"] = $daysOnline;
+header("Location: index.php");//ga direct naar home.php
+
+}
 ?>
 
 <html>
@@ -66,10 +62,6 @@ if ($resultaat->num_rows > 0) {//kijk of er iemand is met deze gegevens
         <link rel="icon" type="image/png" href="icon.png"/>
         <style>
 
-            /*
-    @hiercelik - hiercelik.net
-    @koalapix - koalapix.com
-*/
             @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
             @import url(http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext);
             @media (min-width: 768px) {

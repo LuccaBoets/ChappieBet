@@ -1,5 +1,4 @@
 var dealerTotalValue = 0;
-
 var playerTotalValue = 0;
 
 var ingezeteMunten;
@@ -86,12 +85,13 @@ function onStand() {
         checkDealer();
 
         console.log(dealerTotalValue);
-    } while(dealerTotalValue <= 17);
+    } while(dealerTotalValue < 17);
 
 
     if (dealerTotalValue >= playerTotalValue && dealerNotOut){
         document.getElementById("uikomstSpel").innerHTML = "Dealer wint";
-
+        document.getElementById("button_stand").style.visibility = "hidden";
+        document.getElementById("button_hit").style.visibility = "hidden";
         //Page Reloads
         myVar = setInterval(function (temp) {
 
@@ -101,6 +101,9 @@ function onStand() {
     } else {
 
         document.getElementById("uikomstSpel").innerHTML = "Speler wint";
+        document.getElementById("button_bet").style.visibility = "hidden";
+        document.getElementById("button_hit").style.visibility = "hidden";
+        document.getElementById("button_stand").style.visibility = "hidden";
         //document.getElementById("dealerCard1").src = dealerCards[1];
         //Page Reloads
         myVar = setInterval(function (temp) {
@@ -108,9 +111,6 @@ function onStand() {
             location.reload();
 
         }, 7000);
-        document.getElementById("button_bet").style.visibility = "hidden";
-        document.getElementById("button_hit").style.visibility = "hidden";
-        document.getElementById("button_stand").style.visibility = "hidden";
     }
 
 }
@@ -209,6 +209,9 @@ function checkPlayer() {
             }, 7000);
         }
 
+    }else if (playerTotalValue <= 21){
+        checkDealer();
+
     }
     if (playercards == 5){
         document.getElementById("playerCard4").src = playercards[4];
@@ -230,18 +233,48 @@ function checkPlayer() {
 function checkDealer() {
 
     console.log("check dealer "+dealerTotalValue);
+    console.log("dealer=" + dealerTotalValue +" player=" + playerTotalValue);
 
 
     if (dealerTotalValue > 21){
         
         if (aceDealer){
-            console.log("ass");
             dealerTotalValue -= 10;
             aceDealer = false;
+
         }else {
             dealerNotOut = false;
+            document.getElementById("button_hit").style.visibility = "hidden";
+            document.getElementById("button_stand").style.visibility = "hidden";
+
         }
 
+    }else if(dealerTotalValue < 21){
+        if (dealerTotalValue > playerTotalValue && dealerTotalValue < 21){
+
+            document.getElementById("button_stand").style.visibility = "hidden";
+            document.getElementById("button_hit").style.visibility = "hidden";
+        }
+    }else if (dealerTotalValue == 21){
+        document.getElementById("uikomstSpel").innerHTML = "Dealer wint";
+        document.getElementById("button_stand").style.visibility = "hidden";
+        document.getElementById("button_hit").style.visibility = "hidden";
+        //Page Reloads
+        myVar = setInterval(function (temp) {
+
+            location.reload();
+
+        }, 7000);
+    }else if (dealerTotalValue == playerTotalValue){
+        document.getElementById("uikomstSpel").innerHTML = "Dealer wint";
+        document.getElementById("button_stand").style.visibility = "hidden";
+        document.getElementById("button_hit").style.visibility = "hidden";
+        //Page Reloads
+        myVar = setInterval(function (temp) {
+
+            location.reload();
+
+        }, 7000);
     }
 
 

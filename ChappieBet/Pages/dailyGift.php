@@ -55,41 +55,7 @@
 
 include "connect.php";
 session_start();
-$stop_date = date("Y-m-d");
-$stop_date = date('Y-m-d', strtotime($stop_date . ' -1 day'));
-
-echo "$stop_date";
-
-$sql = "SELECT * FROM `tblgebruikers` WHERE `gebruikerID` = '".$_SESSION['id']."'";
-$resultaat = $mysqli ->query($sql);
-
-if ($resultaat->num_rows > 0){
-    $row = $resultaat->fetch_assoc();
-}
-$daysOnline = $row["daysOnline"];
-$lastDate = $row["lastDate"];
-
-if ($lastDate == $stop_date){
-    $daysOnline+=1;
-    $updateDaysonline = "UPDATE tblgebruikers SET daysOnline = '".$daysOnline."'";
-    $updateDaysonlineVOERUIT = $mysqli->query($updateDaysonline);
-
-    $datum = date("Y-m-d");
-    $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
-                   WHERE `gebruikerID` =". $_SESSION["id"];
-    $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
-    
-}else{
-    $daysOnline = 0;
-    $updateDaysonline = "UPDATE tblgebruikers SET daysOnline = '".$daysOnline."'";
-    $updateDaysonlineVOERUIT = $mysqli->query($updateDaysonline);
-
-    $datum = date("Y-m-d");
-    $sqlSetDate = "UPDATE `tblgebruikers` SET `lastDate` = '".$datum."'
-                   WHERE `gebruikerID` =". $_SESSION["id"];
-
-    $sqlSetDateUITVOER = $mysqli->query($sqlSetDate);
-}
+$daysOnline = $_SESSION['daysOnline'];
 
 
 echo "

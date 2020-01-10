@@ -10,7 +10,7 @@ if ($getCoinsVOERUIT->num_rows>0){
 $COINS = $COINS["coins"];
 
 if ($COINS == 500){
-    echo "<cript>
+    echo "<script>
 myVar = setInterval(function (temp) {
 
             window.location.href = 'index.php';
